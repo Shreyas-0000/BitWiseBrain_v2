@@ -8,38 +8,104 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 100);
 
-    // Get the button and prevent its default link behavior
-    const submitBtn = document.querySelector('.btnn');
-    if (submitBtn) {
-        submitBtn.addEventListener('click', async function(e) {
+    // Handle form submissions
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const form = document.querySelector('.form');
+            const submitBtn = this.querySelector('.btnn');
             
-            if (validateForm(form)) {
+            if (validateForm(this)) {
                 // Show loading state
-                this.disabled = true;
-                this.style.background = '#19b8e6';
-                this.textContent = 'Processing...';
+                submitBtn.disabled = true;
+                submitBtn.style.background = '#19b8e6';
+                submitBtn.textContent = 'Processing...';
                 
                 try {
-                    await simulateSubmission(); // Simulate API call
-                    showSuccess(form);
-                    
-                    // Get redirect path
-                    const redirectPath = form.classList.contains('signup-form') 
-                        ? 'main.html' 
-                        : 'assets/html/main.html';
-                    
-                    // Redirect after success animation
-                    setTimeout(() => {
-                        window.location.href = redirectPath;
-                    }, 1500);
-                    
+                    const formData = {
+                        action: 'login',
+                        email: this.querySelector('input[name="email"]').value,
+                        password: this.querySelector('input[name="password"]').value
+                    };
+
+                    const response = await fetch('/api/auth', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Store user session
+                        localStorage.setItem('user', formData.email);
+                        showSuccess(this);
+                        
+                        setTimeout(() => {
+                            window.location.href = './assets/html/main.html';
+                        }, 1500);
+                    } else {
+                        throw new Error(data.error || 'Invalid credentials');
+                    }
                 } catch (error) {
-                    showError(form, 'Something went wrong. Please try again.');
-                    this.disabled = false;
-                    this.style.background = '#1ec8ff';
-                    this.textContent = form.classList.contains('signup-form') ? 'Sign Up' : 'Log In';
+                    showError(this, error.message);
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#1ec8ff';
+                    submitBtn.textContent = 'Log In';
+                }
+            }
+        });
+    }
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('.btnn');
+            
+            if (validateForm(this)) {
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.style.background = '#19b8e6';
+                submitBtn.textContent = 'Processing...';
+                
+                try {
+                    const formData = {
+                        action: 'register',
+                        email: this.querySelector('input[name="email"]').value,
+                        password: this.querySelector('input[name="password"]').value,
+                        confirmPassword: this.querySelector('input[name="confirm-password"]').value
+                    };
+
+                    const response = await fetch('/api/auth', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Store user session
+                        localStorage.setItem('user', formData.email);
+                        showSuccess(this);
+                        
+                        setTimeout(() => {
+                            window.location.href = 'main.html';
+                        }, 1500);
+                    } else {
+                        throw new Error(data.error || 'Registration failed');
+                    }
+                } catch (error) {
+                    showError(this, error.message);
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '#1ec8ff';
+                    submitBtn.textContent = 'Sign Up';
                 }
             }
         });
