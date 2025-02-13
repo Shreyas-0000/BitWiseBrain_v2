@@ -7,10 +7,7 @@
     { "src": "assets/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { 
-      "src": "/api/(.*)",
-      "dest": "/api/$1.js"
-    },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/styles-login-signup.css", "dest": "/styles-login-signup.css" },
     { "src": "/(.*)", "dest": "/$1" }

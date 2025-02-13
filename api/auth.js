@@ -1,89 +1,84 @@
-import { kv } from '@vercel/kv';
+import mysql from 'mysql2/promise';
 
-export const config = {
-  runtime: 'edge'
+const dbConfig = {
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT || 3306
 };
 
-export default async function handler(req) {
-  const headers = {
-    'Access-Control-Allow-Credentials': 'true',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json'
-  };
+export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
+  // Handle CORS preflight
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers });
+    return res.status(200).end();
   }
 
   if (req.method === 'POST') {
     try {
-      const body = await req.json();
-      const { action, email, password } = body;
+      const { action, email, password } = req.body;
+      console.log('Received request:', { action, email });
+
+      // Create database connection
+      const connection = await mysql.createConnection(dbConfig);
 
       if (action === 'register') {
         // Check if user exists
-        const existingUser = await kv.get(`user:${email}`);
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ?',
+          [email]
+        );
 
-        if (existingUser) {
-          return new Response(
-            JSON.stringify({ error: 'Email already exists' }),
-            { status: 400, headers }
-          );
+        if (users.length > 0) {
+          await connection.end();
+          return res.status(400).json({ error: 'Email already exists' });
         }
 
-        // Store new user
-        await kv.set(`user:${email}`, { 
-          email, 
-          password,
-          createdAt: new Date().toISOString()
-        });
-
-        return new Response(
-          JSON.stringify({ 
-            message: 'User registered successfully',
-            debug: { email }
-          }),
-          { status: 201, headers }
+        // Insert new user
+        await connection.execute(
+          'INSERT INTO users (email, password) VALUES (?, ?)',
+          [email, password]
         );
+
+        await connection.end();
+        return res.status(201).json({ 
+          message: 'User registered successfully',
+          debug: { email }
+        });
       }
 
       if (action === 'login') {
-        const user = await kv.get(`user:${email}`);
-        
-        if (user && user.password === password) {
-          return new Response(
-            JSON.stringify({ message: 'Login successful' }),
-            { status: 200, headers }
-          );
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ? AND password = ?',
+          [email, password]
+        );
+
+        await connection.end();
+
+        if (users.length > 0) {
+          return res.status(200).json({ message: 'Login successful' });
         } else {
-          return new Response(
-            JSON.stringify({ error: 'Invalid credentials' }),
-            { status: 401, headers }
-          );
+          return res.status(401).json({ error: 'Invalid credentials' });
         }
       }
 
-      return new Response(
-        JSON.stringify({ error: 'Invalid action' }),
-        { status: 400, headers }
-      );
+      await connection.end();
+      return res.status(400).json({ error: 'Invalid action' });
 
     } catch (error) {
       console.error('API error:', error);
-      return new Response(
-        JSON.stringify({ 
-          error: 'Internal server error',
-          details: error.message 
-        }),
-        { status: 500, headers }
-      );
+      return res.status(500).json({ 
+        error: 'Internal server error',
+        details: error.message 
+      });
     }
   }
 
-  return new Response(
-    JSON.stringify({ error: 'Method not allowed' }),
-    { status: 405, headers }
-  );
+  return res.status(405).json({ error: 'Method not allowed' });
 } 
