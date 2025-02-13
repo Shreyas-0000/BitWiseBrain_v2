@@ -1,74 +1,96 @@
-const mysql = require('mysql2/promise');
+import mysql from 'mysql2/promise';
 
-// Database configuration
-const dbConfig = {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+export const config = {
+  runtime: 'edge',
+  regions: ['iad1']
 };
 
-export default async function handler(req, res) {
-    // Enable CORS
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', 'https://bitwisebrain.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-    // Handle OPTIONS request for CORS
+export default async function handler(req) {
+  try {
     if (req.method === 'OPTIONS') {
-        res.status(200).end();
-        return;
+      return new Response(null, {
+        headers: {
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Origin': 'https://bitwisebrain.vercel.app',
+          'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type'
+        }
+      });
     }
+
+    const connection = await mysql.createConnection({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      port: process.env.DB_PORT
+    });
 
     if (req.method === 'POST') {
-        try {
-            const { action, username, password } = req.body;
+      const body = await req.json();
+      const { action, email, password } = body;
 
-            // Create database connection
-            const connection = await mysql.createConnection(dbConfig);
+      if (action === 'register') {
+        // Check if user exists
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ?',
+          [email]
+        );
 
-            if (action === 'register') {
-                // Check if user exists
-                const [users] = await connection.execute(
-                    'SELECT * FROM users WHERE username = ?',
-                    [username]
-                );
-
-                if (users.length > 0) {
-                    await connection.end();
-                    return res.status(400).json({ error: 'Username already exists' });
-                }
-
-                // Insert new user
-                await connection.execute(
-                    'INSERT INTO users (username, password) VALUES (?, ?)',
-                    [username, password]
-                );
-
-                await connection.end();
-                return res.status(201).json({ message: 'User registered successfully' });
-            }
-
-            if (action === 'login') {
-                const [users] = await connection.execute(
-                    'SELECT * FROM users WHERE username = ? AND password = ?',
-                    [username, password]
-                );
-
-                await connection.end();
-
-                if (users.length > 0) {
-                    return res.status(200).json({ message: 'Login successful' });
-                } else {
-                    return res.status(401).json({ error: 'Invalid credentials' });
-                }
-            }
-        } catch (error) {
-            console.error('Database error:', error);
-            return res.status(500).json({ error: 'Internal server error' });
+        if (users.length > 0) {
+          await connection.end();
+          return new Response(
+            JSON.stringify({ error: 'Email already exists' }),
+            { status: 400, headers: { 'Content-Type': 'application/json' } }
+          );
         }
+
+        // Insert new user
+        await connection.execute(
+          'INSERT INTO users (email, password) VALUES (?, ?)',
+          [email, password]
+        );
+
+        await connection.end();
+        return new Response(
+          JSON.stringify({ message: 'User registered successfully' }),
+          { status: 201, headers: { 'Content-Type': 'application/json' } }
+        );
+      }
+
+      if (action === 'login') {
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ? AND password = ?',
+          [email, password]
+        );
+
+        await connection.end();
+
+        if (users.length > 0) {
+          return new Response(
+            JSON.stringify({ message: 'Login successful' }),
+            { status: 200, headers: { 'Content-Type': 'application/json' } }
+          );
+        } else {
+          return new Response(
+            JSON.stringify({ error: 'Invalid credentials' }),
+            { status: 401, headers: { 'Content-Type': 'application/json' } }
+          );
+        }
+      }
     }
 
-    return res.status(405).json({ error: 'Method not allowed' });
+    await connection.end();
+    return new Response(
+      JSON.stringify({ error: 'Method not allowed' }),
+      { status: 405, headers: { 'Content-Type': 'application/json' } }
+    );
+
+  } catch (error) {
+    console.error('API error:', error);
+    return new Response(
+      JSON.stringify({ error: 'Internal server error' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 } 
