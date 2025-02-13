@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "mysql2": "^3.6.0"
+    "@vercel/mysql": "^1.0.1"
   }
 } 

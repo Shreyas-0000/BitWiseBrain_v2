@@ -1,9 +1,8 @@
+import mysql from '@vercel/mysql';
+
 export const config = {
   runtime: 'edge'
 };
-
-// Temporary storage for demo
-const users = new Map();
 
 export default async function handler(req) {
   const headers = {
@@ -23,34 +22,53 @@ export default async function handler(req) {
       const body = await req.json();
       const { action, email, password } = body;
 
-      console.log('Received request:', { action, email });
+      // Create database connection
+      const db = await mysql({
+        config: {
+          host: process.env.DB_HOST,
+          database: process.env.DB_NAME,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
+          port: process.env.DB_PORT
+        }
+      });
 
       if (action === 'register') {
         // Check if user exists
-        if (users.has(email)) {
+        const existingUsers = await db.query(
+          'SELECT * FROM users WHERE email = ?',
+          [email]
+        );
+
+        if (existingUsers.length > 0) {
           return new Response(
             JSON.stringify({ error: 'Email already exists' }),
             { status: 400, headers }
           );
         }
 
-        // Store new user
-        users.set(email, { password });
-        console.log('User registered:', email);
+        // Insert new user
+        await db.query(
+          'INSERT INTO users (email, password) VALUES (?, ?)',
+          [email, password]
+        );
 
         return new Response(
           JSON.stringify({ 
             message: 'User registered successfully',
-            debug: { email, totalUsers: users.size }
+            debug: { email }
           }),
           { status: 201, headers }
         );
       }
 
       if (action === 'login') {
-        const user = users.get(email);
+        const users = await db.query(
+          'SELECT * FROM users WHERE email = ? AND password = ?',
+          [email, password]
+        );
         
-        if (user && user.password === password) {
+        if (users.length > 0) {
           return new Response(
             JSON.stringify({ message: 'Login successful' }),
             { status: 200, headers }
