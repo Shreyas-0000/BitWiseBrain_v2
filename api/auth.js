@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise';
+const mysql = require('mysql2/promise');
 
 const dbConfig = {
   host: process.env.DB_HOST,
@@ -8,7 +8,7 @@ const dbConfig = {
   port: process.env.DB_PORT || 3306
 };
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // Set CORS headers
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -81,4 +81,4 @@ export default async function handler(req, res) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-} 
+}; 
