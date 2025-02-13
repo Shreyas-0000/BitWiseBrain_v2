@@ -1,35 +1,27 @@
 import mysql from 'mysql2/promise';
 
+// Use Node.js runtime instead
 export const config = {
-  runtime: 'edge'
+  runtime: 'nodejs18'  // or 'nodejs16'
 };
 
 // Temporary in-memory storage (replace with proper DB later)
 const users = new Map();
 
-export default async function handler(req) {
-  // CORS headers
-  const headers = {
-    'Access-Control-Allow-Credentials': 'true',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json'
-  };
-
-  // Handle CORS preflight
+export default async function handler(req, res) {
+  // Use regular Node.js response handling
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers });
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    return res.status(200).end();
   }
 
   if (req.method === 'POST') {
     try {
-      const body = await req.json();
-      console.log('Received request:', body);
+      const { action, email, password } = req.body;
 
-      const { action, email, password } = body;
-
-      // Create database connection
       const connection = await mysql.createConnection({
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
@@ -47,10 +39,7 @@ export default async function handler(req) {
 
         if (users.length > 0) {
           await connection.end();
-          return new Response(
-            JSON.stringify({ error: 'Email already exists' }),
-            { status: 400, headers }
-          );
+          return res.status(400).json({ error: 'Email already exists' });
         }
 
         // Insert new user
@@ -60,41 +49,35 @@ export default async function handler(req) {
         );
 
         await connection.end();
-        return new Response(
-          JSON.stringify({ 
-            message: 'User registered successfully',
-            debug: { email }
-          }),
-          { status: 201, headers }
-        );
+        return res.status(201).json({ 
+          message: 'User registered successfully',
+          debug: { email }
+        });
       }
 
       if (action === 'login') {
-        // For testing, just return success
-        return new Response(
-          JSON.stringify({ message: 'Login successful' }),
-          { status: 200, headers }
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ? AND password = ?',
+          [email, password]
         );
+
+        await connection.end();
+
+        if (users.length > 0) {
+          return res.status(200).json({ message: 'Login successful' });
+        } else {
+          return res.status(401).json({ error: 'Invalid credentials' });
+        }
       }
 
-      return new Response(
-        JSON.stringify({ error: 'Invalid action' }),
-        { status: 400, headers }
-      );
     } catch (error) {
       console.error('API error:', error);
-      return new Response(
-        JSON.stringify({ 
-          error: 'Internal server error',
-          details: error.message 
-        }),
-        { status: 500, headers }
-      );
+      return res.status(500).json({ 
+        error: 'Internal server error',
+        details: error.message 
+      });
     }
   }
 
-  return new Response(
-    JSON.stringify({ error: 'Method not allowed' }),
-    { status: 405, headers }
-  );
+  return res.status(405).json({ error: 'Method not allowed' });
 } 
