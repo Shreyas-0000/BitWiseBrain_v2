@@ -1,3 +1,5 @@
+import mysql from 'mysql2/promise';
+
 export const config = {
   runtime: 'edge'
 };
@@ -27,17 +29,43 @@ export default async function handler(req) {
 
       const { action, email, password } = body;
 
+      // Create database connection
+      const connection = await mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT
+      });
+
       if (action === 'register') {
-        // For testing, just return success
+        // Check if user exists
+        const [users] = await connection.execute(
+          'SELECT * FROM users WHERE email = ?',
+          [email]
+        );
+
+        if (users.length > 0) {
+          await connection.end();
+          return new Response(
+            JSON.stringify({ error: 'Email already exists' }),
+            { status: 400, headers }
+          );
+        }
+
+        // Insert new user
+        await connection.execute(
+          'INSERT INTO users (email, password) VALUES (?, ?)',
+          [email, password]
+        );
+
+        await connection.end();
         return new Response(
           JSON.stringify({ 
             message: 'User registered successfully',
-            debug: { email, action }
+            debug: { email }
           }),
-          { 
-            status: 201, 
-            headers 
-          }
+          { status: 201, headers }
         );
       }
 

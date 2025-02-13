@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         showSuccess(this);
                         
                         setTimeout(() => {
-                            window.location.href = 'main.html';
+                            window.location.href = './assets/html/main.html';
                         }, 1500);
                     } else {
                         throw new Error(data.error || 'Registration failed');
