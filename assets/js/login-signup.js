@@ -82,9 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         password: this.querySelector('input[name="password"]').value
                     };
 
-                    console.log('Request data:', formData);
+                    // Use the current domain for the API endpoint
+                    const apiUrl = `${window.location.origin}/api/auth`;
+                    console.log('API URL:', apiUrl);
 
-                    const response = await fetch('https://bitwisebrain.vercel.app/api/auth', {
+                    const response = await fetch(apiUrl, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
