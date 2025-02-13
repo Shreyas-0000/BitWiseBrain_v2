@@ -1,8 +1,7 @@
 {
   "name": "bitwisebrain",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
-    "@vercel/mysql": "^1.0.1"
+    "@planetscale/database": "^1.11.0"
   }
 } 

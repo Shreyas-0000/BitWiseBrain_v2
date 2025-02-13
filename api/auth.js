@@ -1,7 +1,14 @@
-import mysql from '@vercel/mysql';
+import { connect } from '@planetscale/database';
 
 export const config = {
   runtime: 'edge'
+};
+
+const config = {
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 };
 
 export default async function handler(req) {
@@ -23,24 +30,16 @@ export default async function handler(req) {
       const { action, email, password } = body;
 
       // Create database connection
-      const db = await mysql({
-        config: {
-          host: process.env.DB_HOST,
-          database: process.env.DB_NAME,
-          user: process.env.DB_USER,
-          password: process.env.DB_PASSWORD,
-          port: process.env.DB_PORT
-        }
-      });
+      const conn = connect(config);
 
       if (action === 'register') {
         // Check if user exists
-        const existingUsers = await db.query(
+        const existingUsers = await conn.execute(
           'SELECT * FROM users WHERE email = ?',
           [email]
         );
 
-        if (existingUsers.length > 0) {
+        if (existingUsers.rows.length > 0) {
           return new Response(
             JSON.stringify({ error: 'Email already exists' }),
             { status: 400, headers }
@@ -48,7 +47,7 @@ export default async function handler(req) {
         }
 
         // Insert new user
-        await db.query(
+        await conn.execute(
           'INSERT INTO users (email, password) VALUES (?, ?)',
           [email, password]
         );
@@ -63,12 +62,12 @@ export default async function handler(req) {
       }
 
       if (action === 'login') {
-        const users = await db.query(
+        const result = await conn.execute(
           'SELECT * FROM users WHERE email = ? AND password = ?',
           [email, password]
         );
         
-        if (users.length > 0) {
+        if (result.rows.length > 0) {
           return new Response(
             JSON.stringify({ message: 'Login successful' }),
             { status: 200, headers }
