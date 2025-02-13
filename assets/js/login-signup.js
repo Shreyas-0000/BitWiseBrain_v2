@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         password: this.querySelector('input[name="password"]').value
                     };
 
-                    const response = await fetch('/api/auth', {
+                    const response = await fetch('https://bitwisebrain.vercel.app/api/auth', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -67,20 +67,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = this.querySelector('.btnn');
             
             if (validateForm(this)) {
-                // Show loading state
-                submitBtn.disabled = true;
-                submitBtn.style.background = '#19b8e6';
-                submitBtn.textContent = 'Processing...';
-                
                 try {
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.style.background = '#19b8e6';
+                    submitBtn.textContent = 'Processing...';
+                    
+                    // Log the request details
+                    console.log('Sending signup request...');
+                    
                     const formData = {
                         action: 'register',
                         email: this.querySelector('input[name="email"]').value,
-                        password: this.querySelector('input[name="password"]').value,
-                        confirmPassword: this.querySelector('input[name="confirm-password"]').value
+                        password: this.querySelector('input[name="password"]').value
                     };
 
-                    const response = await fetch('/api/auth', {
+                    console.log('Request data:', formData);
+
+                    const response = await fetch('https://bitwisebrain.vercel.app/api/auth', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -88,7 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
                         body: JSON.stringify(formData)
                     });
 
-                    const data = await response.json();
+                    // Log the raw response
+                    const rawResponse = await response.text();
+                    console.log('Raw response:', rawResponse);
+
+                    // Try to parse the response as JSON
+                    let data;
+                    try {
+                        data = JSON.parse(rawResponse);
+                    } catch (parseError) {
+                        console.error('Failed to parse response as JSON:', parseError);
+                        throw new Error('Server returned invalid JSON');
+                    }
 
                     if (response.ok) {
                         // Store user session
@@ -102,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         throw new Error(data.error || 'Registration failed');
                     }
                 } catch (error) {
+                    console.error('Signup error:', error);
                     showError(this, error.message);
                     submitBtn.disabled = false;
                     submitBtn.style.background = '#1ec8ff';
