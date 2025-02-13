@@ -2,7 +2,7 @@ export const config = {
   runtime: 'edge'
 };
 
-// Temporary in-memory storage (for testing)
+// Temporary storage for demo
 const users = new Map();
 
 export default async function handler(req) {
