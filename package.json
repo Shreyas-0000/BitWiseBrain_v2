@@ -2,6 +2,6 @@
   "name": "bitwisebrain",
   "version": "1.0.0",
   "dependencies": {
-    "@planetscale/database": "^1.11.0"
+    "@vercel/kv": "^0.2.4"
   }
 } 

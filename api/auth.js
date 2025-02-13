@@ -1,14 +1,7 @@
-import { connect } from '@planetscale/database';
+import { kv } from '@vercel/kv';
 
 export const config = {
   runtime: 'edge'
-};
-
-const config = {
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
 };
 
 export default async function handler(req) {
@@ -29,28 +22,23 @@ export default async function handler(req) {
       const body = await req.json();
       const { action, email, password } = body;
 
-      // Create database connection
-      const conn = connect(config);
-
       if (action === 'register') {
         // Check if user exists
-        const existingUsers = await conn.execute(
-          'SELECT * FROM users WHERE email = ?',
-          [email]
-        );
+        const existingUser = await kv.get(`user:${email}`);
 
-        if (existingUsers.rows.length > 0) {
+        if (existingUser) {
           return new Response(
             JSON.stringify({ error: 'Email already exists' }),
             { status: 400, headers }
           );
         }
 
-        // Insert new user
-        await conn.execute(
-          'INSERT INTO users (email, password) VALUES (?, ?)',
-          [email, password]
-        );
+        // Store new user
+        await kv.set(`user:${email}`, { 
+          email, 
+          password,
+          createdAt: new Date().toISOString()
+        });
 
         return new Response(
           JSON.stringify({ 
@@ -62,12 +50,9 @@ export default async function handler(req) {
       }
 
       if (action === 'login') {
-        const result = await conn.execute(
-          'SELECT * FROM users WHERE email = ? AND password = ?',
-          [email, password]
-        );
+        const user = await kv.get(`user:${email}`);
         
-        if (result.rows.length > 0) {
+        if (user && user.password === password) {
           return new Response(
             JSON.stringify({ message: 'Login successful' }),
             { status: 200, headers }
