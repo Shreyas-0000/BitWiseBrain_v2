@@ -18,19 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = this.querySelector('.btnn');
             
             if (validateForm(this)) {
-                // Show loading state
-                submitBtn.disabled = true;
-                submitBtn.style.background = '#19b8e6';
-                submitBtn.textContent = 'Processing...';
-                
                 try {
+                    submitBtn.disabled = true;
+                    submitBtn.style.background = '#19b8e6';
+                    submitBtn.textContent = 'Processing...';
+                    
+                    // Use current domain for API calls
+                    const apiUrl = `${window.location.origin}/api/auth`;
+                    console.log('Sending login request to:', apiUrl);
+
                     const formData = {
                         action: 'login',
                         email: this.querySelector('input[name="email"]').value,
                         password: this.querySelector('input[name="password"]').value
                     };
 
-                    const response = await fetch('https://bitwisebrain.vercel.app/api/auth', {
+                    const response = await fetch(apiUrl, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -41,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const data = await response.json();
 
                     if (response.ok) {
-                        // Store user session
                         localStorage.setItem('user', formData.email);
                         showSuccess(this);
                         
@@ -49,9 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             window.location.href = './assets/html/main.html';
                         }, 1500);
                     } else {
-                        throw new Error(data.error || 'Invalid credentials');
+                        throw new Error(data.error || 'Login failed');
                     }
                 } catch (error) {
+                    console.error('Login error:', error);
                     showError(this, error.message);
                     submitBtn.disabled = false;
                     submitBtn.style.background = '#1ec8ff';
