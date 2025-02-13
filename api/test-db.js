@@ -1,40 +1,30 @@
-import mysql from 'mysql2/promise';
-
 export const config = {
-  runtime: 'nodejs18'  // or 'nodejs16'
+  runtime: 'edge'
 };
 
-export default async function handler(req, res) {
+export default async function handler(req) {
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  };
+
   try {
-    console.log('Testing connection with:', {
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      database: process.env.DB_NAME,
-      port: process.env.DB_PORT
-    });
-
-    const connection = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-      port: process.env.DB_PORT
-    });
-
-    const [rows] = await connection.execute('SELECT 1 as test');
-    await connection.end();
-
-    return res.status(200).json({ 
-      message: 'Database connection successful!',
-      test: rows[0].test,
-      timestamp: new Date().toISOString()
-    });
+    return new Response(
+      JSON.stringify({ 
+        message: 'API endpoint working!',
+        timestamp: new Date().toISOString()
+      }),
+      { status: 200, headers }
+    );
   } catch (error) {
-    console.error('Database connection error:', error);
-    return res.status(500).json({ 
-      error: 'Failed to connect to database',
-      details: error.message,
-      timestamp: new Date().toISOString()
-    });
+    console.error('API error:', error);
+    return new Response(
+      JSON.stringify({ 
+        error: 'Something went wrong',
+        details: error.message,
+        timestamp: new Date().toISOString()
+      }),
+      { status: 500, headers }
+    );
   }
 } 
