@@ -10,7 +10,7 @@ let availableQuesions = [];
 // CONSTANTS
 const CORRECT_TAX = 10;
 const INCORRECT_TAX = 5;
-const MAX_QUESTIONS = 10; // Change this to the number of questions you want to display
+const MAX_QUESTIONS = 5; // Change this to the number of questions you want to display
 const BATCH_SIZE = 5;
 
 let loadedQuestions = [];
