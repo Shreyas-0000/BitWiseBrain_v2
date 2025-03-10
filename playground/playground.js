@@ -3,7 +3,7 @@ function runCode() {
     let css = document.getElementById("css-code").value;
     let js = document.getElementById("js-code").value;
 
-    // Get the iframe and wait for it to load
+    // Get the iframe
     let output = document.getElementById("output");
     
     // Set sandbox attribute to allow scripts to run
@@ -24,11 +24,12 @@ function runCode() {
         <body>
             ${html}
             <script>
-                window.onerror = function(msg, url, lineNo, columnNo, error) {
-                    console.error(msg, url, lineNo, columnNo, error);
-                    return false;
-                };
-                ${js}
+                try {
+                    ${js}
+                } catch (error) {
+                    console.error("JavaScript Error:", error.message);
+                    document.body.innerHTML += '<div style="color: red; background: rgba(255,0,0,0.1); padding: 10px; margin-top: 10px; border-left: 4px solid red; font-family: monospace;">Error: ' + error.message + '</div>';
+                }
             </script>
         </body>
         </html>
@@ -36,24 +37,73 @@ function runCode() {
     output.contentWindow.document.close();
 }
 
-// Initialize sidebar and playground
+// Initialize tab functionality and code execution
 document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarItems = document.querySelectorAll('.nav-link, .sidebar-btn');
+    // Set up tab switching
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const codeEditors = document.querySelectorAll('.code-editor');
+    const autorunCheckbox = document.getElementById('autorun');
+    let autorunEnabled = false;
+    let typingTimer;
+    const doneTypingInterval = 1000; // Time in ms (1 second)
     
-    // Set initial state
-    sidebar.classList.add('closed');
+    // Set up autorun functionality
+    autorunCheckbox.addEventListener('change', function() {
+        autorunEnabled = this.checked;
+        if (autorunEnabled) {
+            // Run immediately when autorun is enabled
+            runCode();
+        }
+    });
     
-    // Add click event listener to all sidebar items
-    sidebarItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all items
-            sidebarItems.forEach(i => i.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
+    // Function to handle code changes with debounce
+    function codeChanged() {
+        if (autorunEnabled) {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(runCode, doneTypingInterval);
+        }
+    }
+    
+    // Add input event listeners to all code editors
+    document.getElementById('html-code').addEventListener('input', codeChanged);
+    document.getElementById('css-code').addEventListener('input', codeChanged);
+    document.getElementById('js-code').addEventListener('input', codeChanged);
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and editors
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            codeEditors.forEach(editor => editor.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding editor
+            button.classList.add('active');
+            const tabName = button.getAttribute('data-tab');
+            document.getElementById(`${tabName}-editor`).classList.add('active');
+            
+            // Focus the textarea in the active editor
+            document.getElementById(`${tabName}-code`).focus();
+            
+            // Run code if autorun is enabled
+            if (autorunEnabled) {
+                runCode();
+            }
         });
     });
-
+    
+    // Set focus to HTML editor on page load
+    const htmlEditor = document.getElementById('html-code');
+    setTimeout(() => {
+        htmlEditor.focus();
+    }, 100);
+    
+    // Add keyboard shortcut for running code (Ctrl+Enter)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === 'Enter') {
+            e.preventDefault();
+            runCode();
+        }
+    });
+    
     // Run code once on page load to initialize the output
     runCode();
 }); 
