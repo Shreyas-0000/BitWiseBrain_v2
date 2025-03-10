@@ -1,353 +1,517 @@
-import questions from './questions.js';
+// Enhanced implementation for Open Trivia DB API with infinite scrolling and dynamic difficulty
+document.addEventListener('DOMContentLoaded', function() {
+    const questionsContainer = document.getElementById('questions-container');
+    const scoreElement = document.getElementById('score');
+    const questionTemplate = document.getElementById('question-template');
+    const hudElement = document.getElementById('hud');
 
-const scoreText = document.getElementById("score");
-const questionsContainer = document.getElementById("questions-container");
-let score = 0;
-let currentCorrectCount = 0;
-let currentIncorrectCount = 0;
-let availableQuesions = [];
-
-// CONSTANTS
-const CORRECT_TAX = 10;
-const INCORRECT_TAX = 5;
-const MAX_QUESTIONS = 10; // Change this to the number of questions you want to display
-const BATCH_SIZE = 5;
-
-let loadedQuestions = [];
-let isLoading = false;
-
-function addControlsInfo() {
-    const controlsBox = document.createElement('div');
-    controlsBox.id = 'controls-info';
-    controlsBox.innerHTML = `
-        <div class="controls-content">
-            <p>Controls:</p>
-            <ul>
-                <li>↹ Tab: Navigate options</li>
-                <li>↵ Enter: Select option</li>
-                <li>␣ Space: Next question</li>
-                <li>⌫ Backspace: Previous question</li>
-            </ul>
-        </div>
+    let score = 0;
+    let correctAnswers = 0;
+    let incorrectAnswers = 0;
+    let triviaQuestions = [];
+    let isLoading = false;
+    let currentDifficulty = 'easy'; // Start with easy questions
+    let questionsAnswered = 0;
+    let sessionStartTime = Date.now();
+    
+    // Reposition the score HUD to prevent overlap
+    if (hudElement) {
+        // Move the HUD below the accuracy box
+        hudElement.style.top = '80px';
+        hudElement.style.right = '20px';
+    }
+    
+    // Add controls info box if it doesn't exist
+    if (!document.getElementById('controls-info')) {
+        const controlsInfo = document.createElement('div');
+        controlsInfo.id = 'controls-info';
+        controlsInfo.innerHTML = `
+            <div class="controls-content">
+                <p>Controls:</p>
+                <ul>
+                    <li>↑/↓ - Navigate questions</li>
+                    <li>Tab/Shift+Tab - Navigate options</li>
+                    <li>Space/Enter - Select answer</li>
+                    <li>Esc - End Quiz & See Results</li>
+                </ul>
+            </div>
+        `;
+        controlsInfo.style.cssText = `
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 0.9rem;
+        `;
+        document.body.appendChild(controlsInfo);
+    }
+    
+    // Add difficulty indicator
+    const difficultyIndicator = document.createElement('div');
+    difficultyIndicator.id = 'difficulty-indicator';
+    difficultyIndicator.innerHTML = `
+        <p>Difficulty: <span id="current-difficulty">Easy</span></p>
     `;
-    document.body.appendChild(controlsBox);
-}
-
-function startGame() {
-    score = 0;
-    currentCorrectCount = 0;
-    currentIncorrectCount = 0;
-    scoreText.innerText = "0";
-    localStorage.setItem('correctAnswers', '0');
-    localStorage.setItem('incorrectAnswers', '0');
-    localStorage.setItem('mostRecentScore', '0');
-    
-    availableQuesions = _.shuffle([...questions]).slice(0, MAX_QUESTIONS);
-    loadInitialQuestions();
-    setupScrollListener();
-    setupKeyListener();
-    addControlsInfo();
-    
-    setTimeout(() => {
-        const firstSlide = document.querySelector('.question-slide');
-        if (firstSlide) {
-            const firstChoice = firstSlide.querySelector('.choice-container');
-            if (firstChoice) {
-                firstChoice.focus();
-                document.querySelector('.container').scrollTo(0, 0);
-            }
-        }
-    }, 100);
-}
-
-function loadInitialQuestions() {
-    questionsContainer.innerHTML = ''; // Clear existing questions
-    for (let i = 0; i < BATCH_SIZE; i++) {
-        if (availableQuesions.length > 0) {
-            loadNextQuestion();
-        }
-    }
-}
-
-function loadNextQuestion() {
-    if (availableQuesions.length === 0) return;
-
-    // Get random question
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    const question = availableQuesions[questionIndex];
-    availableQuesions.splice(questionIndex, 1);
-
-    // Create and append the question slide
-    const questionSlide = createQuestionSlide(question);
-    if (!questionSlide) return;
-
-    questionsContainer.appendChild(questionSlide);
-    loadedQuestions.push(question);
-
-    // Verify choices were added
-    const choices = questionSlide.querySelectorAll('.choice-container');
-    if (choices.length === 0) {
-        console.error('No choices loaded for question:', question);
-        // Retry loading choices with randomization
-        const choicesContainer = questionSlide.querySelector('.choices-container');
-        
-        // Create array of choice numbers and shuffle them
-        const choiceNumbers = _.shuffle([1, 2, 3, 4]);
-        
-        choiceNumbers.forEach((num) => {
-            const choice = createChoiceElement(
-                question[`choice${num}`],
-                num,
-                question.answer === num
-            );
-            choicesContainer.appendChild(choice);
-        });
-    }
-}
-
-function createQuestionSlide(questionData) {
-    const template = document.getElementById('question-template');
-    const slide = template.content.cloneNode(true);
-    const slideElement = slide.querySelector('.question-slide');
-    
-    slideElement.querySelector('.question-text').textContent = questionData.question;
-    
-    const choicesContainer = slideElement.querySelector('.choices-container');
-    choicesContainer.innerHTML = '';
-    
-    const choiceNumbers = _.shuffle([1, 2, 3, 4]);
-    
-    choiceNumbers.forEach((num) => {
-        const choice = createChoiceElement(
-            questionData[`choice${num}`],
-            num,
-            questionData.answer === num
-        );
-        choicesContainer.appendChild(choice);
-    });
-    
-    return slideElement;
-}
-
-function createChoiceElement(text, number, isCorrect) {
-    const choice = document.createElement('div');
-    choice.className = 'choice-container';
-    choice.tabIndex = 0; // Make element focusable
-    choice.innerHTML = `
-        <p class="choice-prefix">${String.fromCharCode(64 + number)}</p>
-        <p class="choice-text">${text}</p>
+    difficultyIndicator.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        padding: 10px 15px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        color: white;
     `;
+    document.body.appendChild(difficultyIndicator);
     
-    choice.dataset.correct = isCorrect;
-    choice.addEventListener('click', handleChoiceClick);
-    
-    // Remove the old focus styles since we're handling them in CSS now
-    choice.addEventListener('focus', () => {
-        // Only add focus styles if the question hasn't been answered yet
-        if (!choice.closest('.question-slide').querySelector('.correct, .incorrect')) {
-            choice.classList.add('focused');
-        }
-    });
-    
-    choice.addEventListener('blur', () => {
-        choice.classList.remove('focused');
-    });
-    
-    return choice;
-}
+    // Add progress indicator
+    const progressIndicator = document.createElement('div');
+    progressIndicator.id = 'progress-indicator';
+    progressIndicator.innerHTML = `
+        <p>Questions: <span id="questions-answered">0</span> | Accuracy: <span id="accuracy">0%</span></p>
+    `;
+    progressIndicator.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        padding: 10px 15px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        color: white;
+    `;
+    document.body.appendChild(progressIndicator);
 
-function handleChoiceClick(e) {
-    const selectedChoice = e.target.closest('.choice-container');
-    const currentSlide = selectedChoice.closest('.question-slide');
-    
-    if (!selectedChoice || 
-        currentSlide.querySelector('.correct') || 
-        currentSlide.querySelector('.incorrect')) return;
+    // Initialize the game
+    async function startGame() {
+        try {
+            // Show loading message
+            questionsContainer.innerHTML = `
+                <div class="question-slide">
+                    <div id="boxed">
+                        <h2 class="question-text">Loading questions...</h2>
+                    </div>
+                </div>
+            `;
 
-    const isCorrect = selectedChoice.dataset.correct === "true";
-    const classToApply = isCorrect ? "correct" : "incorrect";
-    
-    if (isCorrect) {
-        incrementScore(CORRECT_TAX);
-        currentCorrectCount++;
-        localStorage.setItem('correctAnswers', currentCorrectCount.toString());
-    } else {
-        decrementScore(INCORRECT_TAX);
-        currentIncorrectCount++;
-        localStorage.setItem('incorrectAnswers', currentIncorrectCount.toString());
-    }
-
-    selectedChoice.classList.add(classToApply);
-
-    // Log current counts for debugging
-    console.log('Current counts:', {
-        correct: currentCorrectCount,
-        incorrect: currentIncorrectCount,
-        score: score
-    });
-
-    currentSlide.querySelectorAll('.choice-container').forEach(choice => {
-        choice.style.pointerEvents = 'none';
-    });
-
-    // Check if this was the last question
-    const answeredQuestions = document.querySelectorAll('.correct, .incorrect').length;
-    if (answeredQuestions >= MAX_QUESTIONS) {
-        // Final save of all values before redirect
-        localStorage.setItem('mostRecentScore', score.toString());
-        localStorage.setItem('correctAnswers', currentCorrectCount.toString());
-        localStorage.setItem('incorrectAnswers', currentIncorrectCount.toString());
-        
-        // Log final values before redirect
-        console.log('Final values saved:', {
-            correct: currentCorrectCount,
-            incorrect: currentIncorrectCount,
-            score: score
-        });
-
-        setTimeout(() => {
-            window.location.assign('../html/end.html');
-        }, 1000);
-        return;
-    }
-
-    // If not the last question, continue with normal scroll behavior
-    setTimeout(() => {
-        const nextSlide = currentSlide.nextElementSibling;
-        if (nextSlide) {
-            const container = document.querySelector('.container');
-            const slideRect = nextSlide.getBoundingClientRect();
-            const containerRect = container.getBoundingClientRect();
-            const scrollOffset = (slideRect.height - containerRect.height) / 2;
+            // Load initial questions
+            await loadMoreQuestions();
             
-            container.scrollTo({
-                top: nextSlide.offsetTop - scrollOffset,
-                behavior: 'smooth'
+            // Set up scroll listener for infinite scrolling
+            setupInfiniteScroll();
+            
+            // Set up keyboard navigation
+            setupKeyboardNavigation();
+            
+        } catch (error) {
+            console.error('Error:', error);
+            questionsContainer.innerHTML = `
+                <div class="question-slide">
+                    <div id="boxed">
+                        <h2 class="question-text">Error loading questions. Please try again.</h2>
+                        <div class="choices-container">
+                            <div class="choice-container" onclick="location.reload()">
+                                <span class="choice-prefix">↻</span>
+                                <span class="choice-text">Reload</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    // Load more questions
+    async function loadMoreQuestions() {
+        if (isLoading) return;
+        
+        isLoading = true;
+        
+        try {
+            // Determine difficulty based on score
+            updateDifficulty();
+            
+            // Fetch computer science questions with current difficulty
+            const response = await fetch(`https://opentdb.com/api.php?amount=10&category=18&difficulty=${currentDifficulty}&encode=url3986`);
+            const data = await response.json();
+            
+            if (data.response_code === 0) {
+                // Process questions
+                const newQuestions = data.results.map(q => {
+                    // Decode all answers
+                    const correctAnswer = decodeURIComponent(q.correct_answer);
+                    const incorrectAnswers = q.incorrect_answers.map(a => decodeURIComponent(a));
+                    
+                    // Combine and shuffle all choices
+                    const allChoices = [...incorrectAnswers, correctAnswer];
+                    const shuffledChoices = _.shuffle(allChoices);
+                    
+                    return {
+                        question: decodeURIComponent(q.question),
+                        correctAnswer: correctAnswer,
+                        allChoices: shuffledChoices,
+                        category: decodeURIComponent(q.category),
+                        difficulty: decodeURIComponent(q.difficulty)
+                    };
+                });
+                
+                // Add to existing questions
+                triviaQuestions = [...triviaQuestions, ...newQuestions];
+                
+                // Display all questions
+                displayQuestions();
+            } else if (data.response_code === 1) {
+                // No results found, try a different category
+                const response = await fetch(`https://opentdb.com/api.php?amount=10&difficulty=${currentDifficulty}&encode=url3986`);
+                const data = await response.json();
+                
+                if (data.response_code === 0) {
+                    // Process questions from any category
+                    const newQuestions = data.results.map(q => {
+                        const correctAnswer = decodeURIComponent(q.correct_answer);
+                        const incorrectAnswers = q.incorrect_answers.map(a => decodeURIComponent(a));
+                        const allChoices = [...incorrectAnswers, correctAnswer];
+                        const shuffledChoices = _.shuffle(allChoices);
+                        
+                        return {
+                            question: decodeURIComponent(q.question),
+                            correctAnswer: correctAnswer,
+                            allChoices: shuffledChoices,
+                            category: decodeURIComponent(q.category),
+                            difficulty: decodeURIComponent(q.difficulty)
+                        };
+                    });
+                    
+                    triviaQuestions = [...triviaQuestions, ...newQuestions];
+                    displayQuestions();
+                }
+            } else {
+                console.error('API Error:', data.response_code);
+            }
+        } catch (error) {
+            console.error('Error loading questions:', error);
+        } finally {
+            isLoading = false;
+        }
+    }
+
+    // Update difficulty based on score
+    function updateDifficulty() {
+        // Adjust difficulty based on score
+        let newDifficulty;
+        
+        if (score >= 100) {
+            newDifficulty = 'hard';
+        } else if (score >= 50) {
+            newDifficulty = 'medium';
+        } else {
+            newDifficulty = 'easy';
+        }
+        
+        // Update difficulty indicator if changed
+        if (newDifficulty !== currentDifficulty) {
+            currentDifficulty = newDifficulty;
+            const difficultySpan = document.getElementById('current-difficulty');
+            difficultySpan.textContent = currentDifficulty.charAt(0).toUpperCase() + currentDifficulty.slice(1);
+            
+            // Add visual feedback for difficulty change
+            difficultyIndicator.style.animation = 'pulse 0.5s ease-in-out';
+            setTimeout(() => {
+                difficultyIndicator.style.animation = '';
+            }, 500);
+            
+            console.log(`Difficulty changed to: ${currentDifficulty}`);
+        }
+    }
+
+    // Update progress indicators
+    function updateProgressIndicators() {
+        const questionsAnsweredElement = document.getElementById('questions-answered');
+        const accuracyElement = document.getElementById('accuracy');
+        
+        questionsAnsweredElement.textContent = questionsAnswered;
+        
+        const accuracy = questionsAnswered > 0 
+            ? Math.round((correctAnswers / questionsAnswered) * 100) 
+            : 0;
+        
+        accuracyElement.textContent = `${accuracy}%`;
+        
+        // Color code accuracy
+        if (accuracy >= 70) {
+            accuracyElement.style.color = '#4ade80'; // Green
+        } else if (accuracy >= 40) {
+            accuracyElement.style.color = '#facc15'; // Yellow
+        } else {
+            accuracyElement.style.color = '#f87171'; // Red
+        }
+    }
+
+    // Display questions
+    function displayQuestions() {
+        // Clear loading message if present
+        if (questionsContainer.querySelector('.question-text')?.textContent === 'Loading questions...') {
+            questionsContainer.innerHTML = '';
+        }
+        
+        // Get current question count
+        const currentCount = document.querySelectorAll('.question-slide').length;
+        
+        // Add new questions
+        triviaQuestions.slice(currentCount).forEach((q, index) => {
+            const absoluteIndex = currentCount + index;
+            const slide = questionTemplate.content.cloneNode(true);
+            
+            // Set question text
+            slide.querySelector('.question-text').textContent = q.question;
+            
+            // Add category and difficulty info
+            const boxed = slide.querySelector('#boxed');
+            const metaInfo = document.createElement('div');
+            metaInfo.className = 'question-meta';
+            metaInfo.innerHTML = `
+                <span class="category">${q.category}</span>
+                <span class="difficulty ${q.difficulty}">${q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1)}</span>
+            `;
+            metaInfo.style.cssText = `
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.8rem;
+                margin-bottom: 10px;
+                opacity: 0.7;
+            `;
+            boxed.insertBefore(metaInfo, boxed.firstChild);
+            
+            // Style difficulty tag
+            const difficultyTag = metaInfo.querySelector('.difficulty');
+            if (q.difficulty === 'easy') {
+                difficultyTag.style.color = '#4ade80';
+            } else if (q.difficulty === 'medium') {
+                difficultyTag.style.color = '#facc15';
+            } else {
+                difficultyTag.style.color = '#f87171';
+            }
+            
+            // Add choices
+            const choicesContainer = slide.querySelector('.choices-container');
+            q.allChoices.forEach((choice, choiceIndex) => {
+                const choiceElement = document.createElement('div');
+                choiceElement.className = 'choice-container';
+                choiceElement.tabIndex = 0; // Make focusable
+                choiceElement.innerHTML = `
+                    <span class="choice-prefix">${String.fromCharCode(65 + choiceIndex)}</span>
+                    <span class="choice-text">${choice}</span>
+                `;
+                
+                // Add click event
+                choiceElement.addEventListener('click', () => {
+                    handleAnswer(choiceElement, choice, q.correctAnswer, absoluteIndex);
+                });
+                
+                // Add keyboard event for space/enter
+                choiceElement.addEventListener('keydown', (e) => {
+                    if (e.key === ' ' || e.key === 'Enter') {
+                        e.preventDefault();
+                        handleAnswer(choiceElement, choice, q.correctAnswer, absoluteIndex);
+                    }
+                });
+                
+                choicesContainer.appendChild(choiceElement);
             });
             
-            const firstChoice = nextSlide.querySelector('.choice-container');
-            if (firstChoice) {
-                setTimeout(() => firstChoice.focus(), 500);
-            }
-        }
-    }, 500);
-}
+            questionsContainer.appendChild(slide);
+        });
+    }
 
-function setupScrollListener() {
-    const container = document.querySelector('.container');
-    
-    container.addEventListener('scroll', _.throttle(() => {
-        // Load more questions when near the bottom
-        if (container.scrollHeight - container.scrollTop - container.clientHeight < 500) {
-            if (!isLoading && availableQuesions.length > 0) {
-                isLoading = true;
+    // Set up infinite scroll
+    function setupInfiniteScroll() {
+        const container = document.querySelector('.container');
+        
+        container.addEventListener('scroll', () => {
+            const scrollPosition = container.scrollTop + container.clientHeight;
+            const scrollHeight = container.scrollHeight;
+            
+            // Load more when near the bottom
+            if (scrollHeight - scrollPosition < 300 && !isLoading) {
                 loadMoreQuestions();
             }
-        }
-    }, 200)); // Increased throttle time
-}
+        });
+    }
 
-function loadMoreQuestions() {
-    // Add a small delay to prevent race conditions
-    setTimeout(() => {
-        for (let i = 0; i < BATCH_SIZE; i++) {
-            if (availableQuesions.length > 0) {
-                loadNextQuestion();
+    // Set up keyboard navigation
+    function setupKeyboardNavigation() {
+        document.addEventListener('keydown', (e) => {
+            const currentSlide = getVisibleQuestionSlide();
+            
+            if (!currentSlide) return;
+            
+            switch (e.key) {
+                case 'ArrowUp':
+                    e.preventDefault();
+                    scrollToPreviousQuestion(currentSlide);
+                    break;
+                    
+                case 'ArrowDown':
+                    e.preventDefault();
+                    scrollToNextQuestion(currentSlide);
+                    break;
+                    
+                case 'Escape':
+                    e.preventDefault();
+                    finishQuiz();
+                    break;
+            }
+        });
+    }
+
+    // Get the currently visible question slide
+    function getVisibleQuestionSlide() {
+        const slides = document.querySelectorAll('.question-slide');
+        
+        for (const slide of slides) {
+            const rect = slide.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+            
+            if (isVisible) {
+                return slide;
             }
         }
-        isLoading = false;
-    }, 100);
-}
-
-function incrementScore(num) {
-    score += num;
-    scoreText.innerText = score.toString();
-}
-
-function decrementScore(num) {
-    score -= num;
-    scoreText.innerText = score.toString();
-}
-
-function setupKeyListener() {
-    document.addEventListener('keydown', (e) => {
-        const currentSlide = document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2)
-            .closest('.question-slide');
         
-        if (!currentSlide) return;
-
-        switch (e.key) {
-            case 'Tab':
-                e.preventDefault();
-                handleTabNavigation(currentSlide, e.shiftKey);
-                break;
-
-            case 'Enter':
-                handleEnterKey(currentSlide);
-                break;
-
-            case 'Backspace':
-                e.preventDefault();
-                const previousSlide = currentSlide.previousElementSibling;
-                if (previousSlide) {
-                    previousSlide.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => {
-                        const firstChoice = previousSlide.querySelector('.choice-container');
-                        if (firstChoice) firstChoice.focus();
-                    }, 500);
-                }
-                break;
-
-            case ' ': // Space key
-                e.preventDefault();
-                const nextSlide = currentSlide.nextElementSibling;
-                if (nextSlide) {
-                    nextSlide.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => {
-                        const firstChoice = nextSlide.querySelector('.choice-container');
-                        if (firstChoice) firstChoice.focus();
-                    }, 500);
-                }
-                break;
-        }
-    });
-}
-
-// Helper functions to keep the code clean
-function handleTabNavigation(currentSlide, isShiftKey) {
-    const choices = currentSlide.querySelectorAll('.choice-container');
-    let focusedChoice = currentSlide.querySelector('.choice-container:focus');
-    
-    if (!focusedChoice) {
-        choices[0].focus();
-    } else {
-        const currentIndex = Array.from(choices).indexOf(focusedChoice);
-        let nextIndex;
-        
-        if (isShiftKey) {
-            nextIndex = currentIndex <= 0 ? choices.length - 1 : currentIndex - 1;
-        } else {
-            nextIndex = (currentIndex + 1) % choices.length;
-        }
-        choices[nextIndex].focus();
+        return null;
     }
-}
 
-function handleEnterKey(currentSlide) {
-    const focusedChoice = currentSlide.querySelector('.choice-container:focus');
-    if (focusedChoice) {
-        focusedChoice.click();
-    } else {
+    // Scroll to previous question
+    function scrollToPreviousQuestion(currentSlide) {
+        const prevSlide = currentSlide.previousElementSibling;
+        if (prevSlide && prevSlide.classList.contains('question-slide')) {
+            prevSlide.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Scroll to next question
+    function scrollToNextQuestion(currentSlide) {
         const nextSlide = currentSlide.nextElementSibling;
-        if (nextSlide) {
+        if (nextSlide && nextSlide.classList.contains('question-slide')) {
             nextSlide.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                const firstChoice = nextSlide.querySelector('.choice-container');
-                if (firstChoice) firstChoice.focus();
-            }, 500);
+        } else if (!isLoading) {
+            // Load more questions if we're at the end
+            loadMoreQuestions();
         }
     }
-}
 
-// Start the game when the page loads
-document.addEventListener('DOMContentLoaded', startGame);
+    // Handle answer selection
+    function handleAnswer(choiceElement, selectedAnswer, correctAnswer, questionIndex) {
+        // Check if already answered
+        const questionSlide = choiceElement.closest('.question-slide');
+        if (questionSlide.querySelector('.correct') || questionSlide.querySelector('.incorrect')) {
+            return;
+        }
+        
+        // Check if answer is correct
+        const isCorrect = selectedAnswer === correctAnswer;
+        
+        // Mark selected answer
+        choiceElement.classList.add(isCorrect ? 'correct' : 'incorrect');
+        
+        // Update score: +10 for correct, -5 for incorrect
+        if (isCorrect) {
+            score += 10;
+            correctAnswers++;
+        } else {
+            score = Math.max(0, score - 5); // Prevent negative score
+            incorrectAnswers++;
+            
+            // Highlight correct answer
+            const choices = questionSlide.querySelectorAll('.choice-container');
+            choices.forEach(choice => {
+                if (choice.querySelector('.choice-text').textContent === correctAnswer) {
+                    choice.classList.add('correct');
+                }
+            });
+        }
+        
+        // Update counters
+        questionsAnswered++;
+        
+        // Update displays
+        scoreElement.textContent = score;
+        updateProgressIndicators();
+        
+        // Update difficulty after score change
+        updateDifficulty();
+        
+        // Save stats to localStorage for end page
+        localStorage.setItem('mostRecentScore', score);
+        localStorage.setItem('correctAnswers', correctAnswers);
+        localStorage.setItem('incorrectAnswers', incorrectAnswers);
+        
+        // Scroll to next question after delay
+        setTimeout(() => {
+            scrollToNextQuestion(questionSlide);
+        }, 1000);
+    }
+    
+    // Finish quiz and go to end page
+    function finishQuiz() {
+        // Calculate session duration
+        const sessionDuration = Math.floor((Date.now() - sessionStartTime) / 1000); // in seconds
+        
+        // Save final stats to localStorage
+        localStorage.setItem('mostRecentScore', score);
+        localStorage.setItem('correctAnswers', correctAnswers);
+        localStorage.setItem('incorrectAnswers', incorrectAnswers);
+        localStorage.setItem('questionsAnswered', questionsAnswered);
+        localStorage.setItem('sessionDuration', sessionDuration);
+        localStorage.setItem('averageTimePerQuestion', questionsAnswered > 0 ? Math.round(sessionDuration / questionsAnswered) : 0);
+        
+        // Navigate to end page
+        window.location.href = '../html/end.html';
+    }
+
+    // Add CSS for animations and new elements
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .question-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+        
+        .difficulty.easy {
+            color: #4ade80;
+        }
+        
+        .difficulty.medium {
+            color: #facc15;
+        }
+        
+        .difficulty.hard {
+            color: #f87171;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Start the game
+    startGame();
+});
