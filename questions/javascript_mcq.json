@@ -1,0 +1,2929 @@
+{
+  "javascript_mcq_questions": [
+    {
+      "id": 1,
+      "category": "Introduction to JavaScript",
+      "question": "Which keyword is used to declare a variable in JavaScript (ES6)?",
+      "options": {
+        "a": "var",
+        "b": "let",
+        "c": "const",
+        "d": "Both b and c"
+      },
+      "correct_answer": "d",
+      "explanation": "In ES6, both 'let' and 'const' are used to declare variables, with 'let' for variables that can be reassigned and 'const' for constants."
+    },
+    {
+      "id": 2,
+      "category": "Introduction to JavaScript",
+      "question": "What is the correct syntax to write a comment in JavaScript?",
+      "options": {
+        "a": "<!-- Comment -->",
+        "b": "/* Comment */",
+        "c": "// Comment",
+        "d": "Both b and c"
+      },
+      "correct_answer": "d",
+      "explanation": "JavaScript supports both single-line comments using // and multi-line comments using /* */."
+    },
+    {
+      "id": 3,
+      "category": "Introduction to JavaScript",
+      "question": "Which of the following is NOT a valid JavaScript data type?",
+      "options": {
+        "a": "String",
+        "b": "Number",
+        "c": "Boolean",
+        "d": "Character"
+      },
+      "correct_answer": "d",
+      "explanation": "JavaScript does not have a Character data type. Characters are represented as single-character strings."
+    },
+    {
+      "id": 4,
+      "category": "Introduction to JavaScript",
+      "question": "What will typeof null return?",
+      "options": {
+        "a": "null",
+        "b": "object",
+        "c": "undefined",
+        "d": "boolean"
+      },
+      "correct_answer": "b",
+      "explanation": "In JavaScript, typeof null returns 'object', which is considered a historical bug in the language."
+    },
+    {
+      "id": 5,
+      "category": "Introduction to JavaScript",
+      "question": "What will be the output of typeof undefined?",
+      "options": {
+        "a": "undefined",
+        "b": "null",
+        "c": "object",
+        "d": "string"
+      },
+      "correct_answer": "a",
+      "explanation": "typeof undefined returns 'undefined', which is a primitive type in JavaScript."
+    },
+    {
+      "id": 6,
+      "category": "Operators and Expressions",
+      "question": "Which of the following is the assignment operator in JavaScript?",
+      "options": {
+        "a": "==",
+        "b": "===",
+        "c": "=",
+        "d": ":="
+      },
+      "correct_answer": "c",
+      "explanation": "The = operator is used for assignment in JavaScript, while == and === are used for comparison."
+    },
+    {
+      "id": 7,
+      "category": "Operators and Expressions",
+      "question": "What will be the output of 3 + '5' in JavaScript?",
+      "options": {
+        "a": "8",
+        "b": "35",
+        "c": "NaN",
+        "d": "Error"
+      },
+      "correct_answer": "b",
+      "explanation": "When adding a number and a string, JavaScript performs string concatenation, resulting in '35'."
+    },
+    {
+      "id": 8,
+      "category": "Operators and Expressions",
+      "question": "Which operator is used to compare both value and data type?",
+      "options": {
+        "a": "==",
+        "b": "!=",
+        "c": "===",
+        "d": "="
+      },
+      "correct_answer": "c",
+      "explanation": "The === operator (strict equality) compares both value and type, while == only compares values after type coercion."
+    },
+    {
+      "id": 9,
+      "category": "Conditional Statements",
+      "question": "Which keyword is used to write a conditional statement in JavaScript?",
+      "options": {
+        "a": "for",
+        "b": "if",
+        "c": "while",
+        "d": "function"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'if' keyword is used to create conditional statements in JavaScript."
+    },
+    {
+      "id": 10,
+      "category": "Conditional Statements",
+      "question": "Which statement is used to execute different code based on different conditions?",
+      "options": {
+        "a": "if",
+        "b": "for",
+        "c": "switch",
+        "d": "case"
+      },
+      "correct_answer": "c",
+      "explanation": "The switch statement is used to execute different code blocks based on different conditions."
+    },
+    {
+      "id": 11,
+      "category": "Conditional Statements",
+      "question": "What will if(0) evaluate to?",
+      "options": {
+        "a": "true",
+        "b": "false",
+        "c": "undefined",
+        "d": "NaN"
+      },
+      "correct_answer": "b",
+      "explanation": "0 is a falsy value in JavaScript, so if(0) evaluates to false."
+    },
+    {
+      "id": 12,
+      "category": "Loops and Iteration",
+      "question": "Which type of loop is guaranteed to execute at least once?",
+      "options": {
+        "a": "for loop",
+        "b": "while loop",
+        "c": "do-while loop",
+        "d": "foreach loop"
+      },
+      "correct_answer": "c",
+      "explanation": "The do-while loop always executes its code block at least once before checking the condition."
+    },
+    {
+      "id": 13,
+      "category": "Loops and Iteration",
+      "question": "Which loop is best when the number of iterations is known?",
+      "options": {
+        "a": "while loop",
+        "b": "for loop",
+        "c": "do-while loop",
+        "d": "if-else"
+      },
+      "correct_answer": "b",
+      "explanation": "The for loop is ideal when you know the number of iterations in advance."
+    },
+    {
+      "id": 14,
+      "category": "Loops and Iteration",
+      "question": "What is the correct syntax of a for loop?",
+      "options": {
+        "a": "for i=0 to 5 {}",
+        "b": "for (i = 0; i < 5; i++) {}",
+        "c": "for (i = 0; i++)",
+        "d": "for (i < 5; i = 0)"
+      },
+      "correct_answer": "b",
+      "explanation": "The correct syntax of a for loop includes initialization, condition, and increment/decrement statements."
+    },
+    {
+      "id": 15,
+      "category": "Functions",
+      "question": "How do you declare a function in JavaScript?",
+      "options": {
+        "a": "function myFunction() {}",
+        "b": "declare function myFunction()",
+        "c": "func myFunction() {}",
+        "d": "def myFunction()"
+      },
+      "correct_answer": "a",
+      "explanation": "Functions in JavaScript are declared using the 'function' keyword followed by the function name and parentheses."
+    },
+    {
+      "id": 16,
+      "category": "Functions",
+      "question": "What is a function expression in JavaScript?",
+      "options": {
+        "a": "When a function is assigned to a variable",
+        "b": "When a function is declared directly",
+        "c": "When a function returns a string",
+        "d": "None of the above"
+      },
+      "correct_answer": "a",
+      "explanation": "A function expression is when a function is assigned to a variable, like const myFunc = function() {}."
+    },
+    {
+      "id": 17,
+      "category": "Functions",
+      "question": "Which is the correct syntax of an arrow function?",
+      "options": {
+        "a": "() => {}",
+        "b": "function => {}",
+        "c": "(function) => {}",
+        "d": "=> {}"
+      },
+      "correct_answer": "a",
+      "explanation": "Arrow functions use the => syntax and can be written with empty parentheses for no parameters."
+    },
+    {
+      "id": 18,
+      "category": "Arrays and Array Methods",
+      "question": "How do you create an array in JavaScript?",
+      "options": {
+        "a": "let arr = {};",
+        "b": "let arr = [];",
+        "c": "let arr = ();",
+        "d": "let arr = <>;"
+      },
+      "correct_answer": "b",
+      "explanation": "Arrays in JavaScript are created using square brackets []."
+    },
+    {
+      "id": 19,
+      "category": "Arrays and Array Methods",
+      "question": "What is the index of the first element in an array?",
+      "options": {
+        "a": "1",
+        "b": "0",
+        "c": "-1",
+        "d": "Undefined"
+      },
+      "correct_answer": "b",
+      "explanation": "Arrays in JavaScript are zero-indexed, meaning the first element is at index 0."
+    },
+    {
+      "id": 20,
+      "category": "Arrays and Array Methods",
+      "question": "Which method adds one or more elements to the end of an array?",
+      "options": {
+        "a": "push()",
+        "b": "pop()",
+        "c": "shift()",
+        "d": "unshift()"
+      },
+      "correct_answer": "a",
+      "explanation": "The push() method adds elements to the end of an array and returns the new length."
+    },
+    {
+      "id": 21,
+      "category": "Objects and Object Methods",
+      "question": "How do you define an object in JavaScript?",
+      "options": {
+        "a": "let obj = [];",
+        "b": "let obj = {};",
+        "c": "let obj = ();",
+        "d": "let obj = <>;"
+      },
+      "correct_answer": "b",
+      "explanation": "Objects in JavaScript are defined using curly braces {}."
+    },
+    {
+      "id": 22,
+      "category": "Objects and Object Methods",
+      "question": "How do you access a property of an object named person with key name?",
+      "options": {
+        "a": "person[name]",
+        "b": "person.name",
+        "c": "person->name",
+        "d": "person::name"
+      },
+      "correct_answer": "b",
+      "explanation": "Object properties can be accessed using dot notation (object.property)."
+    },
+    {
+      "id": 23,
+      "category": "Objects and Object Methods",
+      "question": "Which method returns an array of keys from an object?",
+      "options": {
+        "a": "Object.values()",
+        "b": "Object.keys()",
+        "c": "Object.entries()",
+        "d": "Object.getKeys()"
+      },
+      "correct_answer": "b",
+      "explanation": "Object.keys() returns an array containing the names of all enumerable properties of an object."
+    },
+    {
+      "id": 24,
+      "category": "String Methods and Manipulation",
+      "question": "Which method is used to find the length of a string?",
+      "options": {
+        "a": "size()",
+        "b": "length()",
+        "c": "length",
+        "d": "count()"
+      },
+      "correct_answer": "c",
+      "explanation": "In JavaScript, string length is a property, not a method, so it's accessed using .length."
+    },
+    {
+      "id": 25,
+      "category": "String Methods and Manipulation",
+      "question": "Which method converts a string to uppercase?",
+      "options": {
+        "a": "toUpperCase()",
+        "b": "upperCase()",
+        "c": "makeUpper()",
+        "d": "upper()"
+      },
+      "correct_answer": "a",
+      "explanation": "The toUpperCase() method returns the calling string value converted to uppercase."
+    },
+    {
+      "id": 26,
+      "category": "String Methods and Manipulation",
+      "question": "How can you convert a string to lowercase in JavaScript?",
+      "options": {
+        "a": "toLower()",
+        "b": "lowerCase()",
+        "c": "toLowerCase()",
+        "d": "convertLower()"
+      },
+      "correct_answer": "c",
+      "explanation": "The toLowerCase() method returns the calling string value converted to lowercase."
+    },
+    {
+      "id": 27,
+      "category": "DOM Manipulation and Events",
+      "question": "Which method is used to select an element by its ID?",
+      "options": {
+        "a": "querySelector()",
+        "b": "getElementsById()",
+        "c": "getElementById()",
+        "d": "selectById()"
+      },
+      "correct_answer": "c",
+      "explanation": "getElementById() is the standard method to select a single element by its ID attribute."
+    },
+    {
+      "id": 28,
+      "category": "DOM Manipulation and Events",
+      "question": "What is the correct way to add a click event listener to an element?",
+      "options": {
+        "a": "element.addEventListener('click', function())",
+        "b": "element.onClick(function())",
+        "c": "element.attachEvent('click', function())",
+        "d": "element.click(function())"
+      },
+      "correct_answer": "a",
+      "explanation": "addEventListener() is the modern standard way to attach event handlers to elements."
+    },
+    {
+      "id": 29,
+      "category": "DOM Manipulation and Events",
+      "question": "Which property is used to change the text content of an element?",
+      "options": {
+        "a": "innerText",
+        "b": "innerHTML",
+        "c": "textContent",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "innerText, innerHTML, and textContent can all be used to change text content, though they have slight differences in behavior."
+    },
+    {
+      "id": 30,
+      "category": "ES6 Features",
+      "question": "What is the difference between let and var?",
+      "options": {
+        "a": "let has block scope, var has function scope",
+        "b": "let cannot be redeclared, var can be redeclared",
+        "c": "let is not hoisted, var is hoisted",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "let differs from var in terms of scope (block vs function), redeclarability, and hoisting behavior."
+    },
+    {
+      "id": 31,
+      "category": "ES6 Features",
+      "question": "What is the purpose of the spread operator (...)?",
+      "options": {
+        "a": "To concatenate arrays",
+        "b": "To spread array elements as arguments",
+        "c": "To create shallow copies of arrays/objects",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The spread operator can be used for array/object concatenation, spreading elements as arguments, and creating shallow copies."
+    },
+    {
+      "id": 32,
+      "category": "ES6 Features",
+      "question": "What is destructuring in JavaScript?",
+      "options": {
+        "a": "Breaking down complex structures",
+        "b": "A way to extract values from objects/arrays",
+        "c": "Assigning values to new variables",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "Destructuring is a convenient way to extract multiple values from objects and arrays and assign them to variables."
+    },
+    {
+      "id": 33,
+      "category": "Advanced Functions",
+      "question": "What is a closure in JavaScript?",
+      "options": {
+        "a": "A function that returns another function",
+        "b": "A function that has access to variables in its outer scope",
+        "c": "A function that takes another function as an argument",
+        "d": "A function that modifies its own parameters"
+      },
+      "correct_answer": "b",
+      "explanation": "A closure is a function that has access to variables in its outer (enclosing) lexical scope, even after the outer function has returned."
+    },
+    {
+      "id": 34,
+      "category": "Advanced Functions",
+      "question": "What is the purpose of the bind() method?",
+      "options": {
+        "a": "To create a new function with a fixed this value",
+        "b": "To call a function immediately",
+        "c": "To combine two functions",
+        "d": "To bind parameters to a function"
+      },
+      "correct_answer": "a",
+      "explanation": "The bind() method creates a new function that, when called, has its this keyword set to the provided value."
+    },
+    {
+      "id": 35,
+      "category": "Advanced Functions",
+      "question": "What is a higher-order function?",
+      "options": {
+        "a": "A function that takes longer to execute",
+        "b": "A function that takes another function as an argument or returns a function",
+        "c": "A function with more parameters",
+        "d": "A function with complex logic"
+      },
+      "correct_answer": "b",
+      "explanation": "A higher-order function is a function that can take another function as an argument or return a function as its result."
+    },
+    {
+      "id": 36,
+      "category": "Asynchronous JavaScript",
+      "question": "What is a Promise in JavaScript?",
+      "options": {
+        "a": "A guarantee that a function will execute",
+        "b": "An object representing eventual completion of an async operation",
+        "c": "A way to handle errors in async code",
+        "d": "A function that runs in the background"
+      },
+      "correct_answer": "b",
+      "explanation": "A Promise is an object representing the eventual completion (or failure) of an asynchronous operation."
+    },
+    {
+      "id": 37,
+      "category": "Asynchronous JavaScript",
+      "question": "What is the purpose of async/await?",
+      "options": {
+        "a": "To make asynchronous code look synchronous",
+        "b": "To handle errors in promises",
+        "c": "To improve performance of async operations",
+        "d": "To create new promises"
+      },
+      "correct_answer": "a",
+      "explanation": "async/await is syntactic sugar that makes asynchronous code look and behave more like synchronous code."
+    },
+    {
+      "id": 38,
+      "category": "Asynchronous JavaScript",
+      "question": "What is the event loop in JavaScript?",
+      "options": {
+        "a": "A queue of events to be processed",
+        "b": "A mechanism to handle async operations",
+        "c": "A way to execute code in order",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The event loop is a mechanism that handles async operations, maintains a queue of events, and ensures code execution order in JavaScript."
+    },
+    {
+      "id": 39,
+      "category": "Error Handling and Debugging",
+      "question": "What is the purpose of try...catch in JavaScript?",
+      "options": {
+        "a": "To handle runtime errors",
+        "b": "To test code for bugs",
+        "c": "To catch syntax errors",
+        "d": "To improve performance"
+      },
+      "correct_answer": "a",
+      "explanation": "try...catch is used to handle runtime errors gracefully and prevent program crashes."
+    },
+    {
+      "id": 40,
+      "category": "Error Handling and Debugging",
+      "question": "What is the purpose of the finally block?",
+      "options": {
+        "a": "To execute code regardless of try/catch result",
+        "b": "To handle additional errors",
+        "c": "To end the error handling",
+        "d": "To return a value from try/catch"
+      },
+      "correct_answer": "a",
+      "explanation": "The finally block executes after try and catch blocks, regardless of whether an error occurred."
+    },
+    {
+      "id": 41,
+      "category": "Error Handling and Debugging",
+      "question": "Which method is used to create a custom error?",
+      "options": {
+        "a": "throw new Error()",
+        "b": "new CustomError()",
+        "c": "createError()",
+        "d": "makeError()"
+      },
+      "correct_answer": "a",
+      "explanation": "throw new Error() is the standard way to create and throw a custom error in JavaScript."
+    },
+    {
+      "id": 42,
+      "category": "Object-Oriented JavaScript",
+      "question": "What is a class in JavaScript?",
+      "options": {
+        "a": "A template for creating objects",
+        "b": "A type of object",
+        "c": "A function that returns an object",
+        "d": "A way to group variables"
+      },
+      "correct_answer": "a",
+      "explanation": "A class is a template for creating objects that encapsulate data and code."
+    },
+    {
+      "id": 43,
+      "category": "Object-Oriented JavaScript",
+      "question": "What is inheritance in JavaScript?",
+      "options": {
+        "a": "Creating multiple instances of a class",
+        "b": "Copying properties from one object to another",
+        "c": "A mechanism where a class can inherit properties and methods from another class",
+        "d": "Sharing variables between objects"
+      },
+      "correct_answer": "c",
+      "explanation": "Inheritance is a mechanism that allows a class to inherit properties and methods from another class using the extends keyword."
+    },
+    {
+      "id": 44,
+      "category": "Object-Oriented JavaScript",
+      "question": "What is encapsulation in JavaScript?",
+      "options": {
+        "a": "Bundling data and methods that work on that data within a single unit",
+        "b": "Converting data types",
+        "c": "Hiding implementation details",
+        "d": "Creating object instances"
+      },
+      "correct_answer": "a",
+      "explanation": "Encapsulation is the bundling of data and the methods that operate on that data within a single unit or object."
+    },
+    {
+      "id": 45,
+      "category": "JavaScript APIs and Advanced Topics",
+      "question": "What is the Fetch API used for?",
+      "options": {
+        "a": "Making HTTP requests",
+        "b": "Fetching local files",
+        "c": "Loading JavaScript modules",
+        "d": "Managing browser cache"
+      },
+      "correct_answer": "a",
+      "explanation": "The Fetch API provides a JavaScript interface for accessing and manipulating HTTP requests and responses."
+    },
+    {
+      "id": 46,
+      "category": "JavaScript APIs and Advanced Topics",
+      "question": "What is Web Storage API?",
+      "options": {
+        "a": "API for storing data in browser",
+        "b": "API for cloud storage",
+        "c": "API for file system access",
+        "d": "API for database management"
+      },
+      "correct_answer": "a",
+      "explanation": "The Web Storage API provides mechanisms for browsers to store key/value pairs locally."
+    },
+    {
+      "id": 47,
+      "category": "JavaScript APIs and Advanced Topics",
+      "question": "What is the purpose of the Geolocation API?",
+      "options": {
+        "a": "To get user's geographical location",
+        "b": "To calculate distances",
+        "c": "To provide mapping services",
+        "d": "To store location data"
+      },
+      "correct_answer": "a",
+      "explanation": "The Geolocation API allows web applications to access the user's geographical location information."
+    },
+    {
+      "id": 48,
+      "category": "Regular Expressions",
+      "question": "What is the purpose of RegExp in JavaScript?",
+      "options": {
+        "a": "To perform pattern matching and search-and-replace operations",
+        "b": "To validate regular expressions",
+        "c": "To create regular functions",
+        "d": "To handle regular operations"
+      },
+      "correct_answer": "a",
+      "explanation": "RegExp (Regular Expression) objects are used for pattern matching and search-and-replace functionality in strings."
+    },
+    {
+      "id": 49,
+      "category": "Regular Expressions",
+      "question": "Which method is used to test if a pattern exists in a string?",
+      "options": {
+        "a": "match()",
+        "b": "search()",
+        "c": "test()",
+        "d": "exec()"
+      },
+      "correct_answer": "c",
+      "explanation": "The test() method executes a search for a match between a regular expression and a string, and returns true or false."
+    },
+    {
+      "id": 50,
+      "category": "Regular Expressions",
+      "question": "What does the 'i' flag in a regular expression mean?",
+      "options": {
+        "a": "Case-insensitive search",
+        "b": "Integer search",
+        "c": "Inverse search",
+        "d": "Internal search"
+      },
+      "correct_answer": "a",
+      "explanation": "The 'i' flag in regular expressions makes the search case-insensitive."
+    },
+    {
+      "id": 51,
+      "category": "Regular Expressions",
+      "question": "What does the 'g' flag in a regular expression mean?",
+      "options": {
+        "a": "Global search",
+        "b": "Group search",
+        "c": "General search",
+        "d": "Greedy search"
+      },
+      "correct_answer": "a",
+      "explanation": "The 'g' flag performs a global search, finding all matches rather than stopping after the first match."
+    },
+    {
+      "id": 52,
+      "category": "Regular Expressions",
+      "question": "Which character class represents any digit in regex?",
+      "options": {
+        "a": "\\w",
+        "b": "\\d",
+        "c": "\\s",
+        "d": "\\n"
+      },
+      "correct_answer": "b",
+      "explanation": "\\d represents any digit (0-9) in regular expressions."
+    },
+    {
+      "id": 53,
+      "category": "Memory Management and Performance",
+      "question": "What is garbage collection in JavaScript?",
+      "options": {
+        "a": "Automatic memory management process",
+        "b": "Manual memory cleanup",
+        "c": "System to delete unused files",
+        "d": "Process to compress code"
+      },
+      "correct_answer": "a",
+      "explanation": "Garbage collection is an automatic process in JavaScript that frees memory by removing objects that are no longer reachable."
+    },
+    {
+      "id": 54,
+      "category": "Memory Management and Performance",
+      "question": "What is a memory leak in JavaScript?",
+      "options": {
+        "a": "When memory is not properly released",
+        "b": "When a program crashes",
+        "c": "When code runs slowly",
+        "d": "When variables are undefined"
+      },
+      "correct_answer": "a",
+      "explanation": "A memory leak occurs when memory that is no longer needed is not released, leading to increased memory usage over time."
+    },
+    {
+      "id": 55,
+      "category": "Memory Management and Performance",
+      "question": "Which of the following can cause memory leaks?",
+      "options": {
+        "a": "Unremoved event listeners",
+        "b": "Using too many variables",
+        "c": "Large file sizes",
+        "d": "Complex algorithms"
+      },
+      "correct_answer": "a",
+      "explanation": "Forgotten event listeners are a common cause of memory leaks as they prevent objects from being garbage collected."
+    },
+    {
+      "id": 56,
+      "category": "JavaScript Security",
+      "question": "What is Cross-Site Scripting (XSS)?",
+      "options": {
+        "a": "A type of security vulnerability where malicious scripts are injected into trusted websites",
+        "b": "A method to share scripts between websites",
+        "c": "A way to optimize JavaScript code",
+        "d": "A technique to load external scripts"
+      },
+      "correct_answer": "a",
+      "explanation": "XSS is a security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users."
+    },
+    {
+      "id": 57,
+      "category": "JavaScript Security",
+      "question": "What is Content Security Policy (CSP)?",
+      "options": {
+        "a": "A security layer that helps detect and prevent XSS attacks",
+        "b": "A way to compress JavaScript code",
+        "c": "A method to organize JavaScript files",
+        "d": "A tool to validate JavaScript syntax"
+      },
+      "correct_answer": "a",
+      "explanation": "CSP is an added layer of security that helps detect and prevent XSS and other injection attacks."
+    },
+    {
+      "id": 58,
+      "category": "JavaScript Security",
+      "question": "What is CSRF (Cross-Site Request Forgery)?",
+      "options": {
+        "a": "An attack that forces users to execute unwanted actions on a website they're authenticated to",
+        "b": "A method to validate form data",
+        "c": "A technique to prevent form submission",
+        "d": "A way to handle cross-origin requests"
+      },
+      "correct_answer": "a",
+      "explanation": "CSRF is an attack that tricks users into executing unwanted actions on websites where they're currently authenticated."
+    },
+    {
+      "id": 59,
+      "category": "JavaScript Security",
+      "question": "What is the Same-Origin Policy?",
+      "options": {
+        "a": "A security mechanism that restricts how documents/scripts from one origin can interact with resources from another origin",
+        "b": "A policy for naming JavaScript files",
+        "c": "A rule for organizing JavaScript code",
+        "d": "A method to share code between files"
+      },
+      "correct_answer": "a",
+      "explanation": "Same-Origin Policy is a critical security mechanism that restricts how documents or scripts from one origin can interact with resources from other origins."
+    },
+    {
+      "id": 60,
+      "category": "JavaScript Security",
+      "question": "What is the purpose of the HttpOnly flag in cookies?",
+      "options": {
+        "a": "To prevent JavaScript from accessing the cookie",
+        "b": "To make cookies accessible only through HTTP",
+        "c": "To encrypt cookie data",
+        "d": "To compress cookie data"
+      },
+      "correct_answer": "a",
+      "explanation": "The HttpOnly flag helps prevent XSS attacks by making cookies inaccessible to JavaScript's document.cookie API."
+    },
+    {
+      "id": 61,
+      "category": "Design Patterns",
+      "question": "What is the Singleton pattern in JavaScript?",
+      "options": {
+        "a": "A pattern that ensures a class has only one instance",
+        "b": "A pattern for creating multiple objects",
+        "c": "A pattern for inheritance",
+        "d": "A pattern for module loading"
+      },
+      "correct_answer": "a",
+      "explanation": "The Singleton pattern ensures that a class has only one instance and provides a global point of access to it."
+    },
+    {
+      "id": 62,
+      "category": "Design Patterns",
+      "question": "What is the Observer pattern?",
+      "options": {
+        "a": "A pattern where objects observe each other",
+        "b": "A one-to-many dependency between objects where multiple observers are notified of changes",
+        "c": "A pattern for watching variables",
+        "d": "A pattern for monitoring functions"
+      },
+      "correct_answer": "b",
+      "explanation": "The Observer pattern defines a one-to-many relationship where multiple observers are notified when the subject changes."
+    },
+    {
+      "id": 63,
+      "category": "Design Patterns",
+      "question": "What is the Factory pattern?",
+      "options": {
+        "a": "A pattern for manufacturing objects",
+        "b": "A creational pattern that provides an interface for creating objects",
+        "c": "A pattern for organizing code",
+        "d": "A pattern for managing dependencies"
+      },
+      "correct_answer": "b",
+      "explanation": "The Factory pattern is a creational pattern that provides an interface for creating objects without specifying their exact classes."
+    },
+    {
+      "id": 64,
+      "category": "Design Patterns",
+      "question": "What is the Module pattern?",
+      "options": {
+        "a": "A pattern for organizing code into modules",
+        "b": "A pattern that provides both private and public encapsulation",
+        "c": "A pattern for loading JavaScript files",
+        "d": "A pattern for managing dependencies"
+      },
+      "correct_answer": "b",
+      "explanation": "The Module pattern provides a way of encapsulating private and public methods and variables, creating privacy through closure."
+    },
+    {
+      "id": 65,
+      "category": "Design Patterns",
+      "question": "What is the Decorator pattern?",
+      "options": {
+        "a": "A pattern for styling objects",
+        "b": "A pattern that allows behavior to be added to objects dynamically",
+        "c": "A pattern for creating object hierarchies",
+        "d": "A pattern for organizing code"
+      },
+      "correct_answer": "b",
+      "explanation": "The Decorator pattern allows new behaviors to be added to objects dynamically by placing these objects inside wrapper objects."
+    },
+    {
+      "id": 66,
+      "category": "JavaScript Testing",
+      "question": "What is Jest?",
+      "options": {
+        "a": "A JavaScript testing framework",
+        "b": "A JavaScript compiler",
+        "c": "A JavaScript bundler",
+        "d": "A JavaScript linter"
+      },
+      "correct_answer": "a",
+      "explanation": "Jest is a popular JavaScript testing framework developed by Facebook, focusing on simplicity."
+    },
+    {
+      "id": 67,
+      "category": "JavaScript Testing",
+      "question": "What is unit testing?",
+      "options": {
+        "a": "Testing individual components or functions in isolation",
+        "b": "Testing the entire application",
+        "c": "Testing user interface",
+        "d": "Testing database connections"
+      },
+      "correct_answer": "a",
+      "explanation": "Unit testing involves testing individual units of code (like functions or components) in isolation from the rest of the application."
+    },
+    {
+      "id": 68,
+      "category": "JavaScript Testing",
+      "question": "What is a test suite?",
+      "options": {
+        "a": "A collection of related test cases",
+        "b": "A single test case",
+        "c": "A testing framework",
+        "d": "A testing environment"
+      },
+      "correct_answer": "a",
+      "explanation": "A test suite is a collection of related test cases that are grouped together for testing a specific functionality."
+    },
+    {
+      "id": 69,
+      "category": "JavaScript Testing",
+      "question": "What is mocking in testing?",
+      "options": {
+        "a": "Creating fake objects that simulate real objects",
+        "b": "Making fun of code",
+        "c": "Writing bad tests",
+        "d": "Testing performance"
+      },
+      "correct_answer": "a",
+      "explanation": "Mocking involves creating fake objects that simulate the behavior of real objects for testing purposes."
+    },
+    {
+      "id": 70,
+      "category": "JavaScript Testing",
+      "question": "What is Test-Driven Development (TDD)?",
+      "options": {
+        "a": "Writing tests after writing code",
+        "b": "Writing tests before writing code",
+        "c": "Not writing tests at all",
+        "d": "Writing code without testing"
+      },
+      "correct_answer": "b",
+      "explanation": "TDD is a development process where tests are written before the actual code implementation."
+    },
+    {
+      "id": 71,
+      "category": "Build Tools and Module Bundlers",
+      "question": "What is Webpack?",
+      "options": {
+        "a": "A module bundler for JavaScript applications",
+        "b": "A JavaScript framework",
+        "c": "A testing tool",
+        "d": "A package manager"
+      },
+      "correct_answer": "a",
+      "explanation": "Webpack is a static module bundler that processes applications and bundles all modules into one or more files."
+    },
+    {
+      "id": 72,
+      "category": "Build Tools and Module Bundlers",
+      "question": "What is Babel used for?",
+      "options": {
+        "a": "Converting modern JavaScript code into backwards compatible versions",
+        "b": "Bundling modules",
+        "c": "Testing JavaScript code",
+        "d": "Managing packages"
+      },
+      "correct_answer": "a",
+      "explanation": "Babel is a toolchain that converts ECMAScript 2015+ code into backwards compatible JavaScript code."
+    },
+    {
+      "id": 73,
+      "category": "Build Tools and Module Bundlers",
+      "question": "What is npm?",
+      "options": {
+        "a": "Node Package Manager",
+        "b": "New Project Manager",
+        "c": "Node Project Module",
+        "d": "New Package Module"
+      },
+      "correct_answer": "a",
+      "explanation": "npm (Node Package Manager) is the default package manager for Node.js and JavaScript projects."
+    },
+    {
+      "id": 74,
+      "category": "Build Tools and Module Bundlers",
+      "question": "What is the purpose of package.json?",
+      "options": {
+        "a": "To store project metadata and dependencies",
+        "b": "To store JavaScript code",
+        "c": "To bundle modules",
+        "d": "To test code"
+      },
+      "correct_answer": "a",
+      "explanation": "package.json contains project metadata, dependencies, scripts, and other configuration information for a JavaScript project."
+    },
+    {
+      "id": 75,
+      "category": "Build Tools and Module Bundlers",
+      "question": "What is a module bundler?",
+      "options": {
+        "a": "A tool that combines multiple JavaScript files into a single file",
+        "b": "A tool for testing JavaScript",
+        "c": "A tool for writing JavaScript",
+        "d": "A tool for debugging JavaScript"
+      },
+      "correct_answer": "a",
+      "explanation": "A module bundler is a tool that takes multiple JavaScript files and their dependencies and combines them into a single file."
+    },
+    {
+      "id": 76,
+      "category": "JavaScript Frameworks",
+      "question": "What is React?",
+      "options": {
+        "a": "A JavaScript library for building user interfaces",
+        "b": "A JavaScript testing framework",
+        "c": "A JavaScript bundler",
+        "d": "A JavaScript compiler"
+      },
+      "correct_answer": "a",
+      "explanation": "React is a JavaScript library developed by Facebook for building user interfaces, particularly single-page applications."
+    },
+    {
+      "id": 77,
+      "category": "JavaScript Frameworks",
+      "question": "What is Angular?",
+      "options": {
+        "a": "A TypeScript-based open-source framework",
+        "b": "A JavaScript compiler",
+        "c": "A testing framework",
+        "d": "A module bundler"
+      },
+      "correct_answer": "a",
+      "explanation": "Angular is a TypeScript-based open-source framework developed by Google for building web applications."
+    },
+    {
+      "id": 78,
+      "category": "JavaScript Frameworks",
+      "question": "What is Vue.js?",
+      "options": {
+        "a": "A progressive framework for building user interfaces",
+        "b": "A JavaScript testing framework",
+        "c": "A JavaScript compiler",
+        "d": "A package manager"
+      },
+      "correct_answer": "a",
+      "explanation": "Vue.js is a progressive framework for building user interfaces, designed to be incrementally adoptable."
+    },
+    {
+      "id": 79,
+      "category": "JavaScript Frameworks",
+      "question": "What is Next.js?",
+      "options": {
+        "a": "A React framework for production",
+        "b": "A Vue.js framework",
+        "c": "An Angular framework",
+        "d": "A testing framework"
+      },
+      "correct_answer": "a",
+      "explanation": "Next.js is a React framework that enables functionality like server-side rendering and static site generation."
+    },
+    {
+      "id": 80,
+      "category": "JavaScript Frameworks",
+      "question": "What is Svelte?",
+      "options": {
+        "a": "A compiler that creates reactive JavaScript modules",
+        "b": "A JavaScript testing framework",
+        "c": "A module bundler",
+        "d": "A package manager"
+      },
+      "correct_answer": "a",
+      "explanation": "Svelte is a compiler that creates reactive JavaScript modules and shifts work from runtime to build time."
+    },
+    {
+      "id": 81,
+      "category": "State Management",
+      "question": "What is Redux?",
+      "options": {
+        "a": "A predictable state container for JavaScript apps",
+        "b": "A JavaScript framework",
+        "c": "A testing library",
+        "d": "A build tool"
+      },
+      "correct_answer": "a",
+      "explanation": "Redux is a predictable state container for JavaScript applications, commonly used with React."
+    },
+    {
+      "id": 82,
+      "category": "State Management",
+      "question": "What is the main principle of Redux?",
+      "options": {
+        "a": "Single source of truth",
+        "b": "Multiple state trees",
+        "c": "Mutable state",
+        "d": "Direct state modifications"
+      },
+      "correct_answer": "a",
+      "explanation": "Redux follows the principle of having a single source of truth, where the entire application state is stored in a single store."
+    },
+    {
+      "id": 83,
+      "category": "State Management",
+      "question": "What is Vuex?",
+      "options": {
+        "a": "State management pattern and library for Vue.js",
+        "b": "Testing framework for Vue.js",
+        "c": "Build tool for Vue.js",
+        "d": "Router for Vue.js"
+      },
+      "correct_answer": "a",
+      "explanation": "Vuex is a state management pattern and library specifically designed for Vue.js applications."
+    },
+    {
+      "id": 84,
+      "category": "State Management",
+      "question": "What is MobX?",
+      "options": {
+        "a": "A state management library that makes state management simple and scalable",
+        "b": "A testing framework",
+        "c": "A build tool",
+        "d": "A JavaScript framework"
+      },
+      "correct_answer": "a",
+      "explanation": "MobX is a battle-tested library that makes state management simple and scalable by transparently applying functional reactive programming."
+    },
+    {
+      "id": 85,
+      "category": "State Management",
+      "question": "What is Context API in React?",
+      "options": {
+        "a": "A way to pass data through the component tree without props",
+        "b": "A testing utility",
+        "c": "A build tool",
+        "d": "A routing solution"
+      },
+      "correct_answer": "a",
+      "explanation": "Context API provides a way to pass data through the component tree without having to pass props manually at every level."
+    },
+    {
+      "id": 86,
+      "category": "Performance Optimization",
+      "question": "What is code splitting in JavaScript?",
+      "options": {
+        "a": "Splitting code into smaller chunks for better performance",
+        "b": "Splitting code into multiple files",
+        "c": "Breaking code into functions",
+        "d": "Organizing code into modules"
+      },
+      "correct_answer": "a",
+      "explanation": "Code splitting is a technique that splits your code into smaller chunks, loading only what's needed for better performance."
+    },
+    {
+      "id": 87,
+      "category": "Performance Optimization",
+      "question": "What is lazy loading?",
+      "options": {
+        "a": "Loading resources only when needed",
+        "b": "Slow loading of resources",
+        "c": "Loading all resources at once",
+        "d": "Not loading resources"
+      },
+      "correct_answer": "a",
+      "explanation": "Lazy loading is a design pattern that defers the loading of resources until they are actually needed."
+    },
+    {
+      "id": 88,
+      "category": "Performance Optimization",
+      "question": "What is debouncing?",
+      "options": {
+        "a": "Limiting the rate at which a function can fire",
+        "b": "Increasing function execution speed",
+        "c": "Removing function delays",
+        "d": "Optimizing function code"
+      },
+      "correct_answer": "a",
+      "explanation": "Debouncing is a programming practice that limits the rate at which a function can fire, improving performance for expensive operations."
+    },
+    {
+      "id": 89,
+      "category": "Performance Optimization",
+      "question": "What is throttling?",
+      "options": {
+        "a": "Ensuring a function is called at most once in a specified time period",
+        "b": "Making functions run faster",
+        "c": "Stopping function execution",
+        "d": "Delaying all function calls"
+      },
+      "correct_answer": "a",
+      "explanation": "Throttling ensures a function is called at most once in a specified time period, useful for rate-limiting expensive operations."
+    },
+    {
+      "id": 90,
+      "category": "Performance Optimization",
+      "question": "What is memoization?",
+      "options": {
+        "a": "Caching the results of expensive function calls",
+        "b": "Memorizing code",
+        "c": "Writing documentation",
+        "d": "Organizing code"
+      },
+      "correct_answer": "a",
+      "explanation": "Memoization is an optimization technique that stores the results of expensive function calls and returns the cached result when the same inputs occur again."
+    },
+    {
+      "id": 91,
+      "category": "Browser APIs",
+      "question": "What is the localStorage API?",
+      "options": {
+        "a": "An API for storing data in the browser",
+        "b": "An API for making HTTP requests",
+        "c": "An API for handling cookies",
+        "d": "An API for managing browser history"
+      },
+      "correct_answer": "a",
+      "explanation": "localStorage is a web storage API that allows you to store key-value pairs in the browser with no expiration time."
+    },
+    {
+      "id": 92,
+      "category": "Browser APIs",
+      "question": "What is the History API?",
+      "options": {
+        "a": "An API for manipulating browser history",
+        "b": "An API for storing historical data",
+        "c": "An API for tracking user history",
+        "d": "An API for managing cookies"
+      },
+      "correct_answer": "a",
+      "explanation": "The History API allows manipulation of the browser session history through the history object."
+    },
+    {
+      "id": 93,
+      "category": "Browser APIs",
+      "question": "What is the Canvas API?",
+      "options": {
+        "a": "An API for drawing graphics using JavaScript",
+        "b": "An API for styling web pages",
+        "c": "An API for handling forms",
+        "d": "An API for managing audio"
+      },
+      "correct_answer": "a",
+      "explanation": "The Canvas API provides a means for drawing graphics via JavaScript and the HTML <canvas> element."
+    },
+    {
+      "id": 94,
+      "category": "Browser APIs",
+      "question": "What is the WebSocket API?",
+      "options": {
+        "a": "An API for real-time communication between client and server",
+        "b": "An API for managing sockets",
+        "c": "An API for network requests",
+        "d": "An API for managing ports"
+      },
+      "correct_answer": "a",
+      "explanation": "The WebSocket API enables two-way interactive communication between the client browser and a server."
+    },
+    {
+      "id": 95,
+      "category": "Browser APIs",
+      "question": "What is the Intersection Observer API?",
+      "options": {
+        "a": "An API for detecting element visibility",
+        "b": "An API for managing intersections",
+        "c": "An API for handling collisions",
+        "d": "An API for managing layouts"
+      },
+      "correct_answer": "a",
+      "explanation": "The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with its parent or viewport."
+    },
+    {
+      "id": 96,
+      "category": "Accessibility",
+      "question": "What is ARIA in JavaScript?",
+      "options": {
+        "a": "Accessible Rich Internet Applications",
+        "b": "Advanced Resource Integration API",
+        "c": "Automated Resource Interface Access",
+        "d": "Application Resource Integration Architecture"
+      },
+      "correct_answer": "a",
+      "explanation": "ARIA (Accessible Rich Internet Applications) is a set of attributes that define ways to make web content more accessible to people with disabilities."
+    },
+    {
+      "id": 97,
+      "category": "Accessibility",
+      "question": "What is the purpose of role attribute in ARIA?",
+      "options": {
+        "a": "To define the purpose of an element for assistive technologies",
+        "b": "To style elements",
+        "c": "To handle events",
+        "d": "To manage state"
+      },
+      "correct_answer": "a",
+      "explanation": "The role attribute helps define the purpose of an element for assistive technologies like screen readers."
+    },
+    {
+      "id": 98,
+      "category": "Accessibility",
+      "question": "What is keyboard accessibility?",
+      "options": {
+        "a": "Making web content accessible via keyboard navigation",
+        "b": "Using keyboard shortcuts",
+        "c": "Managing keyboard events",
+        "d": "Handling keyboard input"
+      },
+      "correct_answer": "a",
+      "explanation": "Keyboard accessibility ensures that all web content and functionality can be accessed using only a keyboard."
+    },
+    {
+      "id": 99,
+      "category": "Accessibility",
+      "question": "What is the purpose of tabindex attribute?",
+      "options": {
+        "a": "To control the order of keyboard navigation",
+        "b": "To create tabs",
+        "c": "To manage tab key events",
+        "d": "To handle tab spaces"
+      },
+      "correct_answer": "a",
+      "explanation": "The tabindex attribute specifies the tab order of an element for keyboard navigation."
+    },
+    {
+      "id": 100,
+      "category": "Accessibility",
+      "question": "What is focus management in accessibility?",
+      "options": {
+        "a": "Managing keyboard focus for interactive elements",
+        "b": "Managing visual focus effects",
+        "c": "Handling focus events",
+        "d": "Creating focus styles"
+      },
+      "correct_answer": "a",
+      "explanation": "Focus management ensures proper keyboard navigation by managing which elements receive keyboard focus and in what order."
+    },
+    {
+      "id": 101,
+      "category": "Animation",
+      "question": "What is requestAnimationFrame?",
+      "options": {
+        "a": "A method for optimizing animations",
+        "b": "A method for creating frames",
+        "c": "A method for handling animation events",
+        "d": "A method for managing animation timing"
+      },
+      "correct_answer": "a",
+      "explanation": "requestAnimationFrame is a method that tells the browser to perform an animation, optimizing it for better performance."
+    },
+    {
+      "id": 102,
+      "category": "Animation",
+      "question": "What is the Web Animations API?",
+      "options": {
+        "a": "A native browser API for creating animations",
+        "b": "A third-party animation library",
+        "c": "A CSS animation framework",
+        "d": "A JavaScript animation engine"
+      },
+      "correct_answer": "a",
+      "explanation": "The Web Animations API provides a way to create, sequence, and control animations directly in JavaScript."
+    },
+    {
+      "id": 103,
+      "category": "Animation",
+      "question": "What is easing in animation?",
+      "options": {
+        "a": "A function that controls animation timing",
+        "b": "A way to stop animations",
+        "c": "A method to create animations",
+        "d": "A type of animation effect"
+      },
+      "correct_answer": "a",
+      "explanation": "Easing functions specify the rate of change of an animation over time, making animations more natural."
+    },
+    {
+      "id": 104,
+      "category": "Animation",
+      "question": "What is the purpose of cancelAnimationFrame?",
+      "options": {
+        "a": "To stop an animation requested by requestAnimationFrame",
+        "b": "To pause an animation",
+        "c": "To restart an animation",
+        "d": "To modify animation speed"
+      },
+      "correct_answer": "a",
+      "explanation": "cancelAnimationFrame is used to cancel an animation previously scheduled through requestAnimationFrame."
+    },
+    {
+      "id": 105,
+      "category": "Animation",
+      "question": "What is frame rate in animation?",
+      "options": {
+        "a": "Number of frames displayed per second",
+        "b": "Size of animation frames",
+        "c": "Speed of animation",
+        "d": "Length of animation"
+      },
+      "correct_answer": "a",
+      "explanation": "Frame rate (FPS - Frames Per Second) determines how many frames are displayed each second in an animation."
+    },
+    {
+      "id": 106,
+      "category": "Debugging and DevTools",
+      "question": "What is the purpose of console.log()?",
+      "options": {
+        "a": "To output content to the console for debugging",
+        "b": "To create log files",
+        "c": "To log errors only",
+        "d": "To format console output"
+      },
+      "correct_answer": "a",
+      "explanation": "console.log() is used to output content to the browser's console for debugging purposes."
+    },
+    {
+      "id": 107,
+      "category": "Debugging and DevTools",
+      "question": "What is a breakpoint in debugging?",
+      "options": {
+        "a": "A point where code execution pauses for inspection",
+        "b": "A point where code breaks",
+        "c": "A syntax error",
+        "d": "A line break in code"
+      },
+      "correct_answer": "a",
+      "explanation": "A breakpoint is a point in the code where execution will pause, allowing inspection of the current state."
+    },
+    {
+      "id": 108,
+      "category": "Debugging and DevTools",
+      "question": "What is the purpose of debugger statement?",
+      "options": {
+        "a": "To create a breakpoint in code",
+        "b": "To debug errors",
+        "c": "To log debugging information",
+        "d": "To fix bugs automatically"
+      },
+      "correct_answer": "a",
+      "explanation": "The debugger statement creates a breakpoint in your code where execution will pause if developer tools are open."
+    },
+    {
+      "id": 109,
+      "category": "Debugging and DevTools",
+      "question": "What is the Sources panel in Chrome DevTools used for?",
+      "options": {
+        "a": "Debugging JavaScript code",
+        "b": "Viewing network requests",
+        "c": "Inspecting HTML elements",
+        "d": "Managing cookies"
+      },
+      "correct_answer": "a",
+      "explanation": "The Sources panel in Chrome DevTools is used for debugging JavaScript code, setting breakpoints, and stepping through code."
+    },
+    {
+      "id": 110,
+      "category": "Debugging and DevTools",
+      "question": "What is the Network panel in DevTools used for?",
+      "options": {
+        "a": "Monitoring network requests and responses",
+        "b": "Writing network code",
+        "c": "Managing network connections",
+        "d": "Creating network diagrams"
+      },
+      "correct_answer": "a",
+      "explanation": "The Network panel shows information about network requests and responses, including timing, size, and content."
+    },
+    {
+      "id": 111,
+      "category": "Best Practices",
+      "question": "What is the purpose of 'use strict' in JavaScript?",
+      "options": {
+        "a": "To enable strict mode and catch common mistakes",
+        "b": "To make code run faster",
+        "c": "To enable new features",
+        "d": "To prevent code execution"
+      },
+      "correct_answer": "a",
+      "explanation": "'use strict' enables strict mode which helps catch common coding mistakes and prevents the use of certain error-prone features."
+    },
+    {
+      "id": 112,
+      "category": "Best Practices",
+      "question": "What is code linting?",
+      "options": {
+        "a": "Analyzing code for potential errors and style issues",
+        "b": "Formatting code",
+        "c": "Compiling code",
+        "d": "Running code"
+      },
+      "correct_answer": "a",
+      "explanation": "Linting is the process of analyzing code to flag programming errors, bugs, stylistic errors, and suspicious constructs."
+    },
+    {
+      "id": 113,
+      "category": "Best Practices",
+      "question": "What is the importance of code comments?",
+      "options": {
+        "a": "To explain complex logic and improve code maintainability",
+        "b": "To make code longer",
+        "c": "To slow down code execution",
+        "d": "To hide code"
+      },
+      "correct_answer": "a",
+      "explanation": "Comments help explain complex logic, make code more maintainable, and help other developers understand the code's purpose."
+    },
+    {
+      "id": 114,
+      "category": "Best Practices",
+      "question": "What is defensive programming?",
+      "options": {
+        "a": "Writing code that anticipates and handles potential errors",
+        "b": "Writing code to prevent hacking",
+        "c": "Writing code quickly",
+        "d": "Writing minimal code"
+      },
+      "correct_answer": "a",
+      "explanation": "Defensive programming is the practice of anticipating and handling potential errors and edge cases in your code."
+    },
+    {
+      "id": 115,
+      "category": "Best Practices",
+      "question": "What is the DRY principle?",
+      "options": {
+        "a": "Don't Repeat Yourself",
+        "b": "Do Repeat Yourself",
+        "c": "Don't Run Yourself",
+        "d": "Do Review Yourself"
+      },
+      "correct_answer": "a",
+      "explanation": "DRY (Don't Repeat Yourself) is a principle aimed at reducing repetition of code by encouraging code reuse."
+    },
+    {
+      "id": 116,
+      "category": "JavaScript Modules",
+      "question": "What is the purpose of modules in JavaScript?",
+      "options": {
+        "a": "To organize code into reusable, encapsulated pieces",
+        "b": "To make code run faster",
+        "c": "To reduce file size",
+        "d": "To create global variables"
+      },
+      "correct_answer": "a",
+      "explanation": "Modules help organize code into separate, reusable pieces with their own scope and dependencies."
+    },
+    {
+      "id": 117,
+      "category": "JavaScript Modules",
+      "question": "Which keyword is used to export functionality from a module?",
+      "options": {
+        "a": "export",
+        "b": "module",
+        "c": "expose",
+        "d": "public"
+      },
+      "correct_answer": "a",
+      "explanation": "The export keyword is used to expose variables, functions, or classes from a module."
+    },
+    {
+      "id": 118,
+      "category": "JavaScript Modules",
+      "question": "What is the correct way to import a default export?",
+      "options": {
+        "a": "import { default } from './module'",
+        "b": "import default from './module'",
+        "c": "import myDefault from './module'",
+        "d": "require('./module')"
+      },
+      "correct_answer": "c",
+      "explanation": "Default exports are imported without curly braces and can be given any name during import."
+    },
+    {
+      "id": 119,
+      "category": "JavaScript Modules",
+      "question": "How do you import multiple named exports from a module?",
+      "options": {
+        "a": "import { export1, export2 } from './module'",
+        "b": "import export1, export2 from './module'",
+        "c": "import * as exports from './module'",
+        "d": "require('./module').export1"
+      },
+      "correct_answer": "a",
+      "explanation": "Named exports are imported using curly braces and the exact names of the exports."
+    },
+    {
+      "id": 120,
+      "category": "JavaScript Modules",
+      "question": "What is the purpose of 'as' keyword in imports?",
+      "options": {
+        "a": "To rename imported items",
+        "b": "To specify file type",
+        "c": "To define module type",
+        "d": "To create aliases"
+      },
+      "correct_answer": "a",
+      "explanation": "The 'as' keyword allows you to rename imported items to avoid naming conflicts."
+    },
+    {
+      "id": 121,
+      "category": "Events and Event Handling",
+      "question": "What is event bubbling in JavaScript?",
+      "options": {
+        "a": "When an event propagates from child to parent elements",
+        "b": "When an event propagates from parent to child elements",
+        "c": "When multiple events occur simultaneously",
+        "d": "When events are cancelled"
+      },
+      "correct_answer": "a",
+      "explanation": "Event bubbling is when an event triggered on a nested element propagates up through its parent elements."
+    },
+    {
+      "id": 122,
+      "category": "Events and Event Handling",
+      "question": "What is event capturing?",
+      "options": {
+        "a": "When an event propagates from parent to child elements",
+        "b": "When an event propagates from child to parent elements",
+        "c": "When events are prevented",
+        "d": "When events are stored"
+      },
+      "correct_answer": "a",
+      "explanation": "Event capturing is the opposite of bubbling, where events are captured by the outermost element and propagate inward."
+    },
+    {
+      "id": 123,
+      "category": "Events and Event Handling",
+      "question": "What method is used to prevent event bubbling?",
+      "options": {
+        "a": "event.stopPropagation()",
+        "b": "event.preventDefault()",
+        "c": "event.stop()",
+        "d": "event.halt()"
+      },
+      "correct_answer": "a",
+      "explanation": "stopPropagation() prevents further propagation of the current event in the capturing and bubbling phases."
+    },
+    {
+      "id": 124,
+      "category": "Events and Event Handling",
+      "question": "What is the purpose of event.preventDefault()?",
+      "options": {
+        "a": "To stop default browser behavior",
+        "b": "To stop event bubbling",
+        "c": "To remove event listeners",
+        "d": "To cancel all events"
+      },
+      "correct_answer": "a",
+      "explanation": "preventDefault() stops the default action of an element from happening (like form submission or link navigation)."
+    },
+    {
+      "id": 125,
+      "category": "Events and Event Handling",
+      "question": "What is event delegation?",
+      "options": {
+        "a": "A technique to handle events on multiple elements using a single handler",
+        "b": "A way to create custom events",
+        "c": "A method to remove event listeners",
+        "d": "A type of event bubbling"
+      },
+      "correct_answer": "a",
+      "explanation": "Event delegation is a technique where you attach a single event handler to a parent element to handle events on its current and future descendants."
+    },
+    {
+      "id": 126,
+      "category": "Date and Time",
+      "question": "How do you create a new Date object in JavaScript?",
+      "options": {
+        "a": "new Date()",
+        "b": "Date.create()",
+        "c": "Date.now()",
+        "d": "Date()"
+      },
+      "correct_answer": "a",
+      "explanation": "new Date() creates a new Date object representing the current date and time."
+    },
+    {
+      "id": 127,
+      "category": "Date and Time",
+      "question": "What does Date.now() return?",
+      "options": {
+        "a": "Current timestamp in milliseconds",
+        "b": "Current date string",
+        "c": "Date object",
+        "d": "Current time string"
+      },
+      "correct_answer": "a",
+      "explanation": "Date.now() returns the number of milliseconds elapsed since January 1, 1970."
+    },
+    {
+      "id": 128,
+      "category": "Date and Time",
+      "question": "Which method is used to get the current year from a Date object?",
+      "options": {
+        "a": "getYear()",
+        "b": "getFullYear()",
+        "c": "year()",
+        "d": "getCurrentYear()"
+      },
+      "correct_answer": "b",
+      "explanation": "getFullYear() returns the year (4 digits) of a Date object."
+    },
+    {
+      "id": 129,
+      "category": "Date and Time",
+      "question": "What is the starting index for months in JavaScript Date object?",
+      "options": {
+        "a": "0",
+        "b": "1",
+        "c": "Depends on locale",
+        "d": "Depends on timezone"
+      },
+      "correct_answer": "a",
+      "explanation": "In JavaScript Date object, months are zero-based, meaning January is 0 and December is 11."
+    },
+    {
+      "id": 130,
+      "category": "Date and Time",
+      "question": "Which method converts a Date object to a string in local time?",
+      "options": {
+        "a": "toString()",
+        "b": "toLocalString()",
+        "c": "toLocaleString()",
+        "d": "toDateString()"
+      },
+      "correct_answer": "c",
+      "explanation": "toLocaleString() returns a string with a language-sensitive representation of the date."
+    },
+    {
+      "id": 131,
+      "category": "Promises and Async/Await",
+      "question": "What is the main purpose of using Promises in JavaScript?",
+      "options": {
+        "a": "To handle asynchronous operations",
+        "b": "To make code run faster",
+        "c": "To handle errors only",
+        "d": "To create loops"
+      },
+      "correct_answer": "a",
+      "explanation": "Promises are used to handle asynchronous operations and provide a cleaner way to handle success and failure."
+    },
+    {
+      "id": 132,
+      "category": "Promises and Async/Await",
+      "question": "What are the three states of a Promise?",
+      "options": {
+        "a": "pending, fulfilled, rejected",
+        "b": "start, middle, end",
+        "c": "loading, success, error",
+        "d": "new, running, completed"
+      },
+      "correct_answer": "a",
+      "explanation": "A Promise can be in one of three states: pending (initial state), fulfilled (completed successfully), or rejected (failed)."
+    },
+    {
+      "id": 133,
+      "category": "Promises and Async/Await",
+      "question": "What is the purpose of the async keyword?",
+      "options": {
+        "a": "To define a function that returns a Promise",
+        "b": "To make code run faster",
+        "c": "To create a new thread",
+        "d": "To handle errors"
+      },
+      "correct_answer": "a",
+      "explanation": "The async keyword is used to define a function that automatically returns a Promise and enables the use of await inside the function."
+    },
+    {
+      "id": 134,
+      "category": "Promises and Async/Await",
+      "question": "What does the await keyword do?",
+      "options": {
+        "a": "Pauses execution until a Promise resolves",
+        "b": "Creates a new Promise",
+        "c": "Handles errors in Promises",
+        "d": "Cancels a Promise"
+      },
+      "correct_answer": "a",
+      "explanation": "The await keyword pauses the execution of an async function until a Promise is resolved and returns its result."
+    },
+    {
+      "id": 135,
+      "category": "Promises and Async/Await",
+      "question": "Which method is used to handle errors in Promises?",
+      "options": {
+        "a": "catch()",
+        "b": "error()",
+        "c": "handle()",
+        "d": "try()"
+      },
+      "correct_answer": "a",
+      "explanation": "The catch() method is used to handle errors in Promises and is called when a Promise is rejected."
+    },
+    {
+      "id": 136,
+      "category": "Memory Management",
+      "question": "What is garbage collection in JavaScript?",
+      "options": {
+        "a": "Automatic memory management process",
+        "b": "Manual memory cleanup",
+        "c": "System to delete unused files",
+        "d": "Process to compress code"
+      },
+      "correct_answer": "a",
+      "explanation": "Garbage collection is an automatic process in JavaScript that frees memory by removing objects that are no longer reachable."
+    },
+    {
+      "id": 137,
+      "category": "Memory Management",
+      "question": "What is a memory leak in JavaScript?",
+      "options": {
+        "a": "When memory is not properly released",
+        "b": "When a program crashes",
+        "c": "When code runs slowly",
+        "d": "When variables are undefined"
+      },
+      "correct_answer": "a",
+      "explanation": "A memory leak occurs when memory that is no longer needed is not released, leading to increased memory usage over time."
+    },
+    {
+      "id": 138,
+      "category": "Memory Management",
+      "question": "What is the main cause of memory leaks in JavaScript?",
+      "options": {
+        "a": "Unremoved event listeners",
+        "b": "Using too many variables",
+        "c": "Large file sizes",
+        "d": "Complex algorithms"
+      },
+      "correct_answer": "a",
+      "explanation": "Forgotten event listeners are a common cause of memory leaks as they prevent objects from being garbage collected."
+    },
+    {
+      "id": 139,
+      "category": "Memory Management",
+      "question": "What is a circular reference?",
+      "options": {
+        "a": "Objects referencing each other",
+        "b": "Infinite loops",
+        "c": "Recursive functions",
+        "d": "Self-executing functions"
+      },
+      "correct_answer": "a",
+      "explanation": "A circular reference occurs when two or more objects reference each other, which can potentially cause memory leaks if not handled properly."
+    },
+    {
+      "id": 140,
+      "category": "Memory Management",
+      "question": "How can you prevent memory leaks in JavaScript?",
+      "options": {
+        "a": "Remove event listeners when not needed",
+        "b": "Use more variables",
+        "c": "Avoid using objects",
+        "d": "Use global variables"
+      },
+      "correct_answer": "a",
+      "explanation": "To prevent memory leaks, it's important to remove event listeners and clean up references when they are no longer needed."
+    },
+    {
+      "id": 141,
+      "category": "Security",
+      "question": "What is Cross-Site Scripting (XSS)?",
+      "options": {
+        "a": "Injecting malicious scripts into web pages",
+        "b": "Writing cross-browser code",
+        "c": "Using multiple script files",
+        "d": "Loading external scripts"
+      },
+      "correct_answer": "a",
+      "explanation": "XSS is a security vulnerability where attackers inject malicious scripts into web pages viewed by other users."
+    },
+    {
+      "id": 142,
+      "category": "Security",
+      "question": "What is the purpose of Content Security Policy (CSP)?",
+      "options": {
+        "a": "To prevent XSS and other injection attacks",
+        "b": "To compress content",
+        "c": "To cache content",
+        "d": "To encrypt content"
+      },
+      "correct_answer": "a",
+      "explanation": "CSP is a security layer that helps prevent XSS and other injection attacks by controlling which resources can be loaded."
+    },
+    {
+      "id": 143,
+      "category": "Security",
+      "question": "What is CSRF (Cross-Site Request Forgery)?",
+      "options": {
+        "a": "Forcing users to execute unwanted actions",
+        "b": "Creating fake forms",
+        "c": "Cross-browser compatibility issue",
+        "d": "Server configuration error"
+      },
+      "correct_answer": "a",
+      "explanation": "CSRF is an attack that forces authenticated users to execute unwanted actions on a web application they're logged into."
+    },
+    {
+      "id": 144,
+      "category": "Security",
+      "question": "How can you prevent SQL injection in JavaScript?",
+      "options": {
+        "a": "Use parameterized queries",
+        "b": "Use plain SQL queries",
+        "c": "Disable SQL",
+        "d": "Use only GET requests"
+      },
+      "correct_answer": "a",
+      "explanation": "Using parameterized queries helps prevent SQL injection by separating SQL logic from data."
+    },
+    {
+      "id": 145,
+      "category": "Security",
+      "question": "What is the same-origin policy?",
+      "options": {
+        "a": "Security feature restricting resource access",
+        "b": "Loading policy for images",
+        "c": "Code organization strategy",
+        "d": "Browser compatibility feature"
+      },
+      "correct_answer": "a",
+      "explanation": "Same-origin policy is a security feature that restricts how documents/scripts from one origin can interact with resources from another origin."
+    },
+    {
+      "id": 146,
+      "category": "Performance",
+      "question": "What is code minification?",
+      "options": {
+        "a": "Process of reducing code size",
+        "b": "Making code more readable",
+        "c": "Adding comments to code",
+        "d": "Organizing code structure"
+      },
+      "correct_answer": "a",
+      "explanation": "Minification is the process of reducing code size by removing unnecessary characters without changing functionality."
+    },
+    {
+      "id": 147,
+      "category": "Performance",
+      "question": "What is the purpose of debouncing?",
+      "options": {
+        "a": "Limiting function call frequency",
+        "b": "Increasing function speed",
+        "c": "Debugging functions",
+        "d": "Creating function copies"
+      },
+      "correct_answer": "a",
+      "explanation": "Debouncing limits the rate at which a function is called, especially useful for performance-heavy operations."
+    },
+    {
+      "id": 148,
+      "category": "Performance",
+      "question": "What is the difference between throttling and debouncing?",
+      "options": {
+        "a": "Throttling executes regularly, debouncing waits for pause",
+        "b": "They are the same thing",
+        "c": "Throttling is slower than debouncing",
+        "d": "Debouncing is only for events"
+      },
+      "correct_answer": "a",
+      "explanation": "Throttling ensures a function executes at regular intervals, while debouncing executes only after a pause in calls."
+    },
+    {
+      "id": 149,
+      "category": "Performance",
+      "question": "What is lazy loading?",
+      "options": {
+        "a": "Loading resources only when needed",
+        "b": "Slow loading of resources",
+        "c": "Loading all resources at start",
+        "d": "Not loading resources"
+      },
+      "correct_answer": "a",
+      "explanation": "Lazy loading is a strategy to load resources only when they are actually needed, improving initial load performance."
+    },
+    {
+      "id": 150,
+      "category": "Performance",
+      "question": "What is the purpose of memoization?",
+      "options": {
+        "a": "Caching function results",
+        "b": "Measuring memory usage",
+        "c": "Managing memory leaks",
+        "d": "Creating memory snapshots"
+      },
+      "correct_answer": "a",
+      "explanation": "Memoization is an optimization technique that stores the results of expensive function calls and returns the cached result when the same inputs occur again."
+    },
+    {
+      "id": 151,
+      "category": "Error Handling",
+      "question": "What is the purpose of the throw statement?",
+      "options": {
+        "a": "To create custom errors",
+        "b": "To catch errors",
+        "c": "To ignore errors",
+        "d": "To log errors"
+      },
+      "correct_answer": "a",
+      "explanation": "The throw statement allows you to create custom errors and throw exceptions that can be caught by try...catch blocks."
+    },
+    {
+      "id": 152,
+      "category": "Error Handling",
+      "question": "What is error propagation?",
+      "options": {
+        "a": "When errors bubble up through the call stack",
+        "b": "When errors are ignored",
+        "c": "When errors are logged",
+        "d": "When errors are created"
+      },
+      "correct_answer": "a",
+      "explanation": "Error propagation is when an error travels up through the call stack until it's caught or reaches the global scope."
+    },
+    {
+      "id": 153,
+      "category": "Error Handling",
+      "question": "What is the purpose of the Error object?",
+      "options": {
+        "a": "To create standardized error objects",
+        "b": "To prevent errors",
+        "c": "To handle errors",
+        "d": "To log errors"
+      },
+      "correct_answer": "a",
+      "explanation": "The Error object is a built-in object that provides a standard way to create error objects with a name and message."
+    },
+    {
+      "id": 154,
+      "category": "Error Handling",
+      "question": "What is error chaining?",
+      "options": {
+        "a": "Linking multiple catch blocks",
+        "b": "Creating multiple errors",
+        "c": "Ignoring errors",
+        "d": "Logging multiple errors"
+      },
+      "correct_answer": "a",
+      "explanation": "Error chaining allows you to handle different types of errors with multiple catch blocks in sequence."
+    },
+    {
+      "id": 155,
+      "category": "Error Handling",
+      "question": "What is the purpose of the stack trace?",
+      "options": {
+        "a": "To show the call stack when an error occurs",
+        "b": "To prevent errors",
+        "c": "To create errors",
+        "d": "To handle errors"
+      },
+      "correct_answer": "a",
+      "explanation": "A stack trace shows the sequence of function calls that led to an error, helping with debugging."
+    },
+    {
+      "id": 156,
+      "category": "Testing",
+      "question": "What is the purpose of assertion in testing?",
+      "options": {
+        "a": "To verify expected outcomes",
+        "b": "To create test cases",
+        "c": "To run tests",
+        "d": "To debug code"
+      },
+      "correct_answer": "a",
+      "explanation": "Assertions verify that the actual output of code matches the expected outcome during testing."
+    },
+    {
+      "id": 157,
+      "category": "Testing",
+      "question": "What is a test fixture?",
+      "options": {
+        "a": "A consistent test environment",
+        "b": "A type of test case",
+        "c": "A testing framework",
+        "d": "A debugging tool"
+      },
+      "correct_answer": "a",
+      "explanation": "A test fixture provides a consistent testing environment with known data and state for running tests."
+    },
+    {
+      "id": 158,
+      "category": "Testing",
+      "question": "What is integration testing?",
+      "options": {
+        "a": "Testing multiple components together",
+        "b": "Testing single components",
+        "c": "Testing user interface",
+        "d": "Testing performance"
+      },
+      "correct_answer": "a",
+      "explanation": "Integration testing verifies that multiple components work together correctly as a group."
+    },
+    {
+      "id": 159,
+      "category": "Testing",
+      "question": "What is the purpose of code coverage?",
+      "options": {
+        "a": "To measure how much code is tested",
+        "b": "To improve code performance",
+        "c": "To find bugs",
+        "d": "To organize tests"
+      },
+      "correct_answer": "a",
+      "explanation": "Code coverage measures what percentage of code is executed during testing, helping identify untested code."
+    },
+    {
+      "id": 160,
+      "category": "Testing",
+      "question": "What is a test runner?",
+      "options": {
+        "a": "A tool that executes tests",
+        "b": "A type of test case",
+        "c": "A debugging tool",
+        "d": "A code coverage tool"
+      },
+      "correct_answer": "a",
+      "explanation": "A test runner is a tool that executes tests and provides results in a formatted output."
+    },
+    {
+      "id": 161,
+      "category": "Design Patterns",
+      "question": "What is the MVC pattern?",
+      "options": {
+        "a": "Model-View-Controller architecture pattern",
+        "b": "Multiple View Control pattern",
+        "c": "Model View Class pattern",
+        "d": "Main View Component pattern"
+      },
+      "correct_answer": "a",
+      "explanation": "MVC is an architectural pattern that separates an application into Model (data), View (UI), and Controller (logic) components."
+    },
+    {
+      "id": 162,
+      "category": "Design Patterns",
+      "question": "What is the purpose of the Strategy pattern?",
+      "options": {
+        "a": "To define a family of interchangeable algorithms",
+        "b": "To create object copies",
+        "c": "To manage object creation",
+        "d": "To handle events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable."
+    },
+    {
+      "id": 163,
+      "category": "Design Patterns",
+      "question": "What is the Command pattern?",
+      "options": {
+        "a": "Encapsulates a request as an object",
+        "b": "Creates object copies",
+        "c": "Manages object lifecycle",
+        "d": "Handles events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Command pattern encapsulates a request as an object, allowing parameterization of clients with different requests."
+    },
+    {
+      "id": 164,
+      "category": "Design Patterns",
+      "question": "What is the purpose of the Facade pattern?",
+      "options": {
+        "a": "To provide a simplified interface to complex systems",
+        "b": "To create object copies",
+        "c": "To manage object creation",
+        "d": "To handle events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Facade pattern provides a unified interface to a set of interfaces in a subsystem, making it easier to use."
+    },
+    {
+      "id": 165,
+      "category": "Design Patterns",
+      "question": "What is the Mediator pattern?",
+      "options": {
+        "a": "Reduces direct communication between objects",
+        "b": "Creates object copies",
+        "c": "Manages object creation",
+        "d": "Handles events directly"
+      },
+      "correct_answer": "a",
+      "explanation": "The Mediator pattern reduces coupling between objects by having them communicate through a mediator object."
+    },
+    {
+      "id": 166,
+      "category": "Build Tools",
+      "question": "What is the purpose of a bundler like Webpack?",
+      "options": {
+        "a": "To combine multiple files into optimized bundles",
+        "b": "To run tests",
+        "c": "To write code",
+        "d": "To deploy applications"
+      },
+      "correct_answer": "a",
+      "explanation": "A bundler combines multiple JavaScript files and their dependencies into optimized bundles for production use."
+    },
+    {
+      "id": 167,
+      "category": "Build Tools",
+      "question": "What is tree shaking?",
+      "options": {
+        "a": "Removing unused code from bundles",
+        "b": "Organizing file structure",
+        "c": "Creating directory trees",
+        "d": "Managing dependencies"
+      },
+      "correct_answer": "a",
+      "explanation": "Tree shaking is a technique used by bundlers to eliminate unused code from the final bundle."
+    },
+    {
+      "id": 168,
+      "category": "Build Tools",
+      "question": "What is the purpose of source maps?",
+      "options": {
+        "a": "To map minified code to original source",
+        "b": "To create file maps",
+        "c": "To organize code",
+        "d": "To track changes"
+      },
+      "correct_answer": "a",
+      "explanation": "Source maps allow debugging of minified code by mapping it back to the original source code."
+    },
+    {
+      "id": 169,
+      "category": "Build Tools",
+      "question": "What is hot module replacement (HMR)?",
+      "options": {
+        "a": "Updating modules without full refresh",
+        "b": "Replacing broken modules",
+        "c": "Managing module versions",
+        "d": "Creating new modules"
+      },
+      "correct_answer": "a",
+      "explanation": "HMR allows modules to be updated at runtime without requiring a full page refresh."
+    },
+    {
+      "id": 170,
+      "category": "Build Tools",
+      "question": "What is the purpose of a linter?",
+      "options": {
+        "a": "To check code for potential errors and style issues",
+        "b": "To compile code",
+        "c": "To run tests",
+        "d": "To bundle code"
+      },
+      "correct_answer": "a",
+      "explanation": "A linter analyzes code for potential errors, bugs, and style issues before runtime."
+    },
+    {
+      "id": 171,
+      "category": "Frameworks",
+      "question": "What is Virtual DOM in React?",
+      "options": {
+        "a": "A lightweight copy of the actual DOM",
+        "b": "A virtual browser",
+        "c": "A testing environment",
+        "d": "A development server"
+      },
+      "correct_answer": "a",
+      "explanation": "Virtual DOM is a lightweight copy of the actual DOM that React uses to optimize rendering performance."
+    },
+    {
+      "id": 172,
+      "category": "Frameworks",
+      "question": "What is a component in modern frameworks?",
+      "options": {
+        "a": "A reusable piece of UI with its own logic",
+        "b": "A JavaScript file",
+        "c": "A CSS stylesheet",
+        "d": "A HTML template"
+      },
+      "correct_answer": "a",
+      "explanation": "Components are reusable, self-contained pieces of UI that include both the visual elements and their behavior."
+    },
+    {
+      "id": 173,
+      "category": "Frameworks",
+      "question": "What is state management in frameworks?",
+      "options": {
+        "a": "Managing application data and UI state",
+        "b": "Managing server state",
+        "c": "Managing file system",
+        "d": "Managing database"
+      },
+      "correct_answer": "a",
+      "explanation": "State management involves handling and maintaining application data and UI state in a predictable way."
+    },
+    {
+      "id": 174,
+      "category": "Frameworks",
+      "question": "What is server-side rendering (SSR)?",
+      "options": {
+        "a": "Rendering pages on the server before sending to client",
+        "b": "Rendering only on client",
+        "c": "Managing server data",
+        "d": "Testing server code"
+      },
+      "correct_answer": "a",
+      "explanation": "SSR involves rendering pages on the server before sending them to the client, improving initial load time and SEO."
+    },
+    {
+      "id": 175,
+      "category": "Frameworks",
+      "question": "What is the purpose of routing in frameworks?",
+      "options": {
+        "a": "Managing navigation between different views",
+        "b": "Managing server routes",
+        "c": "Managing file paths",
+        "d": "Managing API endpoints"
+      },
+      "correct_answer": "a",
+      "explanation": "Routing handles navigation between different views or pages in a single-page application."
+    },
+    {
+      "id": 176,
+      "category": "Performance",
+      "question": "What is the event loop in JavaScript?",
+      "options": {
+        "a": "A mechanism to handle async operations",
+        "b": "A type of loop structure",
+        "c": "A timing function",
+        "d": "A debugging tool"
+      },
+      "correct_answer": "a",
+      "explanation": "The event loop is a mechanism that handles asynchronous operations and callback execution in JavaScript."
+    },
+    {
+      "id": 177,
+      "category": "Performance",
+      "question": "What is the purpose of Web Workers?",
+      "options": {
+        "a": "To run scripts in background threads",
+        "b": "To manage web servers",
+        "c": "To handle HTTP requests",
+        "d": "To manage DOM updates"
+      },
+      "correct_answer": "a",
+      "explanation": "Web Workers allow running scripts in background threads, preventing blocking of the main thread."
+    },
+    {
+      "id": 178,
+      "category": "Performance",
+      "question": "What is the purpose of requestIdleCallback?",
+      "options": {
+        "a": "To schedule low priority tasks",
+        "b": "To handle high priority tasks",
+        "c": "To manage animations",
+        "d": "To control timing"
+      },
+      "correct_answer": "a",
+      "explanation": "requestIdleCallback schedules low priority tasks to run during browser idle periods."
+    },
+    {
+      "id": 179,
+      "category": "Performance",
+      "question": "What is the purpose of the Performance API?",
+      "options": {
+        "a": "To measure application performance",
+        "b": "To improve performance",
+        "c": "To debug performance",
+        "d": "To test performance"
+      },
+      "correct_answer": "a",
+      "explanation": "The Performance API provides access to timing-related information for measuring application performance."
+    },
+    {
+      "id": 180,
+      "category": "Performance",
+      "question": "What is code splitting in modern JavaScript?",
+      "options": {
+        "a": "Breaking code into smaller chunks",
+        "b": "Splitting files",
+        "c": "Organizing code",
+        "d": "Managing dependencies"
+      },
+      "correct_answer": "a",
+      "explanation": "Code splitting involves breaking code into smaller chunks that can be loaded on demand, improving initial load time."
+    },
+    {
+      "id": 181,
+      "category": "Security",
+      "question": "What is input validation?",
+      "options": {
+        "a": "Checking user input for validity and safety",
+        "b": "Storing user input",
+        "c": "Processing user input",
+        "d": "Displaying user input"
+      },
+      "correct_answer": "a",
+      "explanation": "Input validation ensures that user-provided data meets expected criteria and is safe to process."
+    },
+    {
+      "id": 182,
+      "category": "Security",
+      "question": "What is the purpose of CORS?",
+      "options": {
+        "a": "To control cross-origin resource access",
+        "b": "To manage server resources",
+        "c": "To handle HTTP requests",
+        "d": "To validate data"
+      },
+      "correct_answer": "a",
+      "explanation": "CORS (Cross-Origin Resource Sharing) controls how web pages can request resources from different origins."
+    },
+    {
+      "id": 183,
+      "category": "Security",
+      "question": "What is sanitization in JavaScript?",
+      "options": {
+        "a": "Cleaning and validating data to prevent attacks",
+        "b": "Organizing code",
+        "c": "Managing memory",
+        "d": "Handling errors"
+      },
+      "correct_answer": "a",
+      "explanation": "Sanitization involves cleaning and validating data to prevent security vulnerabilities like XSS attacks."
+    },
+    {
+      "id": 184,
+      "category": "Security",
+      "question": "What is the purpose of the httpOnly flag?",
+      "options": {
+        "a": "To prevent JavaScript access to cookies",
+        "b": "To enable HTTP requests",
+        "c": "To manage HTTP headers",
+        "d": "To handle HTTP responses"
+      },
+      "correct_answer": "a",
+      "explanation": "The httpOnly flag prevents JavaScript from accessing sensitive cookie data, enhancing security."
+    },
+    {
+      "id": 185,
+      "category": "Security",
+      "question": "What is the principle of least privilege?",
+      "options": {
+        "a": "Giving minimum necessary access rights",
+        "b": "Restricting all access",
+        "c": "Granting full access",
+        "d": "Ignoring access control"
+      },
+      "correct_answer": "a",
+      "explanation": "The principle of least privilege involves giving users or processes only the minimum access rights they need."
+    },
+    {
+      "id": 186,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the Fetch API?",
+      "options": {
+        "a": "To make HTTP requests",
+        "b": "To fetch local files",
+        "c": "To manage data",
+        "d": "To handle events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Fetch API provides a modern interface for making HTTP requests to servers."
+    },
+    {
+      "id": 187,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the Web Storage API?",
+      "options": {
+        "a": "To store data in the browser",
+        "b": "To manage server storage",
+        "c": "To handle file storage",
+        "d": "To manage databases"
+      },
+      "correct_answer": "a",
+      "explanation": "The Web Storage API provides mechanisms for storing data in the browser through localStorage and sessionStorage."
+    },
+    {
+      "id": 188,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the Geolocation API?",
+      "options": {
+        "a": "To access user's location",
+        "b": "To manage maps",
+        "c": "To handle navigation",
+        "d": "To store locations"
+      },
+      "correct_answer": "a",
+      "explanation": "The Geolocation API allows web applications to access the user's geographical location information."
+    },
+    {
+      "id": 189,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the Web Audio API?",
+      "options": {
+        "a": "To process and synthesize audio",
+        "b": "To play audio files",
+        "c": "To record audio",
+        "d": "To manage sound"
+      },
+      "correct_answer": "a",
+      "explanation": "The Web Audio API provides a powerful system for controlling audio on the web, allowing processing and synthesis."
+    },
+    {
+      "id": 190,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the File API?",
+      "options": {
+        "a": "To handle file operations in the browser",
+        "b": "To manage server files",
+        "c": "To store files",
+        "d": "To create files"
+      },
+      "correct_answer": "a",
+      "explanation": "The File API allows web applications to handle file operations like reading and manipulating files in the browser."
+    },
+    {
+      "id": 191,
+      "category": "Accessibility",
+      "question": "What is ARIA in web development?",
+      "options": {
+        "a": "Accessible Rich Internet Applications",
+        "b": "Advanced Resource Integration API",
+        "c": "Automated Resource Interface Access",
+        "d": "Application Resource Integration Architecture"
+      },
+      "correct_answer": "a",
+      "explanation": "ARIA (Accessible Rich Internet Applications) is a set of attributes that define ways to make web content more accessible."
+    },
+    {
+      "id": 192,
+      "category": "Accessibility",
+      "question": "What is keyboard accessibility?",
+      "options": {
+        "a": "Making content accessible via keyboard navigation",
+        "b": "Managing keyboard events",
+        "c": "Handling keyboard input",
+        "d": "Creating keyboard shortcuts"
+      },
+      "correct_answer": "a",
+      "explanation": "Keyboard accessibility ensures that all website functionality can be accessed using only a keyboard."
+    },
+    {
+      "id": 193,
+      "category": "Accessibility",
+      "question": "What is the purpose of alt text?",
+      "options": {
+        "a": "To provide text alternatives for images",
+        "b": "To style images",
+        "c": "To format text",
+        "d": "To handle image loading"
+      },
+      "correct_answer": "a",
+      "explanation": "Alt text provides text alternatives for images, making content accessible to screen readers and when images fail to load."
+    },
+    {
+      "id": 194,
+      "category": "SEO",
+      "question": "What is client-side rendering's impact on SEO?",
+      "options": {
+        "a": "Can make content harder for search engines to index",
+        "b": "Always improves SEO",
+        "c": "Has no impact on SEO",
+        "d": "Only affects mobile SEO"
+      },
+      "correct_answer": "a",
+      "explanation": "Client-side rendering can make it harder for search engines to index content as they may not execute JavaScript effectively."
+    },
+    {
+      "id": 195,
+      "category": "SEO",
+      "question": "What is the purpose of meta tags in JavaScript SEO?",
+      "options": {
+        "a": "To provide information about the page to search engines",
+        "b": "To style the page",
+        "c": "To handle page loading",
+        "d": "To manage scripts"
+      },
+      "correct_answer": "a",
+      "explanation": "Meta tags provide important information about the page to search engines, helping with SEO optimization."
+    },
+    {
+      "id": 196,
+      "category": "Tooling",
+      "question": "What is the purpose of ESLint?",
+      "options": {
+        "a": "To identify and fix code style issues",
+        "b": "To compile code",
+        "c": "To run tests",
+        "d": "To manage dependencies"
+      },
+      "correct_answer": "a",
+      "explanation": "ESLint is a tool for identifying and fixing code style issues and potential errors in JavaScript code."
+    },
+    {
+      "id": 197,
+      "category": "Tooling",
+      "question": "What is Prettier?",
+      "options": {
+        "a": "An opinionated code formatter",
+        "b": "A testing framework",
+        "c": "A build tool",
+        "d": "A package manager"
+      },
+      "correct_answer": "a",
+      "explanation": "Prettier is an opinionated code formatter that enforces a consistent code style across your project."
+    },
+    {
+      "id": 198,
+      "category": "Tooling",
+      "question": "What is the purpose of TypeScript?",
+      "options": {
+        "a": "To add static typing to JavaScript",
+        "b": "To run JavaScript code",
+        "c": "To manage packages",
+        "d": "To test code"
+      },
+      "correct_answer": "a",
+      "explanation": "TypeScript adds static typing to JavaScript, helping catch errors early in development."
+    },
+    {
+      "id": 199,
+      "category": "Tooling",
+      "question": "What is the purpose of Git hooks?",
+      "options": {
+        "a": "To automate tasks during Git workflows",
+        "b": "To manage Git repositories",
+        "c": "To write Git commands",
+        "d": "To store Git history"
+      },
+      "correct_answer": "a",
+      "explanation": "Git hooks automate tasks that run at certain points in Git workflows, like pre-commit or pre-push."
+    },
+    {
+      "id": 200,
+      "category": "Tooling",
+      "question": "What is the purpose of package-lock.json?",
+      "options": {
+        "a": "To lock dependency versions",
+        "b": "To store package code",
+        "c": "To manage scripts",
+        "d": "To configure packages"
+      },
+      "correct_answer": "a",
+      "explanation": "package-lock.json locks the versions of installed dependencies to ensure consistent installations across different environments."
+    },
+    {
+      "id": 201,
+      "category": "Patterns",
+      "question": "What is the Repository pattern?",
+      "options": {
+        "a": "A pattern for abstracting data access",
+        "b": "A pattern for storing data",
+        "c": "A pattern for managing code",
+        "d": "A pattern for handling events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Repository pattern abstracts the data access layer, making the code more maintainable and testable."
+    },
+    {
+      "id": 202,
+      "category": "Patterns",
+      "question": "What is the Factory Method pattern?",
+      "options": {
+        "a": "A pattern for creating objects",
+        "b": "A pattern for managing objects",
+        "c": "A pattern for storing objects",
+        "d": "A pattern for deleting objects"
+      },
+      "correct_answer": "a",
+      "explanation": "The Factory Method pattern provides an interface for creating objects but lets subclasses decide which class to instantiate."
+    },
+    {
+      "id": 203,
+      "category": "Patterns",
+      "question": "What is the Observer pattern?",
+      "options": {
+        "a": "A pattern for handling state changes",
+        "b": "A pattern for managing data",
+        "c": "A pattern for creating objects",
+        "d": "A pattern for handling errors"
+      },
+      "correct_answer": "a",
+      "explanation": "The Observer pattern defines a one-to-many dependency between objects, where multiple observers are notified of state changes."
+    },
+    {
+      "id": 204,
+      "category": "Patterns",
+      "question": "What is the Adapter pattern?",
+      "options": {
+        "a": "A pattern for making incompatible interfaces work together",
+        "b": "A pattern for creating interfaces",
+        "c": "A pattern for managing interfaces",
+        "d": "A pattern for testing interfaces"
+      },
+      "correct_answer": "a",
+      "explanation": "The Adapter pattern allows incompatible interfaces to work together by wrapping an object in an adapter to make it compatible."
+    },
+    {
+      "id": 205,
+      "category": "Patterns",
+      "question": "What is the Decorator pattern?",
+      "options": {
+        "a": "A pattern for adding behavior dynamically",
+        "b": "A pattern for styling objects",
+        "c": "A pattern for creating objects",
+        "d": "A pattern for managing objects"
+      },
+      "correct_answer": "a",
+      "explanation": "The Decorator pattern allows behavior to be added to individual objects dynamically without affecting other objects."
+    },
+    {
+      "id": 206,
+      "category": "Networking",
+      "question": "What is XMLHttpRequest?",
+      "options": {
+        "a": "An API for making HTTP requests",
+        "b": "A way to parse XML",
+        "c": "A data format",
+        "d": "A server protocol"
+      },
+      "correct_answer": "a",
+      "explanation": "XMLHttpRequest is an API that provides client functionality for transferring data between client and server."
+    },
+    {
+      "id": 207,
+      "category": "Networking",
+      "question": "What is AJAX?",
+      "options": {
+        "a": "Asynchronous JavaScript and XML",
+        "b": "Advanced JavaScript and XML",
+        "c": "Asynchronous JavaScript and XHTML",
+        "d": "Asynchronous JavaScript and JSON"
+      },
+      "correct_answer": "a",
+      "explanation": "AJAX is a technique for creating interactive web applications. It uses XMLHttpRequest to send and receive data asynchronously."
+    },
+    {
+      "id": 208,
+      "category": "Networking",
+      "question": "What is CORS?",
+      "options": {
+        "a": "Cross-Origin Resource Sharing",
+        "b": "Content-Type Options",
+        "c": "Cross-Origin Request Security",
+        "d": "Cross-Origin Resource Security"
+      },
+      "correct_answer": "a",
+      "explanation": "CORS is a security feature that allows restricted resources on a web page to be requested from another domain outside the domain from which the resource originated."
+    },
+    {
+      "id": 209,
+      "category": "Networking",
+      "question": "What is JSON?",
+      "options": {
+        "a": "JavaScript Object Notation",
+        "b": "JavaScript Object Normalization",
+        "c": "JavaScript Object Notification",
+        "d": "JavaScript Object Network"
+      },
+      "correct_answer": "a",
+      "explanation": "JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate."
+    },
+    {
+      "id": 210,
+      "category": "Networking",
+      "question": "What is REST?",
+      "options": {
+        "a": "Representational State Transfer",
+        "b": "Remote Execution Transfer",
+        "c": "Remote Execution Transfer",
+        "d": "Remote Execution Transfer"
+      },
+      "correct_answer": "a",
+      "explanation": "REST is a style of software architecture that uses a subset of HTTP methods to allow for interaction with web resources."
+    },
+    {
+      "id": 211,
+      "category": "Animation",
+      "question": "What is the purpose of requestAnimationFrame?",
+      "options": {
+        "a": "To optimize animation performance",
+        "b": "To create animations",
+        "c": "To stop animations",
+        "d": "To manage animation timing"
+      },
+      "correct_answer": "a",
+      "explanation": "requestAnimationFrame is a method that tells the browser to perform an animation, optimizing it for better performance."
+    },
+    {
+      "id": 212,
+      "category": "Animation",
+      "question": "What is CSS transform?",
+      "options": {
+        "a": "A way to modify element appearance and position",
+        "b": "A way to animate elements",
+        "c": "A way to style elements",
+        "d": "A way to handle events"
+      },
+      "correct_answer": "a",
+      "explanation": "CSS transform allows you to modify the appearance and position of elements through rotation, scaling, skewing, or translation."
+    },
+    {
+      "id": 213,
+      "category": "Animation",
+      "question": "What is the Canvas API used for?",
+      "options": {
+        "a": "Drawing graphics and animations programmatically",
+        "b": "Creating HTML elements",
+        "c": "Styling web pages",
+        "d": "Managing events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Canvas API provides a means for drawing graphics, making compositions, and creating animations programmatically."
+    },
+    {
+      "id": 214,
+      "category": "Animation",
+      "question": "What is SVG?",
+      "options": {
+        "a": "Scalable Vector Graphics format",
+        "b": "Simple Video Graphics",
+        "c": "System Vector Generator",
+        "d": "Standard Visual Graphics"
+      },
+      "correct_answer": "a",
+      "explanation": "SVG (Scalable Vector Graphics) is an XML-based vector image format for 2D graphics with support for animation and interactivity."
+    },
+    {
+      "id": 215,
+      "category": "Animation",
+      "question": "What is WebGL?",
+      "options": {
+        "a": "A JavaScript API for rendering 3D graphics",
+        "b": "A web graphics library",
+        "c": "A graphics framework",
+        "d": "A drawing tool"
+      },
+      "correct_answer": "a",
+      "explanation": "WebGL (Web Graphics Library) is a JavaScript API for rendering interactive 3D and 2D graphics within any compatible web browser."
+    },
+    {
+      "id": 216,
+      "category": "Browser APIs",
+      "question": "What is the MutationObserver API?",
+      "options": {
+        "a": "An API for watching DOM changes",
+        "b": "An API for handling mutations",
+        "c": "An API for modifying DOM",
+        "d": "An API for creating elements"
+      },
+      "correct_answer": "a",
+      "explanation": "MutationObserver provides the ability to watch for changes being made to the DOM tree."
+    },
+    {
+      "id": 217,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the History API?",
+      "options": {
+        "a": "To manipulate browser history",
+        "b": "To store historical data",
+        "c": "To track user history",
+        "d": "To manage navigation"
+      },
+      "correct_answer": "a",
+      "explanation": "The History API allows manipulation of the browser session history through JavaScript."
+    },
+    {
+      "id": 218,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the IntersectionObserver API?",
+      "options": {
+        "a": "To detect element visibility",
+        "b": "To handle intersections",
+        "c": "To manage DOM elements",
+        "d": "To track mouse position"
+      },
+      "correct_answer": "a",
+      "explanation": "IntersectionObserver provides a way to asynchronously observe changes in the intersection of a target element with its parent or viewport."
+    },
+    {
+      "id": 219,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the ResizeObserver API?",
+      "options": {
+        "a": "To monitor element size changes",
+        "b": "To resize elements",
+        "c": "To handle window resizing",
+        "d": "To manage layouts"
+      },
+      "correct_answer": "a",
+      "explanation": "ResizeObserver provides a way to observe and respond to changes in the size of an element's content or border box."
+    },
+    {
+      "id": 220,
+      "category": "Browser APIs",
+      "question": "What is the purpose of the Clipboard API?",
+      "options": {
+        "a": "To interact with the system clipboard",
+        "b": "To copy elements",
+        "c": "To manage data",
+        "d": "To handle text selection"
+      },
+      "correct_answer": "a",
+      "explanation": "The Clipboard API provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard."
+    },
+    {
+      "id": 221,
+      "category": "Performance",
+      "question": "What is code profiling in JavaScript?",
+      "options": {
+        "a": "Analyzing code performance and resource usage",
+        "b": "Writing code profiles",
+        "c": "Managing code files",
+        "d": "Testing code functionality"
+      },
+      "correct_answer": "a",
+      "explanation": "Code profiling involves analyzing the performance characteristics and resource usage of code to identify bottlenecks and optimization opportunities."
+    },
+    {
+      "id": 222,
+      "category": "Performance",
+      "question": "What is the purpose of the Performance API?",
+      "options": {
+        "a": "To measure and analyze application performance",
+        "b": "To improve code performance",
+        "c": "To manage performance issues",
+        "d": "To handle performance events"
+      },
+      "correct_answer": "a",
+      "explanation": "The Performance API provides access to performance-related information about the current page and methods to measure application performance."
+    },
+    {
+      "id": 223,
+      "category": "Performance",
+      "question": "What is the purpose of lazy loading?",
+      "options": {
+        "a": "To defer loading of non-critical resources",
+        "b": "To load resources slowly",
+        "c": "To manage resource loading",
+        "d": "To handle loading errors"
+      },
+      "correct_answer": "a",
+      "explanation": "Lazy loading is a strategy to defer the loading of non-critical resources until they are actually needed, improving initial page load performance."
+    },
+    {
+      "id": 224,
+      "category": "Performance",
+      "question": "What is tree shaking in JavaScript?",
+      "options": {
+        "a": "Removing unused code from bundles",
+        "b": "Organizing code structure",
+        "c": "Managing code dependencies",
+        "d": "Handling code execution"
+      },
+      "correct_answer": "a",
+      "explanation": "Tree shaking is a dead code elimination technique that removes unused code from the final bundle to reduce its size."
+    },
+    {
+      "id": 225,
+      "category": "Performance",
+      "question": "What is the purpose of code splitting?",
+      "options": {
+        "a": "To split code into smaller chunks for better loading",
+        "b": "To organize code files",
+        "c": "To manage code versions",
+        "d": "To handle code execution"
+      },
+      "correct_answer": "a",
+      "explanation": "Code splitting is a technique that splits your code into smaller chunks, allowing you to load only what's needed for better performance."
+    }
+  ]
+} 

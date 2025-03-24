@@ -3,12 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join BitWiseBrain - Learn Through Reels</title>
+    <title>Join BitWiseBrain - Learn Programming</title>
     <link rel="stylesheet" href="styles-login-signup.css">
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>  
 </head>
 <body>
+    <!-- Left Navigation -->
+    <div class="left-navbar">
+        <a href="#" class="nav-item">
+            <ion-icon name="home-outline"></ion-icon>
+            <span class="tooltip">Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <ion-icon name="book-outline"></ion-icon>
+            <span class="tooltip">Learn</span>
+        </a>
+        <a href="#" class="nav-item">
+            <ion-icon name="code-slash-outline"></ion-icon>
+            <span class="tooltip">Practice</span>
+        </a>
+        <a href="#" class="nav-item">
+            <ion-icon name="trophy-outline"></ion-icon>
+            <span class="tooltip">Leaderboard</span>
+        </a>
+        <a href="#" class="nav-item">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span class="tooltip">Settings</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
     <div class="main">
         <div class="navbar">
             <div class="icon">
@@ -28,9 +53,10 @@
         <div class="content">
             <h1>Start Your<br>Learning <span>Journey</span><br>Today</h1>
             <p class="par">Join our community of learners and master programming<br>
-                through engaging video reels and interactive quizzes.<br>
+                through engaging interactive quizzes.<br>
                 Learn at your own pace, anywhere, anytime.</p>
 
+            <!-- Signup Form -->
             <div class="signup-form form">
                 <h2>Create Account</h2>
                 <form id="signupForm">
@@ -51,7 +77,7 @@
                 </div>
             </div>
 
-            <!-- In signup.html, use this path instead -->
+            <!-- Dev Access -->
             <div class="dev-access">
                 <button 
                     onclick="window.location.href='main.html'" 

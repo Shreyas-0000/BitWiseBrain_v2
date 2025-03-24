@@ -1,0 +1,2799 @@
+{
+  "html_mcq_questions": [
+    {
+      "id": 1,
+      "category": "Introduction to HTML",
+      "question": "What does HTML stand for?",
+      "options": {
+        "a": "Hyper Tool Markup Language",
+        "b": "Hyperlinks and Text Markup Language",
+        "c": "Hyper Text Markup Language",
+        "d": "Home Tool Markup Language"
+      },
+      "correct_answer": "c",
+      "explanation": "HTML stands for Hyper Text Markup Language, which is the standard markup language for creating web pages."
+    },
+    {
+      "id": 2,
+      "category": "Introduction to HTML",
+      "question": "Who is the inventor of HTML?",
+      "options": {
+        "a": "Tim Berners-Lee",
+        "b": "Brendan Eich",
+        "c": "Dennis Ritchie",
+        "d": "Bjarne Stroustrup"
+      },
+      "correct_answer": "a",
+      "explanation": "Tim Berners-Lee invented HTML in 1989 while working at CERN."
+    },
+    {
+      "id": 3,
+      "category": "Introduction to HTML",
+      "question": "HTML files are saved with which file extension?",
+      "options": {
+        "a": ".htm or .html",
+        "b": ".xml",
+        "c": ".txt",
+        "d": ".css"
+      },
+      "correct_answer": "a",
+      "explanation": "HTML files use either .htm or .html file extensions."
+    },
+    {
+      "id": 4,
+      "category": "Introduction to HTML",
+      "question": "Which tag defines the root of an HTML document?",
+      "options": {
+        "a": "[head]",
+        "b": "[body]",
+        "c": "[title]",
+        "d": "[html]"
+      },
+      "correct_answer": "d",
+      "explanation": "The [html] tag defines the root of an HTML document."
+    },
+    {
+      "id": 5,
+      "category": "Introduction to HTML",
+      "question": "Which tag is used to display a horizontal line in HTML?",
+      "options": {
+        "a": "[br]",
+        "b": "[hr]",
+        "c": "[line]",
+        "d": "[hline]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [hr] tag creates a horizontal line in HTML."
+    },
+    {
+      "id": 6,
+      "category": "Introduction to HTML",
+      "question": "Which HTML element is used to define a paragraph?",
+      "options": {
+        "a": "[p]",
+        "b": "[h1]",
+        "c": "[para]",
+        "d": "[div]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [p] tag defines a paragraph in HTML."
+    },
+    {
+      "id": 7,
+      "category": "Introduction to HTML",
+      "question": "Which tag is used to insert a line break?",
+      "options": {
+        "a": "[break]",
+        "b": "[lb]",
+        "c": "[br]",
+        "d": "[hr]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [br] tag inserts a single line break in HTML."
+    },
+    {
+      "id": 8,
+      "category": "Introduction to HTML",
+      "question": "HTML is a:",
+      "options": {
+        "a": "Programming Language",
+        "b": "Scripting Language",
+        "c": "Markup Language",
+        "d": "Styling Language"
+      },
+      "correct_answer": "c",
+      "explanation": "HTML is a Markup Language used for structuring and presenting content on the web."
+    },
+    {
+      "id": 9,
+      "category": "Introduction to HTML",
+      "question": "Which tag defines the title of an HTML document?",
+      "options": {
+        "a": "[title]",
+        "b": "[heading]",
+        "c": "[header]",
+        "d": "[meta]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [title] tag defines the title of the HTML document which appears in the browser's title bar or tab."
+    },
+    {
+      "id": 10,
+      "category": "Introduction to HTML",
+      "question": "Which tag is used to create a hyperlink in HTML?",
+      "options": {
+        "a": "[link]",
+        "b": "[a]",
+        "c": "[href]",
+        "d": "[hyper]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [a] tag creates hyperlinks in HTML."
+    },
+    {
+      "id": 11,
+      "category": "Introduction to HTML",
+      "question": "What is the purpose of the [!DOCTYPE] declaration?",
+      "options": {
+        "a": "To define the document type",
+        "b": "To declare the HTML version",
+        "c": "To start the HTML document",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The [!DOCTYPE] declaration specifies the document type and HTML version, helping browsers render the page correctly."
+    },
+    {
+      "id": 12,
+      "category": "Introduction to HTML",
+      "question": "Which HTML element contains metadata about the document?",
+      "options": {
+        "a": "[meta]",
+        "b": "[head]",
+        "c": "[header]",
+        "d": "[info]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [head] element contains metadata about the document, including title, styles, scripts, and meta information."
+    },
+    {
+      "id": 13,
+      "category": "Introduction to HTML",
+      "question": "What is the correct way to comment in HTML?",
+      "options": {
+        "a": "// This is a comment",
+        "b": "/* This is a comment */",
+        "c": "[!-- This is a comment --]",
+        "d": "# This is a comment"
+      },
+      "correct_answer": "c",
+      "explanation": "HTML comments are written using [!-- comment text --]."
+    },
+    {
+      "id": 14,
+      "category": "Introduction to HTML",
+      "question": "Which character encoding is recommended for HTML5?",
+      "options": {
+        "a": "UTF-8",
+        "b": "ASCII",
+        "c": "ISO-8859-1",
+        "d": "ANSI"
+      },
+      "correct_answer": "a",
+      "explanation": "UTF-8 is the recommended character encoding for HTML5 as it supports all Unicode characters."
+    },
+    {
+      "id": 15,
+      "category": "Introduction to HTML",
+      "question": "What is the purpose of the lang attribute in HTML?",
+      "options": {
+        "a": "To specify the document language",
+        "b": "To define text direction",
+        "c": "To set character encoding",
+        "d": "To declare document type"
+      },
+      "correct_answer": "a",
+      "explanation": "The lang attribute specifies the language of the document content."
+    },
+    {
+      "id": 16,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to define the largest heading in HTML?",
+      "options": {
+        "a": "[h1]",
+        "b": "[h6]",
+        "c": "[heading]",
+        "d": "[head]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [h1] tag defines the largest and most important heading in HTML."
+    },
+    {
+      "id": 17,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to define a paragraph in HTML?",
+      "options": {
+        "a": "[p]",
+        "b": "[para]",
+        "c": "[paragraph]",
+        "d": "[pg]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [p] tag defines a paragraph in HTML."
+    },
+    {
+      "id": 18,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to make text bold in HTML?",
+      "options": {
+        "a": "[strong]",
+        "b": "[b]",
+        "c": "[bold]",
+        "d": "Both a and b"
+      },
+      "correct_answer": "d",
+      "explanation": "Both [strong] and [b] tags can be used to make text bold in HTML."
+    },
+    {
+      "id": 19,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to insert an image in HTML?",
+      "options": {
+        "a": "[img]",
+        "b": "[image]",
+        "c": "[pic]",
+        "d": "[src]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [img] tag is used to embed images in HTML documents."
+    },
+    {
+      "id": 20,
+      "category": "Basic HTML Tags",
+      "question": "Which attribute is used with [img] to specify the image path?",
+      "options": {
+        "a": "link",
+        "b": "src",
+        "c": "href",
+        "d": "path"
+      },
+      "correct_answer": "b",
+      "explanation": "The src attribute specifies the path (URL) to the image."
+    },
+    {
+      "id": 21,
+      "category": "Basic HTML Tags",
+      "question": "Which HTML tag is used to create an unordered list?",
+      "options": {
+        "a": "[ol]",
+        "b": "[ul]",
+        "c": "[li]",
+        "d": "[list]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [ul] tag creates an unordered (bulleted) list."
+    },
+    {
+      "id": 22,
+      "category": "Basic HTML Tags",
+      "question": "Which HTML tag is used to create a list item?",
+      "options": {
+        "a": "[li]",
+        "b": "[list]",
+        "c": "[item]",
+        "d": "[ul]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [li] tag defines a list item within ordered or unordered lists."
+    },
+    {
+      "id": 23,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to insert a line horizontally?",
+      "options": {
+        "a": "[br]",
+        "b": "[line]",
+        "c": "[hr]",
+        "d": "[break]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [hr] tag creates a horizontal line in HTML."
+    },
+    {
+      "id": 24,
+      "category": "Basic HTML Tags",
+      "question": "What is the purpose of the [em] tag?",
+      "options": {
+        "a": "Makes text bold",
+        "b": "Makes text italic",
+        "c": "Inserts an image",
+        "d": "Creates a link"
+      },
+      "correct_answer": "b",
+      "explanation": "The [em] tag renders text in italic and emphasizes it."
+    },
+    {
+      "id": 25,
+      "category": "Basic HTML Tags",
+      "question": "Which tag is used to define a hyperlink in HTML?",
+      "options": {
+        "a": "[a]",
+        "b": "[link]",
+        "c": "[href]",
+        "d": "[hyper]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [a] tag creates hyperlinks in HTML documents."
+    },
+    {
+      "id": 26,
+      "category": "Links and Images",
+      "question": "Which HTML tag is used to define a hyperlink?",
+      "options": {
+        "a": "[link]",
+        "b": "[a]",
+        "c": "[href]",
+        "d": "[hyper]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [a] tag defines a hyperlink in HTML."
+    },
+    {
+      "id": 27,
+      "category": "Links and Images",
+      "question": "Which attribute is used to specify the URL in an anchor ([a]) tag?",
+      "options": {
+        "a": "link",
+        "b": "href",
+        "c": "src",
+        "d": "url"
+      },
+      "correct_answer": "b",
+      "explanation": "The href attribute specifies the URL of the page the link goes to."
+    },
+    {
+      "id": 28,
+      "category": "Links and Images",
+      "question": "Which tag is used to embed an image in an HTML page?",
+      "options": {
+        "a": "[image]",
+        "b": "[img]",
+        "c": "[src]",
+        "d": "[pic]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [img] tag is used to embed images in HTML documents."
+    },
+    {
+      "id": 29,
+      "category": "Links and Images",
+      "question": "What attribute is used to specify the path of an image in [img] tag?",
+      "options": {
+        "a": "href",
+        "b": "src",
+        "c": "path",
+        "d": "link"
+      },
+      "correct_answer": "b",
+      "explanation": "The src attribute specifies the path to the image file."
+    },
+    {
+      "id": 30,
+      "category": "Links and Images",
+      "question": "Which attribute provides alternative text for an image if it cannot be displayed?",
+      "options": {
+        "a": "alt",
+        "b": "title",
+        "c": "src",
+        "d": "desc"
+      },
+      "correct_answer": "a",
+      "explanation": "The alt attribute provides alternative text for an image if it cannot be displayed."
+    },
+    {
+      "id": 31,
+      "category": "Links and Images",
+      "question": "Which attribute is used to open a hyperlink in a new tab?",
+      "options": {
+        "a": "target=\"_blank\"",
+        "b": "newtab=\"yes\"",
+        "c": "href=\"_new\"",
+        "d": "blank=\"true\""
+      },
+      "correct_answer": "a",
+      "explanation": "The target=\"_blank\" attribute opens the linked document in a new window or tab."
+    },
+    {
+      "id": 32,
+      "category": "Links and Images",
+      "question": "What is the correct way to display an image that is located in a folder named \"images\"?",
+      "options": {
+        "a": "[img href=\"images/photo.jpg\"]",
+        "b": "[img src=\"images/photo.jpg\"]",
+        "c": "[image src=\"images/photo.jpg\"]",
+        "d": "[img link=\"images/photo.jpg\"]"
+      },
+      "correct_answer": "b",
+      "explanation": "Use the src attribute with the correct path to display an image from a folder."
+    },
+    {
+      "id": 33,
+      "category": "Links and Images",
+      "question": "Which tag is used to create clickable image links?",
+      "options": {
+        "a": "[img link]",
+        "b": "[a][img][/a]",
+        "c": "[link img]",
+        "d": "[clickimg]"
+      },
+      "correct_answer": "b",
+      "explanation": "Wrap an [img] tag inside an [a] tag to create a clickable image link."
+    },
+    {
+      "id": 34,
+      "category": "Links and Images",
+      "question": "Which attribute is used to provide a tooltip text when hovering over an image?",
+      "options": {
+        "a": "alt",
+        "b": "title",
+        "c": "tooltip",
+        "d": "hover"
+      },
+      "correct_answer": "b",
+      "explanation": "The title attribute shows tooltip text when hovering over an element."
+    },
+    {
+      "id": 35,
+      "category": "Links and Images",
+      "question": "How can you link to a section within the same page?",
+      "options": {
+        "a": "Using href=\"#sectionID\"",
+        "b": "Using src=\"#section\"",
+        "c": "Using link=\"section\"",
+        "d": "Using target=\"#section\""
+      },
+      "correct_answer": "a",
+      "explanation": "Use href=\"#sectionID\" to create an internal link to a section with the corresponding ID."
+    },
+    {
+      "id": 36,
+      "category": "Tables",
+      "question": "Which HTML tag is used to define a table?",
+      "options": {
+        "a": "[table]",
+        "b": "[tab]",
+        "c": "[tbody]",
+        "d": "[td]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [table] tag defines an HTML table."
+    },
+    {
+      "id": 37,
+      "category": "Tables",
+      "question": "Which tag is used to define a row in a table?",
+      "options": {
+        "a": "[td]",
+        "b": "[tr]",
+        "c": "[th]",
+        "d": "[row]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [tr] tag defines a row in an HTML table."
+    },
+    {
+      "id": 38,
+      "category": "Tables",
+      "question": "Which tag defines a header cell in a table?",
+      "options": {
+        "a": "[td]",
+        "b": "[tr]",
+        "c": "[th]",
+        "d": "[thead]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [th] tag defines a header cell in an HTML table."
+    },
+    {
+      "id": 39,
+      "category": "Tables",
+      "question": "Which tag defines a standard data cell in a table?",
+      "options": {
+        "a": "[td]",
+        "b": "[th]",
+        "c": "[tr]",
+        "d": "[table]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [td] tag defines a standard data cell in an HTML table."
+    },
+    {
+      "id": 40,
+      "category": "Tables",
+      "question": "What is the purpose of the [caption] tag in an HTML table?",
+      "options": {
+        "a": "Adds a header row",
+        "b": "Adds a title to the table",
+        "c": "Adds a border",
+        "d": "Changes cell color"
+      },
+      "correct_answer": "b",
+      "explanation": "The [caption] tag defines a table caption or title."
+    },
+    {
+      "id": 41,
+      "category": "Tables",
+      "question": "Which tag groups the header content in a table?",
+      "options": {
+        "a": "[thead]",
+        "b": "[tbody]",
+        "c": "[tfoot]",
+        "d": "[th]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [thead] tag groups the header content in an HTML table."
+    },
+    {
+      "id": 42,
+      "category": "Tables",
+      "question": "Which tag groups the footer content in a table?",
+      "options": {
+        "a": "[tfoot]",
+        "b": "[thead]",
+        "c": "[tbody]",
+        "d": "[th]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [tfoot] tag groups the footer content in an HTML table."
+    },
+    {
+      "id": 43,
+      "category": "Tables",
+      "question": "Which tag groups the main body content of a table?",
+      "options": {
+        "a": "[tbody]",
+        "b": "[thead]",
+        "c": "[tfoot]",
+        "d": "[td]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [tbody] tag groups the body content in an HTML table."
+    },
+    {
+      "id": 44,
+      "category": "Tables",
+      "question": "What attribute is used to merge two or more columns in a table?",
+      "options": {
+        "a": "rowspan",
+        "b": "colspan",
+        "c": "merge",
+        "d": "span"
+      },
+      "correct_answer": "b",
+      "explanation": "The colspan attribute specifies the number of columns a cell should span."
+    },
+    {
+      "id": 45,
+      "category": "Tables",
+      "question": "What attribute is used to merge two or more rows in a table?",
+      "options": {
+        "a": "colspan",
+        "b": "merge",
+        "c": "rowspan",
+        "d": "span"
+      },
+      "correct_answer": "c",
+      "explanation": "The rowspan attribute specifies the number of rows a cell should span."
+    },
+    {
+      "id": 46,
+      "category": "Forms and Input",
+      "question": "Which HTML tag is used to create a form?",
+      "options": {
+        "a": "[input]",
+        "b": "[form]",
+        "c": "[fieldset]",
+        "d": "[label]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [form] tag is used to create an HTML form for user input."
+    },
+    {
+      "id": 47,
+      "category": "Forms and Input",
+      "question": "Which attribute specifies where to send the form data after submission?",
+      "options": {
+        "a": "method",
+        "b": "action",
+        "c": "target",
+        "d": "href"
+      },
+      "correct_answer": "b",
+      "explanation": "The action attribute specifies where to send the form data when submitted."
+    },
+    {
+      "id": 48,
+      "category": "Forms and Input",
+      "question": "Which attribute defines the HTTP method to be used when submitting the form?",
+      "options": {
+        "a": "action",
+        "b": "target",
+        "c": "method",
+        "d": "type"
+      },
+      "correct_answer": "c",
+      "explanation": "The method attribute specifies the HTTP method (GET or POST) to be used when submitting the form."
+    },
+    {
+      "id": 49,
+      "category": "Forms and Input",
+      "question": "Which tag is used to define a single-line input field?",
+      "options": {
+        "a": "[input]",
+        "b": "[textarea]",
+        "c": "[label]",
+        "d": "[select]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [input] tag is used to create various types of input fields, including single-line text inputs."
+    },
+    {
+      "id": 50,
+      "category": "Forms and Input",
+      "question": "Which attribute is used to define the type of input field?",
+      "options": {
+        "a": "type",
+        "b": "method",
+        "c": "action",
+        "d": "value"
+      },
+      "correct_answer": "a",
+      "explanation": "The type attribute specifies what kind of input field to display."
+    },
+    {
+      "id": 51,
+      "category": "Forms and Input",
+      "question": "Which input type is used for creating a password field?",
+      "options": {
+        "a": "text",
+        "b": "password",
+        "c": "email",
+        "d": "hidden"
+      },
+      "correct_answer": "b",
+      "explanation": "The password input type creates a field where characters are masked for security."
+    },
+    {
+      "id": 52,
+      "category": "Forms and Input",
+      "question": "Which tag is used to create a drop-down list?",
+      "options": {
+        "a": "[dropdown]",
+        "b": "[select]",
+        "c": "[list]",
+        "d": "[input type=\"dropdown\"]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [select] tag creates a drop-down list."
+    },
+    {
+      "id": 53,
+      "category": "Forms and Input",
+      "question": "Which tag is used to define options inside a drop-down list?",
+      "options": {
+        "a": "[item]",
+        "b": "[list]",
+        "c": "[option]",
+        "d": "[select]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [option] tag defines an option in a select list."
+    },
+    {
+      "id": 54,
+      "category": "Forms and Input",
+      "question": "Which tag is used to group related elements inside a form?",
+      "options": {
+        "a": "[fieldset]",
+        "b": "[group]",
+        "c": "[div]",
+        "d": "[section]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [fieldset] tag groups related form elements together."
+    },
+    {
+      "id": 55,
+      "category": "Forms and Input",
+      "question": "Which tag provides a caption for a [fieldset] element?",
+      "options": {
+        "a": "[caption]",
+        "b": "[legend]",
+        "c": "[label]",
+        "d": "[title]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [legend] tag defines a caption for the [fieldset] element."
+    },
+    {
+      "id": 56,
+      "category": "Forms and Input",
+      "question": "What is the purpose of the required attribute in form elements?",
+      "options": {
+        "a": "Makes the field optional",
+        "b": "Makes the field mandatory",
+        "c": "Hides the field",
+        "d": "Disables the field"
+      },
+      "correct_answer": "b",
+      "explanation": "The required attribute specifies that an input field must be filled out before submitting the form."
+    },
+    {
+      "id": 57,
+      "category": "Forms and Input",
+      "question": "Which input type is used for email addresses?",
+      "options": {
+        "a": "text",
+        "b": "email",
+        "c": "mail",
+        "d": "address"
+      },
+      "correct_answer": "b",
+      "explanation": "The email input type is used for fields that should contain an email address."
+    },
+    {
+      "id": 58,
+      "category": "Forms and Input",
+      "question": "Which attribute is used to specify a maximum value for a number input?",
+      "options": {
+        "a": "maximum",
+        "b": "max",
+        "c": "top",
+        "d": "limit"
+      },
+      "correct_answer": "b",
+      "explanation": "The max attribute specifies the maximum value allowed in a number input field."
+    },
+    {
+      "id": 59,
+      "category": "Forms and Input",
+      "question": "Which input type creates a date picker?",
+      "options": {
+        "a": "calendar",
+        "b": "datetime",
+        "c": "date",
+        "d": "time"
+      },
+      "correct_answer": "c",
+      "explanation": "The date input type creates a date picker control."
+    },
+    {
+      "id": 60,
+      "category": "Forms and Input",
+      "question": "What is the purpose of the placeholder attribute?",
+      "options": {
+        "a": "Sets default value",
+        "b": "Shows hint text",
+        "c": "Validates input",
+        "d": "Styles input"
+      },
+      "correct_answer": "b",
+      "explanation": "The placeholder attribute shows hint text in an input field before the user enters a value."
+    },
+    {
+      "id": 61,
+      "category": "Semantic HTML",
+      "question": "What is the purpose of semantic HTML?",
+      "options": {
+        "a": "To make the code look prettier",
+        "b": "To provide meaning to the content",
+        "c": "To add styling",
+        "d": "To improve performance"
+      },
+      "correct_answer": "b",
+      "explanation": "Semantic HTML provides meaning to the content structure, making it more accessible and SEO-friendly."
+    },
+    {
+      "id": 62,
+      "category": "Semantic HTML",
+      "question": "Which tag is used to define the main content area of a webpage?",
+      "options": {
+        "a": "[content]",
+        "b": "[main]",
+        "c": "[body]",
+        "d": "[section]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [main] tag specifies the main content area of a document."
+    },
+    {
+      "id": 63,
+      "category": "Semantic HTML",
+      "question": "Which tag is used for navigation links?",
+      "options": {
+        "a": "[navigation]",
+        "b": "[menu]",
+        "c": "[nav]",
+        "d": "[links]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [nav] tag defines a section of navigation links."
+    },
+    {
+      "id": 64,
+      "category": "Semantic HTML",
+      "question": "Which tag represents a standalone section of content?",
+      "options": {
+        "a": "[div]",
+        "b": "[section]",
+        "c": "[article]",
+        "d": "[content]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [article] tag represents a self-contained composition in a document."
+    },
+    {
+      "id": 65,
+      "category": "Semantic HTML",
+      "question": "What is the purpose of the [aside] tag?",
+      "options": {
+        "a": "Main content",
+        "b": "Navigation menu",
+        "c": "Related content",
+        "d": "Footer content"
+      },
+      "correct_answer": "c",
+      "explanation": "The [aside] tag defines content aside from the main content, like a sidebar."
+    },
+    {
+      "id": 66,
+      "category": "Multimedia",
+      "question": "Which tag is used to embed video content?",
+      "options": {
+        "a": "[media]",
+        "b": "[video]",
+        "c": "[movie]",
+        "d": "[play]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [video] tag is used to embed video content in HTML."
+    },
+    {
+      "id": 67,
+      "category": "Multimedia",
+      "question": "Which attribute in the video tag makes video controls visible?",
+      "options": {
+        "a": "controls",
+        "b": "player",
+        "c": "visible",
+        "d": "show"
+      },
+      "correct_answer": "a",
+      "explanation": "The controls attribute adds video controls like play, pause, and volume."
+    },
+    {
+      "id": 68,
+      "category": "Multimedia",
+      "question": "Which tag is used to embed audio content?",
+      "options": {
+        "a": "[sound]",
+        "b": "[music]",
+        "c": "[audio]",
+        "d": "[mp3]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [audio] tag is used to embed sound content in HTML."
+    },
+    {
+      "id": 69,
+      "category": "Multimedia",
+      "question": "Which attribute makes audio or video play automatically?",
+      "options": {
+        "a": "autostart",
+        "b": "autoplay",
+        "c": "auto",
+        "d": "play"
+      },
+      "correct_answer": "b",
+      "explanation": "The autoplay attribute starts playing audio/video automatically when the page loads."
+    },
+    {
+      "id": 70,
+      "category": "Multimedia",
+      "question": "Which attribute loops the audio/video content?",
+      "options": {
+        "a": "repeat",
+        "b": "cycle",
+        "c": "loop",
+        "d": "replay"
+      },
+      "correct_answer": "c",
+      "explanation": "The loop attribute makes the audio/video content play repeatedly."
+    },
+    {
+      "id": 71,
+      "category": "HTML Entities",
+      "question": "What is the HTML entity for copyright symbol?",
+      "options": {
+        "a": "&copy;",
+        "b": "&copyright;",
+        "c": "&cpy;",
+        "d": "&copyrt;"
+      },
+      "correct_answer": "a",
+      "explanation": "&copy; displays the copyright symbol (©)."
+    },
+    {
+      "id": 72,
+      "category": "HTML Entities",
+      "question": "Which entity is used to display the less than symbol ([)?",
+      "options": {
+        "a": "&lt;",
+        "b": "&lessthan;",
+        "c": "&lts;",
+        "d": "&less;"
+      },
+      "correct_answer": "a",
+      "explanation": "&lt; displays the less than symbol ([)."
+    },
+    {
+      "id": 73,
+      "category": "HTML Entities",
+      "question": "What is the entity for non-breaking space?",
+      "options": {
+        "a": "&space;",
+        "b": "&nbsp;",
+        "c": "&sp;",
+        "d": "&blank;"
+      },
+      "correct_answer": "b",
+      "explanation": "&nbsp; creates a non-breaking space that won't wrap to a new line."
+    },
+    {
+      "id": 74,
+      "category": "HTML Entities",
+      "question": "Which entity represents the ampersand (&)?",
+      "options": {
+        "a": "&amp;",
+        "b": "&and;",
+        "c": "&amper;",
+        "d": "&ampersand;"
+      },
+      "correct_answer": "a",
+      "explanation": "&amp; displays the ampersand symbol (&)."
+    },
+    {
+      "id": 75,
+      "category": "HTML Entities",
+      "question": "What is the entity for the euro symbol (€)?",
+      "options": {
+        "a": "&euro;",
+        "b": "&eur;",
+        "c": "&europe;",
+        "d": "&money;"
+      },
+      "correct_answer": "a",
+      "explanation": "&euro; displays the euro symbol (€)."
+    },
+    {
+      "id": 71,
+      "category": "IFrames",
+      "question": "What is the purpose of an iframe?",
+      "options": {
+        "a": "To create frames",
+        "b": "To embed another document",
+        "c": "To style content",
+        "d": "To create links"
+      },
+      "correct_answer": "b",
+      "explanation": "An iframe (inline frame) is used to embed another document within the current HTML document."
+    },
+    {
+      "id": 72,
+      "category": "IFrames",
+      "question": "Which attribute specifies the URL of the page to embed in an iframe?",
+      "options": {
+        "a": "url",
+        "b": "link",
+        "c": "src",
+        "d": "href"
+      },
+      "correct_answer": "c",
+      "explanation": "The src attribute specifies the URL of the page to embed in an iframe."
+    },
+    {
+      "id": 73,
+      "category": "IFrames",
+      "question": "Which attribute is used to remove the border around an iframe?",
+      "options": {
+        "a": "border=\"0\"",
+        "b": "frameborder=\"0\"",
+        "c": "noborder",
+        "d": "removeborder"
+      },
+      "correct_answer": "b",
+      "explanation": "The frameborder=\"0\" attribute removes the border around an iframe."
+    },
+    {
+      "id": 74,
+      "category": "IFrames",
+      "question": "Which attribute specifies the name of an iframe?",
+      "options": {
+        "a": "title",
+        "b": "id",
+        "c": "name",
+        "d": "framename"
+      },
+      "correct_answer": "c",
+      "explanation": "The name attribute specifies a name for an iframe, which can be used as a target for links."
+    },
+    {
+      "id": 75,
+      "category": "IFrames",
+      "question": "Which attribute controls iframe scrolling?",
+      "options": {
+        "a": "scroll",
+        "b": "scrolling",
+        "c": "overflow",
+        "d": "scrollbar"
+      },
+      "correct_answer": "b",
+      "explanation": "The scrolling attribute controls whether scrollbars appear in an iframe."
+    },
+    {
+      "id": 76,
+      "category": "Meta Tags",
+      "question": "What is the purpose of meta tags in HTML?",
+      "options": {
+        "a": "To style content",
+        "b": "To provide metadata",
+        "c": "To create links",
+        "d": "To format text"
+      },
+      "correct_answer": "b",
+      "explanation": "Meta tags provide metadata about the HTML document such as description, keywords, author, etc."
+    },
+    {
+      "id": 77,
+      "category": "Meta Tags",
+      "question": "Which meta tag defines the character encoding for the HTML document?",
+      "options": {
+        "a": "[meta charset=\"UTF-8\"]",
+        "b": "[meta encoding=\"UTF-8\"]",
+        "c": "[meta type=\"UTF-8\"]",
+        "d": "[meta lang=\"UTF-8\"]"
+      },
+      "correct_answer": "a",
+      "explanation": "The charset meta tag specifies the character encoding for the HTML document."
+    },
+    {
+      "id": 78,
+      "category": "Meta Tags",
+      "question": "Which meta tag is used for responsive design?",
+      "options": {
+        "a": "[meta name=\"responsive\"]",
+        "b": "[meta name=\"viewport\"]",
+        "c": "[meta name=\"mobile\"]",
+        "d": "[meta name=\"screen\"]"
+      },
+      "correct_answer": "b",
+      "explanation": "The viewport meta tag is used to control the viewport's size and scale on mobile devices."
+    },
+    {
+      "id": 79,
+      "category": "Meta Tags",
+      "question": "Which meta tag defines a description of your web page?",
+      "options": {
+        "a": "[meta name=\"description\"]",
+        "b": "[meta name=\"info\"]",
+        "c": "[meta name=\"about\"]",
+        "d": "[meta name=\"summary\"]"
+      },
+      "correct_answer": "a",
+      "explanation": "The description meta tag provides a description of the page for search engines."
+    },
+    {
+      "id": 80,
+      "category": "Meta Tags",
+      "question": "Which meta tag defines keywords for search engines?",
+      "options": {
+        "a": "[meta name=\"terms\"]",
+        "b": "[meta name=\"search\"]",
+        "c": "[meta name=\"keywords\"]",
+        "d": "[meta name=\"tags\"]"
+      },
+      "correct_answer": "c",
+      "explanation": "The keywords meta tag specifies keywords for search engines to use."
+    },
+    {
+      "id": 81,
+      "category": "Advanced Forms",
+      "question": "Which input type is used for color selection?",
+      "options": {
+        "a": "color",
+        "b": "palette",
+        "c": "colorpicker",
+        "d": "rgb"
+      },
+      "correct_answer": "a",
+      "explanation": "The color input type creates a color picker control."
+    },
+    {
+      "id": 82,
+      "category": "Advanced Forms",
+      "question": "Which input type creates a slider control?",
+      "options": {
+        "a": "slider",
+        "b": "range",
+        "c": "scroll",
+        "d": "number"
+      },
+      "correct_answer": "b",
+      "explanation": "The range input type creates a slider control for number input."
+    },
+    {
+      "id": 83,
+      "category": "Advanced Forms",
+      "question": "Which attribute is used to specify a regular expression for input validation?",
+      "options": {
+        "a": "validate",
+        "b": "pattern",
+        "c": "regexp",
+        "d": "format"
+      },
+      "correct_answer": "b",
+      "explanation": "The pattern attribute specifies a regular expression to validate input."
+    },
+    {
+      "id": 84,
+      "category": "Advanced Forms",
+      "question": "Which input type is used for telephone numbers?",
+      "options": {
+        "a": "phone",
+        "b": "number",
+        "c": "tel",
+        "d": "mobile"
+      },
+      "correct_answer": "c",
+      "explanation": "The tel input type is used for input fields that should contain a telephone number."
+    },
+    {
+      "id": 85,
+      "category": "Advanced Forms",
+      "question": "Which attribute specifies autocomplete suggestions?",
+      "options": {
+        "a": "suggest",
+        "b": "complete",
+        "c": "autocomplete",
+        "d": "datalist"
+      },
+      "correct_answer": "c",
+      "explanation": "The autocomplete attribute specifies whether a form or input field should have autocomplete enabled."
+    },
+    {
+      "id": 86,
+      "category": "Accessibility",
+      "question": "What is the purpose of the alt attribute in images?",
+      "options": {
+        "a": "To make images load faster",
+        "b": "To provide alternative text",
+        "c": "To style images",
+        "d": "To resize images"
+      },
+      "correct_answer": "b",
+      "explanation": "The alt attribute provides alternative text for users who cannot see the image."
+    },
+    {
+      "id": 87,
+      "category": "Accessibility",
+      "question": "Which attribute is used to define keyboard shortcuts?",
+      "options": {
+        "a": "shortcut",
+        "b": "key",
+        "c": "accesskey",
+        "d": "keycode"
+      },
+      "correct_answer": "c",
+      "explanation": "The accesskey attribute specifies a keyboard shortcut for an element."
+    },
+    {
+      "id": 88,
+      "category": "Accessibility",
+      "question": "What is the purpose of the tabindex attribute?",
+      "options": {
+        "a": "To create tabs",
+        "b": "To specify tab order",
+        "c": "To align content",
+        "d": "To create spacing"
+      },
+      "correct_answer": "b",
+      "explanation": "The tabindex attribute specifies the tab order of an element."
+    },
+    {
+      "id": 89,
+      "category": "Accessibility",
+      "question": "Which attribute provides additional information about an element?",
+      "options": {
+        "a": "info",
+        "b": "description",
+        "c": "aria-label",
+        "d": "data"
+      },
+      "correct_answer": "c",
+      "explanation": "The aria-label attribute provides a label for screen readers."
+    },
+    {
+      "id": 90,
+      "category": "Accessibility",
+      "question": "What is the purpose of the role attribute?",
+      "options": {
+        "a": "To style elements",
+        "b": "To define element behavior",
+        "c": "To specify ARIA roles",
+        "d": "To create animations"
+      },
+      "correct_answer": "c",
+      "explanation": "The role attribute defines the purpose of an element for accessibility."
+    },
+    {
+      "id": 91,
+      "category": "HTML APIs",
+      "question": "Which API is used for drag and drop functionality?",
+      "options": {
+        "a": "Drag API",
+        "b": "HTML5 Drag and Drop API",
+        "c": "Move API",
+        "d": "Transfer API"
+      },
+      "correct_answer": "b",
+      "explanation": "The HTML5 Drag and Drop API enables drag and drop functionality."
+    },
+    {
+      "id": 92,
+      "category": "HTML APIs",
+      "question": "Which attribute makes an element draggable?",
+      "options": {
+        "a": "drag=\"true\"",
+        "b": "draggable=\"true\"",
+        "c": "movable=\"true\"",
+        "d": "transfer=\"true\""
+      },
+      "correct_answer": "b",
+      "explanation": "The draggable attribute specifies whether an element is draggable."
+    },
+    {
+      "id": 93,
+      "category": "HTML APIs",
+      "question": "Which API is used for storing data locally?",
+      "options": {
+        "a": "Cache API",
+        "b": "Storage API",
+        "c": "Web Storage API",
+        "d": "Data API"
+      },
+      "correct_answer": "c",
+      "explanation": "The Web Storage API is used for storing data locally in the browser."
+    },
+    {
+      "id": 94,
+      "category": "HTML APIs",
+      "question": "Which API is used for getting the user's location?",
+      "options": {
+        "a": "Location API",
+        "b": "Map API",
+        "c": "Geolocation API",
+        "d": "Position API"
+      },
+      "correct_answer": "c",
+      "explanation": "The Geolocation API is used to get the user's geographical location."
+    },
+    {
+      "id": 95,
+      "category": "HTML APIs",
+      "question": "Which API is used for drawing graphics?",
+      "options": {
+        "a": "Paint API",
+        "b": "Canvas API",
+        "c": "Drawing API",
+        "d": "Graphics API"
+      },
+      "correct_answer": "b",
+      "explanation": "The Canvas API is used for drawing graphics on a web page."
+    },
+    {
+      "id": 96,
+      "category": "HTML5 Features",
+      "question": "Which element is used to play video files?",
+      "options": {
+        "a": "[media]",
+        "b": "[video]",
+        "c": "[player]",
+        "d": "[movie]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [video] element is used to embed video content."
+    },
+    {
+      "id": 97,
+      "category": "HTML5 Features",
+      "question": "Which element represents a progress bar?",
+      "options": {
+        "a": "[progress]",
+        "b": "[meter]",
+        "c": "[bar]",
+        "d": "[status]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [progress] element represents the progress of a task."
+    },
+    {
+      "id": 98,
+      "category": "HTML5 Features",
+      "question": "Which element is used for user-editable content?",
+      "options": {
+        "a": "[edit]",
+        "b": "[content]",
+        "c": "[contenteditable]",
+        "d": "[editable]"
+      },
+      "correct_answer": "c",
+      "explanation": "The contenteditable attribute makes content editable by the user."
+    },
+    {
+      "id": 99,
+      "category": "HTML5 Features",
+      "question": "Which attribute is used to specify custom data attributes?",
+      "options": {
+        "a": "data-*",
+        "b": "custom-*",
+        "c": "user-*",
+        "d": "attr-*"
+      },
+      "correct_answer": "a",
+      "explanation": "Data attributes (data-*) are used to store custom data within HTML elements."
+    },
+    {
+      "id": 100,
+      "category": "HTML5 Features",
+      "question": "Which element is used to draw graphics?",
+      "options": {
+        "a": "[draw]",
+        "b": "[canvas]",
+        "c": "[graphic]",
+        "d": "[paint]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [canvas] element is used to draw graphics via JavaScript."
+    },
+    {
+      "id": 101,
+      "category": "HTML5 Features",
+      "question": "Which element is used for navigation?",
+      "options": {
+        "a": "[navigation]",
+        "b": "[nav]",
+        "c": "[menu]",
+        "d": "[navbar]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [nav] element defines a set of navigation links."
+    },
+    {
+      "id": 102,
+      "category": "HTML5 Features",
+      "question": "Which element defines a header section?",
+      "options": {
+        "a": "[head]",
+        "b": "[header]",
+        "c": "[top]",
+        "d": "[heading]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [header] element defines a header section for a document or section."
+    },
+    {
+      "id": 103,
+      "category": "HTML5 Features",
+      "question": "Which element defines a footer section?",
+      "options": {
+        "a": "[bottom]",
+        "b": "[footer]",
+        "c": "[end]",
+        "d": "[foot]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [footer] element defines a footer section for a document or section."
+    },
+    {
+      "id": 104,
+      "category": "HTML5 Features",
+      "question": "Which element represents a self-contained composition?",
+      "options": {
+        "a": "[section]",
+        "b": "[content]",
+        "c": "[article]",
+        "d": "[div]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [article] element represents a self-contained composition in a document."
+    },
+    {
+      "id": 105,
+      "category": "HTML5 Features",
+      "question": "Which element defines a section in a document?",
+      "options": {
+        "a": "[div]",
+        "b": "[section]",
+        "c": "[part]",
+        "d": "[area]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [section] element defines a section in a document."
+    },
+    {
+      "id": 106,
+      "category": "HTML5 Features",
+      "question": "Which element represents a generic container?",
+      "options": {
+        "a": "[container]",
+        "b": "[section]",
+        "c": "[div]",
+        "d": "[span]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [div] element is a generic container for flow content."
+    },
+    {
+      "id": 107,
+      "category": "HTML5 Features",
+      "question": "Which element represents complementary content?",
+      "options": {
+        "a": "[aside]",
+        "b": "[extra]",
+        "c": "[sidebar]",
+        "d": "[complement]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [aside] element represents content that is tangentially related to the content around it."
+    },
+    {
+      "id": 108,
+      "category": "HTML5 Features",
+      "question": "Which element represents a figure with optional caption?",
+      "options": {
+        "a": "[img]",
+        "b": "[picture]",
+        "c": "[figure]",
+        "d": "[image]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [figure] element represents self-contained content, often with a caption ([figcaption])."
+    },
+    {
+      "id": 109,
+      "category": "HTML5 Features",
+      "question": "Which element defines the main content of a document?",
+      "options": {
+        "a": "[content]",
+        "b": "[main]",
+        "c": "[body]",
+        "d": "[article]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [main] element specifies the main content of a document."
+    },
+    {
+      "id": 110,
+      "category": "HTML5 Features",
+      "question": "Which element represents a marked or highlighted text?",
+      "options": {
+        "a": "[highlight]",
+        "b": "[mark]",
+        "c": "[bold]",
+        "d": "[strong]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [mark] element represents text that is marked or highlighted for reference."
+    },
+    {
+      "id": 111,
+      "category": "HTML Forms",
+      "question": "Which input type is used for time selection?",
+      "options": {
+        "a": "clock",
+        "b": "time",
+        "c": "datetime",
+        "d": "timer"
+      },
+      "correct_answer": "b",
+      "explanation": "The time input type creates a control for entering a time (hour, minute, seconds, fractional seconds)."
+    },
+    {
+      "id": 112,
+      "category": "HTML Forms",
+      "question": "Which input type is used for file upload?",
+      "options": {
+        "a": "upload",
+        "b": "file",
+        "c": "document",
+        "d": "attachment"
+      },
+      "correct_answer": "b",
+      "explanation": "The file input type creates a file select field and a 'Browse' button for file uploads."
+    },
+    {
+      "id": 113,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies the maximum length of text in an input?",
+      "options": {
+        "a": "length",
+        "b": "max",
+        "c": "maxlength",
+        "d": "chars"
+      },
+      "correct_answer": "c",
+      "explanation": "The maxlength attribute specifies the maximum number of characters allowed in an input field."
+    },
+    {
+      "id": 114,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies a minimum value for an input field?",
+      "options": {
+        "a": "minimum",
+        "b": "min",
+        "c": "low",
+        "d": "start"
+      },
+      "correct_answer": "b",
+      "explanation": "The min attribute specifies the minimum value for an input field."
+    },
+    {
+      "id": 115,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies that an input field is read-only?",
+      "options": {
+        "a": "readonly",
+        "b": "disabled",
+        "c": "locked",
+        "d": "noedit"
+      },
+      "correct_answer": "a",
+      "explanation": "The readonly attribute specifies that an input field is read-only and cannot be modified."
+    },
+    {
+      "id": 116,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies that an input field must be filled out?",
+      "options": {
+        "a": "validate",
+        "b": "required",
+        "c": "mandatory",
+        "d": "needed"
+      },
+      "correct_answer": "b",
+      "explanation": "The required attribute specifies that an input field must be filled out before submitting the form."
+    },
+    {
+      "id": 117,
+      "category": "HTML Forms",
+      "question": "Which input type is used for URLs?",
+      "options": {
+        "a": "link",
+        "b": "web",
+        "c": "url",
+        "d": "href"
+      },
+      "correct_answer": "c",
+      "explanation": "The url input type is used for input fields that should contain a URL."
+    },
+    {
+      "id": 118,
+      "category": "HTML Forms",
+      "question": "Which input type is used for search fields?",
+      "options": {
+        "a": "find",
+        "b": "query",
+        "c": "search",
+        "d": "lookup"
+      },
+      "correct_answer": "c",
+      "explanation": "The search input type is used for search fields (a text field with a clear icon)."
+    },
+    {
+      "id": 119,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies the visible width of a text input?",
+      "options": {
+        "a": "length",
+        "b": "size",
+        "c": "width",
+        "d": "cols"
+      },
+      "correct_answer": "b",
+      "explanation": "The size attribute specifies the visible width, in characters, of an input field."
+    },
+    {
+      "id": 120,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies a regular expression to check an input against?",
+      "options": {
+        "a": "regex",
+        "b": "pattern",
+        "c": "validate",
+        "d": "check"
+      },
+      "correct_answer": "b",
+      "explanation": "The pattern attribute specifies a regular expression that an input field's value is checked against."
+    },
+    {
+      "id": 121,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies the type of autocomplete functionality?",
+      "options": {
+        "a": "complete",
+        "b": "autocomplete",
+        "c": "suggest",
+        "d": "hint"
+      },
+      "correct_answer": "b",
+      "explanation": "The autocomplete attribute specifies whether a form or input field should have autocomplete enabled."
+    },
+    {
+      "id": 122,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies a shortcut key to activate/focus an element?",
+      "options": {
+        "a": "shortcut",
+        "b": "key",
+        "c": "accesskey",
+        "d": "keycode"
+      },
+      "correct_answer": "c",
+      "explanation": "The accesskey attribute specifies a shortcut key to activate/focus an element."
+    },
+    {
+      "id": 123,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies whether an element is editable?",
+      "options": {
+        "a": "editable",
+        "b": "contenteditable",
+        "c": "edit",
+        "d": "modify"
+      },
+      "correct_answer": "b",
+      "explanation": "The contenteditable attribute specifies whether the content of an element is editable or not."
+    },
+    {
+      "id": 124,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies the form an element belongs to?",
+      "options": {
+        "a": "formid",
+        "b": "form",
+        "c": "parent",
+        "d": "target"
+      },
+      "correct_answer": "b",
+      "explanation": "The form attribute specifies which form the element belongs to."
+    },
+    {
+      "id": 125,
+      "category": "HTML Forms",
+      "question": "Which attribute specifies how the form-data should be encoded?",
+      "options": {
+        "a": "format",
+        "b": "enctype",
+        "c": "encoding",
+        "d": "type"
+      },
+      "correct_answer": "b",
+      "explanation": "The enctype attribute specifies how the form-data should be encoded when submitted."
+    },
+    {
+      "id": 126,
+      "category": "HTML5 Audio/Video",
+      "question": "Which attribute in audio/video specifies the URL of the media file?",
+      "options": {
+        "a": "href",
+        "b": "src",
+        "c": "url",
+        "d": "link"
+      },
+      "correct_answer": "b",
+      "explanation": "The src attribute specifies the URL of the audio/video file."
+    },
+    {
+      "id": 127,
+      "category": "HTML5 Audio/Video",
+      "question": "Which attribute in audio/video enables automatic playing?",
+      "options": {
+        "a": "auto",
+        "b": "autoplay",
+        "c": "play",
+        "d": "start"
+      },
+      "correct_answer": "b",
+      "explanation": "The autoplay attribute starts playing the audio/video automatically."
+    },
+    {
+      "id": 128,
+      "category": "HTML5 Audio/Video",
+      "question": "Which attribute shows media controls?",
+      "options": {
+        "a": "controls",
+        "b": "player",
+        "c": "mediacontrols",
+        "d": "showcontrols"
+      },
+      "correct_answer": "a",
+      "explanation": "The controls attribute adds audio/video controls like play, pause, and volume."
+    },
+    {
+      "id": 129,
+      "category": "HTML5 Audio/Video",
+      "question": "Which attribute loads the audio/video when the page loads?",
+      "options": {
+        "a": "load",
+        "b": "buffer",
+        "c": "preload",
+        "d": "cache"
+      },
+      "correct_answer": "c",
+      "explanation": "The preload attribute specifies if and how the audio/video should be loaded when the page loads."
+    },
+    {
+      "id": 130,
+      "category": "HTML5 Audio/Video",
+      "question": "Which element specifies alternative text for audio/video?",
+      "options": {
+        "a": "[alt]",
+        "b": "[track]",
+        "c": "[caption]",
+        "d": "[text]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [track] element specifies text tracks for audio/video elements."
+    },
+    {
+      "id": 131,
+      "category": "HTML Canvas",
+      "question": "Which method is used to draw a rectangle in canvas?",
+      "options": {
+        "a": "drawRect()",
+        "b": "rect()",
+        "c": "rectangle()",
+        "d": "createRect()"
+      },
+      "correct_answer": "b",
+      "explanation": "The rect() method creates a rectangle on the canvas."
+    },
+    {
+      "id": 132,
+      "category": "HTML Canvas",
+      "question": "Which property sets the color used for drawing operations?",
+      "options": {
+        "a": "drawColor",
+        "b": "paintColor",
+        "c": "strokeStyle",
+        "d": "penColor"
+      },
+      "correct_answer": "c",
+      "explanation": "The strokeStyle property sets the color for drawing operations."
+    },
+    {
+      "id": 133,
+      "category": "HTML Canvas",
+      "question": "Which method begins a path in canvas?",
+      "options": {
+        "a": "startPath()",
+        "b": "beginPath()",
+        "c": "createPath()",
+        "d": "newPath()"
+      },
+      "correct_answer": "b",
+      "explanation": "The beginPath() method begins a path or resets the current path."
+    },
+    {
+      "id": 134,
+      "category": "HTML Canvas",
+      "question": "Which method draws a line to a point in canvas?",
+      "options": {
+        "a": "drawLine()",
+        "b": "line()",
+        "c": "lineTo()",
+        "d": "drawTo()"
+      },
+      "correct_answer": "c",
+      "explanation": "The lineTo() method adds a new point and creates a line to that point."
+    },
+    {
+      "id": 135,
+      "category": "HTML Canvas",
+      "question": "Which method fills the current drawing?",
+      "options": {
+        "a": "fill()",
+        "b": "paint()",
+        "c": "draw()",
+        "d": "color()"
+      },
+      "correct_answer": "a",
+      "explanation": "The fill() method fills the current drawing (path)."
+    },
+    {
+      "id": 136,
+      "category": "HTML Storage",
+      "question": "Which API is used for storing data in web browser?",
+      "options": {
+        "a": "Browser API",
+        "b": "Storage API",
+        "c": "Web Storage API",
+        "d": "Cache API"
+      },
+      "correct_answer": "c",
+      "explanation": "The Web Storage API is used for storing data locally in the browser."
+    },
+    {
+      "id": 137,
+      "category": "HTML Storage",
+      "question": "Which object stores data with no expiration date?",
+      "options": {
+        "a": "localStorage",
+        "b": "sessionStorage",
+        "c": "cookieStorage",
+        "d": "browserStorage"
+      },
+      "correct_answer": "a",
+      "explanation": "localStorage stores data with no expiration date."
+    },
+    {
+      "id": 138,
+      "category": "HTML Storage",
+      "question": "Which object stores data for one session?",
+      "options": {
+        "a": "localStorage",
+        "b": "sessionStorage",
+        "c": "tempStorage",
+        "d": "pageStorage"
+      },
+      "correct_answer": "b",
+      "explanation": "sessionStorage stores data for one session (data is lost when browser tab is closed)."
+    },
+    {
+      "id": 139,
+      "category": "HTML Storage",
+      "question": "Which method removes an item from storage?",
+      "options": {
+        "a": "delete()",
+        "b": "remove()",
+        "c": "removeItem()",
+        "d": "deleteItem()"
+      },
+      "correct_answer": "c",
+      "explanation": "The removeItem() method removes a specific item from storage."
+    },
+    {
+      "id": 140,
+      "category": "HTML Storage",
+      "question": "Which method clears all items in storage?",
+      "options": {
+        "a": "clear()",
+        "b": "removeAll()",
+        "c": "deleteAll()",
+        "d": "clearAll()"
+      },
+      "correct_answer": "a",
+      "explanation": "The clear() method removes all items from storage."
+    },
+    {
+      "id": 141,
+      "category": "HTML Drag and Drop",
+      "question": "Which attribute makes an element draggable?",
+      "options": {
+        "a": "drag",
+        "b": "draggable",
+        "c": "candrag",
+        "d": "movable"
+      },
+      "correct_answer": "b",
+      "explanation": "The draggable attribute makes an element draggable."
+    },
+    {
+      "id": 142,
+      "category": "HTML Drag and Drop",
+      "question": "Which event is fired when dragging starts?",
+      "options": {
+        "a": "dragstart",
+        "b": "drag",
+        "c": "start",
+        "d": "dragging"
+      },
+      "correct_answer": "a",
+      "explanation": "The dragstart event is fired when dragging starts."
+    },
+    {
+      "id": 143,
+      "category": "HTML Drag and Drop",
+      "question": "Which event is fired when dragging ends?",
+      "options": {
+        "a": "dragend",
+        "b": "drop",
+        "c": "end",
+        "d": "finish"
+      },
+      "correct_answer": "a",
+      "explanation": "The dragend event is fired when dragging ends."
+    },
+    {
+      "id": 144,
+      "category": "HTML Drag and Drop",
+      "question": "Which event is fired when a dragged element enters a drop target?",
+      "options": {
+        "a": "dragenter",
+        "b": "dropin",
+        "c": "enter",
+        "d": "over"
+      },
+      "correct_answer": "a",
+      "explanation": "The dragenter event is fired when a dragged element enters a drop target."
+    },
+    {
+      "id": 145,
+      "category": "HTML Drag and Drop",
+      "question": "Which event is fired when an element is dropped?",
+      "options": {
+        "a": "dragdrop",
+        "b": "drop",
+        "c": "dropped",
+        "d": "finish"
+      },
+      "correct_answer": "b",
+      "explanation": "The drop event is fired when an element is dropped."
+    },
+    {
+      "id": 146,
+      "category": "HTML Geolocation",
+      "question": "Which method gets the current position?",
+      "options": {
+        "a": "getLocation()",
+        "b": "getCurrentPosition()",
+        "c": "getPosition()",
+        "d": "getCoordinates()"
+      },
+      "correct_answer": "b",
+      "explanation": "The getCurrentPosition() method gets the current position of the device."
+    },
+    {
+      "id": 147,
+      "category": "HTML Geolocation",
+      "question": "Which method watches for position changes?",
+      "options": {
+        "a": "watchLocation()",
+        "b": "watchPosition()",
+        "c": "trackPosition()",
+        "d": "monitorPosition()"
+      },
+      "correct_answer": "b",
+      "explanation": "The watchPosition() method watches for changes in position."
+    },
+    {
+      "id": 148,
+      "category": "HTML Geolocation",
+      "question": "Which property returns the latitude?",
+      "options": {
+        "a": "lat",
+        "b": "latitude",
+        "c": "coords.latitude",
+        "d": "position.lat"
+      },
+      "correct_answer": "c",
+      "explanation": "The coords.latitude property returns the latitude."
+    },
+    {
+      "id": 149,
+      "category": "HTML Geolocation",
+      "question": "Which property returns the longitude?",
+      "options": {
+        "a": "long",
+        "b": "longitude",
+        "c": "coords.longitude",
+        "d": "position.long"
+      },
+      "correct_answer": "c",
+      "explanation": "The coords.longitude property returns the longitude."
+    },
+    {
+      "id": 150,
+      "category": "HTML Geolocation",
+      "question": "Which method clears the watch on position?",
+      "options": {
+        "a": "clearWatch()",
+        "b": "stopWatch()",
+        "c": "clearPosition()",
+        "d": "stopPosition()"
+      },
+      "correct_answer": "a",
+      "explanation": "The clearWatch() method stops watching for position changes."
+    },
+    {
+      "id": 151,
+      "category": "HTML SVG",
+      "question": "Which element is used to create SVG graphics?",
+      "options": {
+        "a": "[graphics]",
+        "b": "[svg]",
+        "c": "[draw]",
+        "d": "[vector]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [svg] element is used to define Scalable Vector Graphics."
+    },
+    {
+      "id": 152,
+      "category": "HTML SVG",
+      "question": "Which element creates a circle in SVG?",
+      "options": {
+        "a": "[circle]",
+        "b": "[round]",
+        "c": "[oval]",
+        "d": "[sphere]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [circle] element creates a circle in SVG."
+    },
+    {
+      "id": 153,
+      "category": "HTML SVG",
+      "question": "Which element creates a rectangle in SVG?",
+      "options": {
+        "a": "[rectangle]",
+        "b": "[square]",
+        "c": "[rect]",
+        "d": "[box]"
+      },
+      "correct_answer": "c",
+      "explanation": "The [rect] element creates a rectangle in SVG."
+    },
+    {
+      "id": 154,
+      "category": "HTML SVG",
+      "question": "Which element creates a line in SVG?",
+      "options": {
+        "a": "[line]",
+        "b": "[path]",
+        "c": "[draw]",
+        "d": "[stroke]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [line] element creates a line in SVG."
+    },
+    {
+      "id": 155,
+      "category": "HTML SVG",
+      "question": "Which attribute sets the fill color in SVG?",
+      "options": {
+        "a": "color",
+        "b": "fill",
+        "c": "background",
+        "d": "paint"
+      },
+      "correct_answer": "b",
+      "explanation": "The fill attribute sets the fill color of SVG shapes."
+    },
+    {
+      "id": 156,
+      "category": "HTML Performance",
+      "question": "Which attribute helps in lazy loading images?",
+      "options": {
+        "a": "lazy",
+        "b": "loading=\"lazy\"",
+        "c": "lazyload",
+        "d": "defer"
+      },
+      "correct_answer": "b",
+      "explanation": "The loading=\"lazy\" attribute enables lazy loading of images."
+    },
+    {
+      "id": 157,
+      "category": "HTML Performance",
+      "question": "Which attribute preloads resources?",
+      "options": {
+        "a": "preload",
+        "b": "prefetch",
+        "c": "load",
+        "d": "cache"
+      },
+      "correct_answer": "a",
+      "explanation": "The preload attribute tells the browser to load a resource early."
+    },
+    {
+      "id": 158,
+      "category": "HTML Performance",
+      "question": "Which attribute hints the browser to prefetch resources?",
+      "options": {
+        "a": "preload",
+        "b": "prefetch",
+        "c": "fetch",
+        "d": "cache"
+      },
+      "correct_answer": "b",
+      "explanation": "The prefetch attribute suggests that the browser should fetch a resource."
+    },
+    {
+      "id": 159,
+      "category": "HTML Performance",
+      "question": "Which attribute defers script execution?",
+      "options": {
+        "a": "wait",
+        "b": "defer",
+        "c": "delay",
+        "d": "async"
+      },
+      "correct_answer": "b",
+      "explanation": "The defer attribute postpones script execution until the document is loaded."
+    },
+    {
+      "id": 160,
+      "category": "HTML Performance",
+      "question": "Which attribute loads scripts asynchronously?",
+      "options": {
+        "a": "defer",
+        "b": "async",
+        "c": "parallel",
+        "d": "load"
+      },
+      "correct_answer": "b",
+      "explanation": "The async attribute loads and executes scripts asynchronously."
+    },
+    {
+      "id": 161,
+      "category": "HTML Security",
+      "question": "Which attribute prevents XSS attacks in forms?",
+      "options": {
+        "a": "novalidate",
+        "b": "secure",
+        "c": "sanitize",
+        "d": "autocomplete=\"off\""
+      },
+      "correct_answer": "d",
+      "explanation": "The autocomplete=\"off\" attribute can help prevent XSS attacks in forms."
+    },
+    {
+      "id": 162,
+      "category": "HTML Security",
+      "question": "Which attribute sets the content security policy?",
+      "options": {
+        "a": "security",
+        "b": "content-security-policy",
+        "c": "policy",
+        "d": "csp"
+      },
+      "correct_answer": "b",
+      "explanation": "The content-security-policy attribute sets security policies for the page."
+    },
+    {
+      "id": 163,
+      "category": "HTML Security",
+      "question": "Which attribute prevents clickjacking?",
+      "options": {
+        "a": "noframe",
+        "b": "X-Frame-Options",
+        "c": "secure",
+        "d": "protect"
+      },
+      "correct_answer": "b",
+      "explanation": "The X-Frame-Options header prevents clickjacking attacks."
+    },
+    {
+      "id": 164,
+      "category": "HTML Security",
+      "question": "Which attribute sets CORS policy?",
+      "options": {
+        "a": "cors",
+        "b": "crossorigin",
+        "c": "origin",
+        "d": "access"
+      },
+      "correct_answer": "b",
+      "explanation": "The crossorigin attribute sets CORS policies for elements."
+    },
+    {
+      "id": 165,
+      "category": "HTML Security",
+      "question": "Which attribute prevents data leaks in forms?",
+      "options": {
+        "a": "secure",
+        "b": "novalidate",
+        "c": "autocomplete=\"off\"",
+        "d": "protect"
+      },
+      "correct_answer": "c",
+      "explanation": "The autocomplete=\"off\" attribute can prevent sensitive data from being saved."
+    },
+    {
+      "id": 166,
+      "category": "HTML Best Practices",
+      "question": "Which practice improves SEO?",
+      "options": {
+        "a": "Using semantic tags",
+        "b": "Using div tags",
+        "c": "Using spans",
+        "d": "Using tables"
+      },
+      "correct_answer": "a",
+      "explanation": "Using semantic HTML tags improves SEO and accessibility."
+    },
+    {
+      "id": 167,
+      "category": "HTML Best Practices",
+      "question": "Which practice improves accessibility?",
+      "options": {
+        "a": "Using alt text",
+        "b": "Using div tags",
+        "c": "Using spans",
+        "d": "Using tables"
+      },
+      "correct_answer": "a",
+      "explanation": "Using alt text for images improves accessibility for screen readers."
+    },
+    {
+      "id": 168,
+      "category": "HTML Best Practices",
+      "question": "Which practice improves performance?",
+      "options": {
+        "a": "Using tables",
+        "b": "Lazy loading",
+        "c": "Using inline styles",
+        "d": "Using frames"
+      },
+      "correct_answer": "b",
+      "explanation": "Lazy loading images improves page load performance."
+    },
+    {
+      "id": 169,
+      "category": "HTML Best Practices",
+      "question": "Which practice improves maintainability?",
+      "options": {
+        "a": "Using semantic tags",
+        "b": "Using inline styles",
+        "c": "Using tables",
+        "d": "Using frames"
+      },
+      "correct_answer": "a",
+      "explanation": "Using semantic HTML tags improves code maintainability."
+    },
+    {
+      "id": 170,
+      "category": "HTML Best Practices",
+      "question": "Which practice improves user experience?",
+      "options": {
+        "a": "Using forms",
+        "b": "Using proper labels",
+        "c": "Using tables",
+        "d": "Using frames"
+      },
+      "correct_answer": "b",
+      "explanation": "Using proper labels for form elements improves user experience."
+    },
+    {
+      "id": 171,
+      "category": "HTML Validation",
+      "question": "Which attribute validates email input?",
+      "options": {
+        "a": "type=\"email\"",
+        "b": "validate=\"email\"",
+        "c": "pattern=\"email\"",
+        "d": "check=\"email\""
+      },
+      "correct_answer": "a",
+      "explanation": "The type=\"email\" attribute validates email input format."
+    },
+    {
+      "id": 172,
+      "category": "HTML Validation",
+      "question": "Which attribute sets input as required?",
+      "options": {
+        "a": "mandatory",
+        "b": "required",
+        "c": "validate",
+        "d": "needed"
+      },
+      "correct_answer": "b",
+      "explanation": "The required attribute makes an input field mandatory."
+    },
+    {
+      "id": 173,
+      "category": "HTML Validation",
+      "question": "Which attribute sets minimum length?",
+      "options": {
+        "a": "min",
+        "b": "minlength",
+        "c": "length",
+        "d": "validate"
+      },
+      "correct_answer": "b",
+      "explanation": "The minlength attribute sets the minimum length for input."
+    },
+    {
+      "id": 174,
+      "category": "HTML Validation",
+      "question": "Which attribute sets maximum length?",
+      "options": {
+        "a": "max",
+        "b": "maxlength",
+        "c": "length",
+        "d": "validate"
+      },
+      "correct_answer": "b",
+      "explanation": "The maxlength attribute sets the maximum length for input."
+    },
+    {
+      "id": 175,
+      "category": "HTML Validation",
+      "question": "Which attribute sets input pattern?",
+      "options": {
+        "a": "regex",
+        "b": "pattern",
+        "c": "validate",
+        "d": "format"
+      },
+      "correct_answer": "b",
+      "explanation": "The pattern attribute sets a regular expression pattern for input validation."
+    },
+    {
+      "id": 176,
+      "category": "HTML5 APIs",
+      "question": "Which API is used for drawing graphics?",
+      "options": {
+        "a": "SVG API",
+        "b": "Canvas API",
+        "c": "Graphics API",
+        "d": "Drawing API"
+      },
+      "correct_answer": "b",
+      "explanation": "The Canvas API is used for drawing graphics on a web page."
+    },
+    {
+      "id": 177,
+      "category": "HTML5 APIs",
+      "question": "Which API is used for storing data locally?",
+      "options": {
+        "a": "Cache API",
+        "b": "Storage API",
+        "c": "Web Storage API",
+        "d": "Data API"
+      },
+      "correct_answer": "c",
+      "explanation": "The Web Storage API is used for storing data locally in the browser."
+    },
+    {
+      "id": 178,
+      "category": "HTML5 APIs",
+      "question": "Which API is used for drag and drop functionality?",
+      "options": {
+        "a": "Drag API",
+        "b": "HTML5 Drag and Drop API",
+        "c": "Move API",
+        "d": "Transfer API"
+      },
+      "correct_answer": "b",
+      "explanation": "The HTML5 Drag and Drop API enables drag and drop functionality."
+    },
+    {
+      "id": 179,
+      "category": "HTML5 APIs",
+      "question": "Which API is used for getting user's location?",
+      "options": {
+        "a": "Location API",
+        "b": "Geolocation API",
+        "c": "Position API",
+        "d": "Map API"
+      },
+      "correct_answer": "b",
+      "explanation": "The Geolocation API is used to get the user's geographical location."
+    },
+    {
+      "id": 180,
+      "category": "HTML5 APIs",
+      "question": "Which API is used for full-screen mode?",
+      "options": {
+        "a": "Screen API",
+        "b": "Fullscreen API",
+        "c": "Display API",
+        "d": "View API"
+      },
+      "correct_answer": "b",
+      "explanation": "The Fullscreen API is used to present web content in full-screen mode."
+    },
+    {
+      "id": 181,
+      "category": "HTML Accessibility",
+      "question": "Which attribute provides alternative text for images?",
+      "options": {
+        "a": "title",
+        "b": "alt",
+        "c": "description",
+        "d": "text"
+      },
+      "correct_answer": "b",
+      "explanation": "The alt attribute provides alternative text for images for screen readers."
+    },
+    {
+      "id": 182,
+      "category": "HTML Accessibility",
+      "question": "Which attribute defines the language of the document?",
+      "options": {
+        "a": "language",
+        "b": "lang",
+        "c": "locale",
+        "d": "region"
+      },
+      "correct_answer": "b",
+      "explanation": "The lang attribute specifies the language of the document."
+    },
+    {
+      "id": 183,
+      "category": "HTML Accessibility",
+      "question": "Which attribute describes the role of an element?",
+      "options": {
+        "a": "type",
+        "b": "role",
+        "c": "aria",
+        "d": "description"
+      },
+      "correct_answer": "b",
+      "explanation": "The role attribute describes the role of an element for accessibility."
+    },
+    {
+      "id": 184,
+      "category": "HTML Accessibility",
+      "question": "Which attribute provides labels for form controls?",
+      "options": {
+        "a": "for",
+        "b": "label",
+        "c": "aria-label",
+        "d": "description"
+      },
+      "correct_answer": "a",
+      "explanation": "The for attribute associates a label with a form control."
+    },
+    {
+      "id": 185,
+      "category": "HTML Accessibility",
+      "question": "Which attribute indicates if an element is expanded?",
+      "options": {
+        "a": "state",
+        "b": "aria-expanded",
+        "c": "expanded",
+        "d": "open"
+      },
+      "correct_answer": "b",
+      "explanation": "The aria-expanded attribute indicates if an element is expanded or collapsed."
+    },
+    {
+      "id": 186,
+      "category": "HTML SEO",
+      "question": "Which meta tag describes the page content?",
+      "options": {
+        "a": "description",
+        "b": "content",
+        "c": "about",
+        "d": "summary"
+      },
+      "correct_answer": "a",
+      "explanation": "The description meta tag provides a description of the page for search engines."
+    },
+    {
+      "id": 187,
+      "category": "HTML SEO",
+      "question": "Which meta tag defines keywords for search engines?",
+      "options": {
+        "a": "keywords",
+        "b": "tags",
+        "c": "search",
+        "d": "terms"
+      },
+      "correct_answer": "a",
+      "explanation": "The keywords meta tag specifies keywords for search engines."
+    },
+    {
+      "id": 188,
+      "category": "HTML SEO",
+      "question": "Which tag defines the most important heading?",
+      "options": {
+        "a": "[header]",
+        "b": "[h1]",
+        "c": "[heading]",
+        "d": "[title]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [h1] tag defines the most important heading for SEO."
+    },
+    {
+      "id": 189,
+      "category": "HTML SEO",
+      "question": "Which attribute helps in URL structure?",
+      "options": {
+        "a": "href",
+        "b": "src",
+        "c": "link",
+        "d": "url"
+      },
+      "correct_answer": "a",
+      "explanation": "The href attribute creates proper URL structure for SEO."
+    },
+    {
+      "id": 190,
+      "category": "HTML SEO",
+      "question": "Which tag improves semantic structure?",
+      "options": {
+        "a": "[div]",
+        "b": "[article]",
+        "c": "[span]",
+        "d": "[container]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [article] tag improves semantic structure for SEO."
+    },
+    {
+      "id": 191,
+      "category": "HTML Meta Tags",
+      "question": "Which meta tag defines the viewport?",
+      "options": {
+        "a": "screen",
+        "b": "viewport",
+        "c": "device",
+        "d": "mobile"
+      },
+      "correct_answer": "b",
+      "explanation": "The viewport meta tag defines the viewport for responsive design."
+    },
+    {
+      "id": 192,
+      "category": "HTML Meta Tags",
+      "question": "Which meta tag defines the character encoding?",
+      "options": {
+        "a": "charset",
+        "b": "encoding",
+        "c": "type",
+        "d": "language"
+      },
+      "correct_answer": "a",
+      "explanation": "The charset meta tag defines the character encoding for the document."
+    },
+    {
+      "id": 193,
+      "category": "HTML Meta Tags",
+      "question": "Which meta tag controls page refresh?",
+      "options": {
+        "a": "reload",
+        "b": "refresh",
+        "c": "update",
+        "d": "renew"
+      },
+      "correct_answer": "b",
+      "explanation": "The refresh meta tag controls automatic page refresh."
+    },
+    {
+      "id": 194,
+      "category": "HTML Meta Tags",
+      "question": "Which meta tag defines the author?",
+      "options": {
+        "a": "creator",
+        "b": "author",
+        "c": "owner",
+        "d": "publisher"
+      },
+      "correct_answer": "b",
+      "explanation": "The author meta tag defines the author of the document."
+    },
+    {
+      "id": 195,
+      "category": "HTML Meta Tags",
+      "question": "Which meta tag controls robots?",
+      "options": {
+        "a": "crawler",
+        "b": "robots",
+        "c": "spider",
+        "d": "bot"
+      },
+      "correct_answer": "b",
+      "explanation": "The robots meta tag controls search engine crawling and indexing."
+    },
+    {
+      "id": 196,
+      "category": "HTML5 Features",
+      "question": "Which element represents a progress bar?",
+      "options": {
+        "a": "[progress]",
+        "b": "[meter]",
+        "c": "[bar]",
+        "d": "[loading]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [progress] element represents a progress bar."
+    },
+    {
+      "id": 197,
+      "category": "HTML5 Features",
+      "question": "Which element represents a gauge?",
+      "options": {
+        "a": "[gauge]",
+        "b": "[meter]",
+        "c": "[measure]",
+        "d": "[level]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [meter] element represents a gauge or meter."
+    },
+    {
+      "id": 198,
+      "category": "HTML5 Features",
+      "question": "Which element defines a time or date?",
+      "options": {
+        "a": "[date]",
+        "b": "[time]",
+        "c": "[calendar]",
+        "d": "[datetime]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [time] element defines a time or date."
+    },
+    {
+      "id": 199,
+      "category": "HTML5 Features",
+      "question": "Which element defines a command button?",
+      "options": {
+        "a": "[command]",
+        "b": "[button]",
+        "c": "[action]",
+        "d": "[control]"
+      },
+      "correct_answer": "a",
+      "explanation": "The [command] element defines a command button."
+    },
+    {
+      "id": 200,
+      "category": "HTML5 Features",
+      "question": "Which element defines details that can be hidden?",
+      "options": {
+        "a": "[hidden]",
+        "b": "[details]",
+        "c": "[summary]",
+        "d": "[collapse]"
+      },
+      "correct_answer": "b",
+      "explanation": "The [details] element defines additional details that can be hidden or shown."
+    },
+    {
+      "id": 201,
+      "category": "HTML Performance",
+      "question": "Which attribute improves image loading performance?",
+      "options": {
+        "a": "loading=\"lazy\"",
+        "b": "performance=\"high\"",
+        "c": "optimize=\"true\"",
+        "d": "speed=\"fast\""
+      },
+      "correct_answer": "a",
+      "explanation": "The loading=\"lazy\" attribute enables lazy loading of images for better performance."
+    },
+    {
+      "id": 202,
+      "category": "HTML Performance",
+      "question": "Which attribute preloads resources?",
+      "options": {
+        "a": "preload",
+        "b": "prefetch",
+        "c": "priority",
+        "d": "load"
+      },
+      "correct_answer": "a",
+      "explanation": "The preload attribute tells browsers to download and cache resources for later use."
+    },
+    {
+      "id": 203,
+      "category": "HTML Performance",
+      "question": "Which attribute hints resource priority?",
+      "options": {
+        "a": "importance",
+        "b": "priority",
+        "c": "fetchpriority",
+        "d": "loading"
+      },
+      "correct_answer": "c",
+      "explanation": "The fetchpriority attribute hints at the relative priority of resources."
+    },
+    {
+      "id": 204,
+      "category": "HTML Performance",
+      "question": "Which attribute improves font loading?",
+      "options": {
+        "a": "font-display",
+        "b": "font-loading",
+        "c": "font-render",
+        "d": "font-priority"
+      },
+      "correct_answer": "a",
+      "explanation": "The font-display attribute controls how fonts are loaded and displayed."
+    },
+    {
+      "id": 205,
+      "category": "HTML Performance",
+      "question": "Which attribute defers script execution?",
+      "options": {
+        "a": "wait",
+        "b": "defer",
+        "c": "delay",
+        "d": "async"
+      },
+      "correct_answer": "b",
+      "explanation": "The defer attribute delays script execution until after HTML parsing."
+    },
+    {
+      "id": 206,
+      "category": "HTML Security",
+      "question": "Which attribute prevents XSS attacks?",
+      "options": {
+        "a": "security",
+        "b": "safe",
+        "c": "sandbox",
+        "d": "protect"
+      },
+      "correct_answer": "c",
+      "explanation": "The sandbox attribute restricts potentially malicious content."
+    },
+    {
+      "id": 207,
+      "category": "HTML Security",
+      "question": "Which policy header prevents clickjacking?",
+      "options": {
+        "a": "X-Frame-Options",
+        "b": "Content-Security-Policy",
+        "c": "X-XSS-Protection",
+        "d": "X-Content-Type-Options"
+      },
+      "correct_answer": "a",
+      "explanation": "The X-Frame-Options header prevents clickjacking attacks."
+    },
+    {
+      "id": 208,
+      "category": "HTML Security",
+      "question": "Which attribute secures form submission?",
+      "options": {
+        "a": "secure",
+        "b": "encrypt",
+        "c": "https",
+        "d": "ssl"
+      },
+      "correct_answer": "c",
+      "explanation": "The https attribute ensures secure form submission over HTTPS."
+    },
+    {
+      "id": 209,
+      "category": "HTML Security",
+      "question": "Which attribute prevents data leaks?",
+      "options": {
+        "a": "referrerpolicy",
+        "b": "privacy",
+        "c": "secure",
+        "d": "protect"
+      },
+      "correct_answer": "a",
+      "explanation": "The referrerpolicy attribute controls how much referrer information is sent."
+    },
+    {
+      "id": 210,
+      "category": "HTML Security",
+      "question": "Which attribute validates input patterns?",
+      "options": {
+        "a": "validate",
+        "b": "pattern",
+        "c": "check",
+        "d": "verify"
+      },
+      "correct_answer": "b",
+      "explanation": "The pattern attribute validates input against a regular expression."
+    }
+  ]
+} 

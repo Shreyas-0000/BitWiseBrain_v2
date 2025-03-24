@@ -1,0 +1,2578 @@
+{
+  "python_mcq_questions": [
+    {
+      "id": 28,
+      "category": "Data Structures",
+      "question": "Which of the following is not a built-in data structure in Python?",
+      "options": {
+        "a": "List",
+        "b": "Dictionary",
+        "c": "Array",
+        "d": "Tuple"
+      },
+      "correct_answer": "c",
+      "explanation": "Array is not a built-in data structure in Python. Lists are used instead, while arrays are available through the array module."
+    },
+    {
+      "id": 29,
+      "category": "Data Structures",
+      "question": "What is the time complexity of accessing an element in a Python dictionary by key?",
+      "options": {
+        "a": "O(1)",
+        "b": "O(n)",
+        "c": "O(log n)",
+        "d": "O(n log n)"
+      },
+      "correct_answer": "a",
+      "explanation": "Dictionary access by key in Python has an average time complexity of O(1) due to the hash table implementation."
+    },
+    {
+      "id": 30,
+      "category": "Data Structures",
+      "question": "What is the difference between a list and a tuple in Python?",
+      "options": {
+        "a": "Lists are ordered, tuples are not",
+        "b": "Tuples are mutable, lists are immutable",
+        "c": "Lists are mutable, tuples are immutable",
+        "d": "There is no difference"
+      },
+      "correct_answer": "c",
+      "explanation": "The main difference is that lists are mutable (can be modified after creation) while tuples are immutable (cannot be modified after creation)."
+    },
+    {
+      "id": 31,
+      "category": "Data Structures",
+      "question": "What is the output of set([1, 2, 2, 3, 3, 3])?",
+      "options": {
+        "a": "[1, 2, 2, 3, 3, 3]",
+        "b": "{1, 2, 3}",
+        "c": "(1, 2, 3)",
+        "d": "Error"
+      },
+      "correct_answer": "b",
+      "explanation": "A set automatically removes duplicate elements, so the result will be {1, 2, 3}."
+    },
+    {
+      "id": 32,
+      "category": "Data Structures",
+      "question": "Which method is used to add an element to a set in Python?",
+      "options": {
+        "a": "append()",
+        "b": "add()",
+        "c": "insert()",
+        "d": "extend()"
+      },
+      "correct_answer": "b",
+      "explanation": "The add() method is used to add a single element to a set. append() is for lists, not sets."
+    },
+    {
+      "id": 33,
+      "category": "Object-Oriented Programming",
+      "question": "What is the purpose of the __init__ method in Python classes?",
+      "options": {
+        "a": "To delete an object",
+        "b": "To initialize class attributes",
+        "c": "To create a new class",
+        "d": "To import modules"
+      },
+      "correct_answer": "b",
+      "explanation": "The __init__ method is a constructor that initializes attributes when a new instance of a class is created."
+    },
+    {
+      "id": 34,
+      "category": "Object-Oriented Programming",
+      "question": "What is inheritance in Python?",
+      "options": {
+        "a": "Creating multiple instances of a class",
+        "b": "Defining a new class based on an existing class",
+        "c": "Creating a class within another class",
+        "d": "Importing class definitions from another module"
+      },
+      "correct_answer": "b",
+      "explanation": "Inheritance allows a class to inherit attributes and methods from another class, promoting code reuse and establishing a relationship between parent and child classes."
+    },
+    {
+      "id": 35,
+      "category": "Object-Oriented Programming",
+      "question": "What is the purpose of self parameter in Python methods?",
+      "options": {
+        "a": "To refer to the current instance of the class",
+        "b": "To create a new instance",
+        "c": "To delete an instance",
+        "d": "To access class attributes only"
+      },
+      "correct_answer": "a",
+      "explanation": "The self parameter refers to the current instance of the class and is used to access instance variables and methods."
+    },
+    {
+      "id": 36,
+      "category": "Object-Oriented Programming",
+      "question": "What is encapsulation in Python?",
+      "options": {
+        "a": "Creating multiple classes",
+        "b": "Combining multiple inheritance",
+        "c": "Bundling data and methods that work on that data within a single unit",
+        "d": "Creating instances of a class"
+      },
+      "correct_answer": "c",
+      "explanation": "Encapsulation is the bundling of data and the methods that operate on that data within a single unit or object, hiding the internal details of how an object works."
+    },
+    {
+      "id": 37,
+      "category": "Object-Oriented Programming",
+      "question": "What is the purpose of the super() function in Python?",
+      "options": {
+        "a": "To create a superclass",
+        "b": "To call methods from the parent class",
+        "c": "To create multiple inheritance",
+        "d": "To create class attributes"
+      },
+      "correct_answer": "b",
+      "explanation": "The super() function is used to call methods from the parent class, allowing you to extend or override methods while maintaining the functionality of the parent class."
+    },
+    {
+      "id": 38,
+      "category": "File Handling",
+      "question": "Which mode opens a file for reading in text mode?",
+      "options": {
+        "a": "w",
+        "b": "r",
+        "c": "a",
+        "d": "x"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'r' mode opens a file for reading in text mode. It is also the default mode when opening files."
+    },
+    {
+      "id": 39,
+      "category": "File Handling",
+      "question": "What is the difference between 'w' and 'a' modes in file handling?",
+      "options": {
+        "a": "No difference",
+        "b": "'w' is for writing, 'a' is for reading",
+        "c": "'w' overwrites existing content, 'a' appends to the end",
+        "d": "'w' is faster than 'a'"
+      },
+      "correct_answer": "c",
+      "explanation": "The 'w' mode overwrites any existing content in the file, while 'a' mode appends new content to the end of the file."
+    },
+    {
+      "id": 40,
+      "category": "File Handling",
+      "question": "Which method is used to read all lines of a file into a list?",
+      "options": {
+        "a": "readlines()",
+        "b": "readline()",
+        "c": "read()",
+        "d": "readall()"
+      },
+      "correct_answer": "a",
+      "explanation": "The readlines() method reads all lines from a file and returns them as a list of strings."
+    },
+    {
+      "id": 41,
+      "category": "File Handling",
+      "question": "What is the purpose of the 'with' statement in file handling?",
+      "options": {
+        "a": "To make file operations faster",
+        "b": "To automatically close the file after operations",
+        "c": "To create a new file",
+        "d": "To read and write simultaneously"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'with' statement ensures that a file is properly closed after operations are completed, even if an error occurs."
+    },
+    {
+      "id": 42,
+      "category": "File Handling",
+      "question": "Which mode should be used to write binary data to a file?",
+      "options": {
+        "a": "w",
+        "b": "wb",
+        "c": "w+",
+        "d": "wt"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'wb' mode opens a file for writing in binary mode, which is necessary when writing binary data like images or executables."
+    },
+    {
+      "id": 43,
+      "category": "Exception Handling",
+      "question": "Which statement is used to handle exceptions in Python?",
+      "options": {
+        "a": "catch",
+        "b": "handle",
+        "c": "try",
+        "d": "except"
+      },
+      "correct_answer": "c",
+      "explanation": "The try statement is used to handle exceptions in Python. Code that might raise an exception is placed in the try block."
+    },
+    {
+      "id": 44,
+      "category": "Exception Handling",
+      "question": "What is the purpose of the 'finally' block in exception handling?",
+      "options": {
+        "a": "To handle exceptions",
+        "b": "To execute code regardless of whether an exception occurred",
+        "c": "To raise exceptions",
+        "d": "To define custom exceptions"
+      },
+      "correct_answer": "b",
+      "explanation": "The finally block contains code that will be executed regardless of whether an exception was raised or not."
+    },
+    {
+      "id": 45,
+      "category": "Exception Handling",
+      "question": "Which of the following is a base class for all built-in exceptions?",
+      "options": {
+        "a": "Error",
+        "b": "BaseError",
+        "c": "Exception",
+        "d": "BaseException"
+      },
+      "correct_answer": "d",
+      "explanation": "BaseException is the base class for all built-in exceptions in Python. Exception is a subclass of BaseException."
+    },
+    {
+      "id": 46,
+      "category": "Exception Handling",
+      "question": "How do you create a custom exception class?",
+      "options": {
+        "a": "By inheriting from Exception class",
+        "b": "By using the @exception decorator",
+        "c": "By using the exception keyword",
+        "d": "By importing the exceptions module"
+      },
+      "correct_answer": "a",
+      "explanation": "Custom exceptions are created by defining a new class that inherits from the Exception class or one of its subclasses."
+    },
+    {
+      "id": 47,
+      "category": "Exception Handling",
+      "question": "What is the purpose of the 'raise' statement?",
+      "options": {
+        "a": "To catch exceptions",
+        "b": "To ignore exceptions",
+        "c": "To throw or raise an exception",
+        "d": "To define new exceptions"
+      },
+      "correct_answer": "c",
+      "explanation": "The raise statement is used to throw or raise an exception when a certain condition occurs."
+    },
+    {
+      "id": 48,
+      "category": "Iterators and Generators",
+      "question": "What is an iterator in Python?",
+      "options": {
+        "a": "A function that returns multiple values",
+        "b": "An object that implements __iter__ and __next__ methods",
+        "c": "A loop construct",
+        "d": "A type of collection"
+      },
+      "correct_answer": "b",
+      "explanation": "An iterator is an object that implements the iterator protocol, which consists of the __iter__ and __next__ methods."
+    },
+    {
+      "id": 49,
+      "category": "Iterators and Generators",
+      "question": "What is the purpose of the 'yield' keyword?",
+      "options": {
+        "a": "To define a function",
+        "b": "To return multiple values from a function",
+        "c": "To create a generator function",
+        "d": "To handle exceptions"
+      },
+      "correct_answer": "c",
+      "explanation": "The yield keyword is used to define generator functions, which return a generator iterator that can be used to iterate over a sequence of values."
+    },
+    {
+      "id": 50,
+      "category": "Iterators and Generators",
+      "question": "What is the main difference between a generator and a regular function?",
+      "options": {
+        "a": "Generators use less memory",
+        "b": "Generators can only return one value",
+        "c": "Generators maintain state between calls",
+        "d": "Generators are faster"
+      },
+      "correct_answer": "c",
+      "explanation": "Generators maintain their state between calls, allowing them to resume execution from where they left off, unlike regular functions that start fresh each time."
+    },
+    {
+      "id": 51,
+      "category": "Iterators and Generators",
+      "question": "What happens when a generator function reaches the end?",
+      "options": {
+        "a": "It starts over",
+        "b": "It raises a StopIteration exception",
+        "c": "It returns None",
+        "d": "It continues indefinitely"
+      },
+      "correct_answer": "b",
+      "explanation": "When a generator function reaches the end or encounters a return statement, it raises a StopIteration exception to signal the end of iteration."
+    },
+    {
+      "id": 52,
+      "category": "Iterators and Generators",
+      "question": "Which of the following is a generator expression?",
+      "options": {
+        "a": "[x for x in range(10)]",
+        "b": "(x for x in range(10))",
+        "c": "{x for x in range(10)}",
+        "d": "list(range(10))"
+      },
+      "correct_answer": "b",
+      "explanation": "Generator expressions use parentheses () and create a generator object, unlike list comprehensions which use square brackets [] and create a list."
+    },
+    {
+      "id": 53,
+      "category": "Decorators and Closures",
+      "question": "What is a decorator in Python?",
+      "options": {
+        "a": "A function that takes another function as an argument",
+        "b": "A class that inherits from another class",
+        "c": "A variable that stores function references",
+        "d": "A type of loop"
+      },
+      "correct_answer": "a",
+      "explanation": "A decorator is a function that takes another function as an argument and extends or modifies its behavior without explicitly modifying the function itself."
+    },
+    {
+      "id": 54,
+      "category": "Decorators and Closures",
+      "question": "What is a closure in Python?",
+      "options": {
+        "a": "A way to close files",
+        "b": "A function that remembers values from its enclosing scope",
+        "c": "A way to end a program",
+        "d": "A way to close database connections"
+      },
+      "correct_answer": "b",
+      "explanation": "A closure is a function that retains access to variables from its enclosing scope even after the scope has closed."
+    },
+    {
+      "id": 55,
+      "category": "Decorators and Closures",
+      "question": "What is the correct syntax for applying a decorator to a function?",
+      "options": {
+        "a": "@decorator\ndef function():",
+        "b": "decorator@function():",
+        "c": "def function()@decorator:",
+        "d": "def @decorator function():"
+      },
+      "correct_answer": "a",
+      "explanation": "Decorators are applied using the @ symbol followed by the decorator name, placed on the line immediately before the function definition."
+    },
+    {
+      "id": 56,
+      "category": "Decorators and Closures",
+      "question": "What happens when multiple decorators are applied to a function?",
+      "options": {
+        "a": "Only the last decorator is applied",
+        "b": "Only the first decorator is applied",
+        "c": "Decorators are applied from bottom to top",
+        "d": "Decorators are applied randomly"
+      },
+      "correct_answer": "c",
+      "explanation": "When multiple decorators are applied, they are applied from bottom to top (the decorator closest to the function is applied first)."
+    },
+    {
+      "id": 57,
+      "category": "Decorators and Closures",
+      "question": "What is the main advantage of using closures?",
+      "options": {
+        "a": "They make code run faster",
+        "b": "They provide data encapsulation",
+        "c": "They reduce memory usage",
+        "d": "They improve code readability"
+      },
+      "correct_answer": "b",
+      "explanation": "Closures provide data encapsulation by allowing a function to maintain access to variables in its enclosing scope, creating a form of data privacy."
+    },
+    {
+      "id": 58,
+      "category": "Regular Expressions",
+      "question": "Which module is used for working with regular expressions in Python?",
+      "options": {
+        "a": "regex",
+        "b": "re",
+        "c": "regexp",
+        "d": "regular"
+      },
+      "correct_answer": "b",
+      "explanation": "The 're' module provides support for regular expressions in Python."
+    },
+    {
+      "id": 59,
+      "category": "Regular Expressions",
+      "question": "What does the '.' character mean in a regular expression?",
+      "options": {
+        "a": "Matches any single character except newline",
+        "b": "Matches the dot character",
+        "c": "Matches the end of a string",
+        "d": "Matches zero or more occurrences"
+      },
+      "correct_answer": "a",
+      "explanation": "The dot (.) metacharacter matches any single character except a newline character."
+    },
+    {
+      "id": 60,
+      "category": "Regular Expressions",
+      "question": "Which function is used to find all non-overlapping matches of a pattern in a string?",
+      "options": {
+        "a": "re.match()",
+        "b": "re.search()",
+        "c": "re.findall()",
+        "d": "re.find()"
+      },
+      "correct_answer": "c",
+      "explanation": "re.findall() returns a list of all non-overlapping matches of a pattern in a string."
+    },
+    {
+      "id": 61,
+      "category": "Regular Expressions",
+      "question": "What does the '*' quantifier mean in regular expressions?",
+      "options": {
+        "a": "Exactly one occurrence",
+        "b": "One or more occurrences",
+        "c": "Zero or more occurrences",
+        "d": "Zero or one occurrence"
+      },
+      "correct_answer": "c",
+      "explanation": "The '*' quantifier means zero or more occurrences of the preceding character or group."
+    },
+    {
+      "id": 62,
+      "category": "Regular Expressions",
+      "question": "What is the difference between re.match() and re.search()?",
+      "options": {
+        "a": "There is no difference",
+        "b": "match() looks for a match at the start of the string, search() looks anywhere",
+        "c": "match() is faster than search()",
+        "d": "search() only finds the first occurrence"
+      },
+      "correct_answer": "b",
+      "explanation": "re.match() attempts to match at the beginning of the string, while re.search() looks for a match anywhere in the string."
+    },
+    {
+      "id": 63,
+      "category": "Concurrency and Parallelism",
+      "question": "Which module is used for creating threads in Python?",
+      "options": {
+        "a": "thread",
+        "b": "threading",
+        "c": "multithread",
+        "d": "parallel"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'threading' module is used to create and manage threads in Python."
+    },
+    {
+      "id": 64,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the Global Interpreter Lock (GIL) in Python?",
+      "options": {
+        "a": "A lock that prevents memory leaks",
+        "b": "A lock that allows only one thread to execute Python bytecode at a time",
+        "c": "A lock that prevents infinite loops",
+        "d": "A lock that manages file access"
+      },
+      "correct_answer": "b",
+      "explanation": "The GIL is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes simultaneously."
+    },
+    {
+      "id": 65,
+      "category": "Concurrency and Parallelism",
+      "question": "Which module is used for running processes in parallel?",
+      "options": {
+        "a": "parallel",
+        "b": "multiprocess",
+        "c": "multiprocessing",
+        "d": "process"
+      },
+      "correct_answer": "c",
+      "explanation": "The 'multiprocessing' module allows you to spawn processes using an API similar to the threading module."
+    },
+    {
+      "id": 66,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the main difference between multiprocessing and multithreading in Python?",
+      "options": {
+        "a": "Multiprocessing is faster",
+        "b": "Multithreading uses less memory",
+        "c": "Multiprocessing bypasses the GIL",
+        "d": "Multithreading is more secure"
+      },
+      "correct_answer": "c",
+      "explanation": "Multiprocessing runs multiple Python processes in parallel, each with its own Python interpreter and memory space, effectively bypassing the GIL."
+    },
+    {
+      "id": 67,
+      "category": "Concurrency and Parallelism",
+      "question": "What is asyncio in Python?",
+      "options": {
+        "a": "A threading library",
+        "b": "A library for asynchronous I/O and concurrent code",
+        "c": "A multiprocessing library",
+        "d": "A library for parallel computing"
+      },
+      "correct_answer": "b",
+      "explanation": "asyncio is a library to write concurrent code using the async/await syntax, primarily for handling I/O-bound and high-level structured network code."
+    },
+    {
+      "id": 68,
+      "category": "Networking and Web Development",
+      "question": "Which module is commonly used for making HTTP requests in Python?",
+      "options": {
+        "a": "http",
+        "b": "requests",
+        "c": "urllib",
+        "d": "web"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'requests' library is the most popular and user-friendly way to make HTTP requests in Python."
+    },
+    {
+      "id": 69,
+      "category": "Networking and Web Development",
+      "question": "What is Flask?",
+      "options": {
+        "a": "A database management system",
+        "b": "A web framework",
+        "c": "A testing framework",
+        "d": "A debugging tool"
+      },
+      "correct_answer": "b",
+      "explanation": "Flask is a lightweight WSGI web application framework designed to be simple and easy to use."
+    },
+    {
+      "id": 70,
+      "category": "Networking and Web Development",
+      "question": "Which method is used to handle GET requests in Flask?",
+      "options": {
+        "a": "@app.get()",
+        "b": "@app.route() with methods=['GET']",
+        "c": "@app.request('GET')",
+        "d": "@app.handle_get()"
+      },
+      "correct_answer": "b",
+      "explanation": "In Flask, you can handle GET requests using the @app.route() decorator with methods=['GET'] or by default if no methods are specified."
+    },
+    {
+      "id": 71,
+      "category": "Networking and Web Development",
+      "question": "What is WSGI?",
+      "options": {
+        "a": "Web Server Gateway Interface",
+        "b": "Web Socket Gateway Implementation",
+        "c": "Web Service Gateway Interface",
+        "d": "Web Server Gateway Implementation"
+      },
+      "correct_answer": "a",
+      "explanation": "WSGI (Web Server Gateway Interface) is a specification for a universal interface between web servers and web applications or frameworks in Python."
+    },
+    {
+      "id": 72,
+      "category": "Networking and Web Development",
+      "question": "Which module is used for parsing HTML in Python?",
+      "options": {
+        "a": "html",
+        "b": "beautifulsoup4",
+        "c": "htmlparser",
+        "d": "parsehtml"
+      },
+      "correct_answer": "b",
+      "explanation": "BeautifulSoup (beautifulsoup4) is a popular library for parsing HTML and XML documents in Python."
+    },
+    {
+      "id": 73,
+      "category": "Testing and Debugging",
+      "question": "Which module is used for unit testing in Python?",
+      "options": {
+        "a": "test",
+        "b": "unittest",
+        "c": "pytest",
+        "d": "testing"
+      },
+      "correct_answer": "b",
+      "explanation": "The unittest module is Python's built-in unit testing framework, inspired by JUnit."
+    },
+    {
+      "id": 74,
+      "category": "Testing and Debugging",
+      "question": "What is the purpose of the pdb module in Python?",
+      "options": {
+        "a": "Performance monitoring",
+        "b": "Package management",
+        "c": "Interactive debugging",
+        "d": "Process management"
+      },
+      "correct_answer": "c",
+      "explanation": "pdb is Python's built-in interactive debugger, allowing you to step through code, set breakpoints, and inspect variables."
+    },
+    {
+      "id": 75,
+      "category": "Testing and Debugging",
+      "question": "What is a test fixture in unit testing?",
+      "options": {
+        "a": "A piece of code that tests a specific feature",
+        "b": "A set of preconditions and cleanup actions for tests",
+        "c": "A bug in the test code",
+        "d": "A type of assertion"
+      },
+      "correct_answer": "b",
+      "explanation": "A test fixture sets up the necessary preconditions for testing and handles cleanup after tests are complete."
+    },
+    {
+      "id": 76,
+      "category": "Testing and Debugging",
+      "question": "Which statement is used to deliberately raise an exception in Python?",
+      "options": {
+        "a": "throw",
+        "b": "raise",
+        "c": "except",
+        "d": "error"
+      },
+      "correct_answer": "b",
+      "explanation": "The raise statement is used to deliberately raise an exception in Python when a certain condition is met."
+    },
+    {
+      "id": 77,
+      "category": "Testing and Debugging",
+      "question": "What is the purpose of the assert statement in Python?",
+      "options": {
+        "a": "To define a variable",
+        "b": "To handle exceptions",
+        "c": "To verify that a condition is true",
+        "d": "To import modules"
+      },
+      "correct_answer": "c",
+      "explanation": "The assert statement is used to test if a condition is true. If false, it raises an AssertionError with an optional message."
+    },
+    {
+      "id": 78,
+      "category": "Variables and Data Types",
+      "question": "Which of the following is not a valid variable name in Python?",
+      "options": {
+        "a": "_variable",
+        "b": "variable123",
+        "c": "123variable",
+        "d": "my_variable"
+      },
+      "correct_answer": "c",
+      "explanation": "Variable names cannot start with a number in Python. They must start with a letter or underscore."
+    },
+    {
+      "id": 79,
+      "category": "Variables and Data Types",
+      "question": "What is the type of the result of 3 / 2 in Python 3?",
+      "options": {
+        "a": "int",
+        "b": "float",
+        "c": "decimal",
+        "d": "double"
+      },
+      "correct_answer": "b",
+      "explanation": "In Python 3, the / operator performs floating-point division, always returning a float."
+    },
+    {
+      "id": 80,
+      "category": "Variables and Data Types",
+      "question": "What is the output of type(None)?",
+      "options": {
+        "a": "<class 'None'>",
+        "b": "<class 'NoneType'>",
+        "c": "<class 'null'>",
+        "d": "<class 'void'>"
+      },
+      "correct_answer": "b",
+      "explanation": "None is a special constant in Python that represents the absence of a value, and its type is NoneType."
+    },
+    {
+      "id": 81,
+      "category": "Variables and Data Types",
+      "question": "What is the result of bool('')?",
+      "options": {
+        "a": "True",
+        "b": "False",
+        "c": "None",
+        "d": "Error"
+      },
+      "correct_answer": "b",
+      "explanation": "An empty string is considered False when converted to a boolean in Python."
+    },
+    {
+      "id": 82,
+      "category": "Variables and Data Types",
+      "question": "What is the type of {1, 2, 3}?",
+      "options": {
+        "a": "list",
+        "b": "tuple",
+        "c": "set",
+        "d": "dictionary"
+      },
+      "correct_answer": "c",
+      "explanation": "Curly braces {} with comma-separated values create a set in Python, which is an unordered collection of unique elements."
+    },
+    {
+      "id": 83,
+      "category": "Control Flow Statements",
+      "question": "What is the output of 'True and False'?",
+      "options": {
+        "a": "True",
+        "b": "False",
+        "c": "None",
+        "d": "1"
+      },
+      "correct_answer": "b",
+      "explanation": "The logical AND operator returns False if any operand is False."
+    },
+    {
+      "id": 84,
+      "category": "Control Flow Statements",
+      "question": "What is the output of 'True or False'?",
+      "options": {
+        "a": "True",
+        "b": "False",
+        "c": "None",
+        "d": "1"
+      },
+      "correct_answer": "a",
+      "explanation": "The logical OR operator returns True if any operand is True."
+    },
+    {
+      "id": 85,
+      "category": "Control Flow Statements",
+      "question": "Which loop is guaranteed to execute at least once?",
+      "options": {
+        "a": "for loop",
+        "b": "while loop",
+        "c": "do-while loop",
+        "d": "Python doesn't have such a loop"
+      },
+      "correct_answer": "d",
+      "explanation": "Python doesn't have a do-while loop. All loops in Python check their condition before executing the loop body."
+    },
+    {
+      "id": 86,
+      "category": "Control Flow Statements",
+      "question": "What is the purpose of the 'else' clause in a for loop?",
+      "options": {
+        "a": "It executes when the loop is broken",
+        "b": "It executes when the loop completes normally",
+        "c": "It executes when an exception occurs",
+        "d": "It executes when the loop condition is False"
+      },
+      "correct_answer": "b",
+      "explanation": "The else clause in a for loop executes when the loop completes normally (not when break is called)."
+    },
+    {
+      "id": 87,
+      "category": "Control Flow Statements",
+      "question": "What is the output of 'not True'?",
+      "options": {
+        "a": "True",
+        "b": "False",
+        "c": "None",
+        "d": "0"
+      },
+      "correct_answer": "b",
+      "explanation": "The 'not' operator negates a boolean value. 'not True' evaluates to False."
+    },
+    {
+      "id": 88,
+      "category": "Functions and Modules",
+      "question": "What is the purpose of *args in function parameters?",
+      "options": {
+        "a": "To accept any number of positional arguments",
+        "b": "To accept any number of keyword arguments",
+        "c": "To make arguments optional",
+        "d": "To unpack a list"
+      },
+      "correct_answer": "a",
+      "explanation": "*args allows a function to accept any number of positional arguments, which are collected into a tuple."
+    },
+    {
+      "id": 89,
+      "category": "Functions and Modules",
+      "question": "What is the purpose of **kwargs in function parameters?",
+      "options": {
+        "a": "To accept any number of positional arguments",
+        "b": "To accept any number of keyword arguments",
+        "c": "To make arguments optional",
+        "d": "To unpack a dictionary"
+      },
+      "correct_answer": "b",
+      "explanation": "**kwargs allows a function to accept any number of keyword arguments, which are collected into a dictionary."
+    },
+    {
+      "id": 90,
+      "category": "Functions and Modules",
+      "question": "What is a module in Python?",
+      "options": {
+        "a": "A function that performs a specific task",
+        "b": "A file containing Python code",
+        "c": "A class definition",
+        "d": "A built-in data type"
+      },
+      "correct_answer": "b",
+      "explanation": "A module is a file containing Python definitions and statements. It allows you to logically organize your Python code."
+    },
+    {
+      "id": 91,
+      "category": "Functions and Modules",
+      "question": "What is the difference between 'import module' and 'from module import *'?",
+      "options": {
+        "a": "No difference",
+        "b": "'import module' is faster",
+        "c": "'from module import *' imports everything directly into current namespace",
+        "d": "'import module' imports everything directly into current namespace"
+      },
+      "correct_answer": "c",
+      "explanation": "'from module import *' imports all names directly into the current namespace, while 'import module' requires using the module name as a prefix."
+    },
+    {
+      "id": 92,
+      "category": "Functions and Modules",
+      "question": "What is the purpose of the if __name__ == '__main__': statement?",
+      "options": {
+        "a": "To define the main function",
+        "b": "To check if the module is being run directly or imported",
+        "c": "To create a new module",
+        "d": "To import the main module"
+      },
+      "correct_answer": "b",
+      "explanation": "This statement checks whether the module is being run directly (as the main program) or being imported by another module."
+    },
+    {
+      "id": 93,
+      "category": "Data Structures",
+      "question": "What is the time complexity of list.append() in Python?",
+      "options": {
+        "a": "O(1)",
+        "b": "O(n)",
+        "c": "O(log n)",
+        "d": "O(n log n)"
+      },
+      "correct_answer": "a",
+      "explanation": "The append() method in Python lists has an amortized time complexity of O(1) as it adds elements to the end of the list."
+    },
+    {
+      "id": 94,
+      "category": "Data Structures",
+      "question": "What is the output of list(set([1, 2, 2, 3, 3, 3]))?",
+      "options": {
+        "a": "[1, 2, 2, 3, 3, 3]",
+        "b": "[1, 2, 3]",
+        "c": "{1, 2, 3}",
+        "d": "(1, 2, 3)"
+      },
+      "correct_answer": "b",
+      "explanation": "Converting a list to a set removes duplicates, and converting back to a list maintains the unique elements."
+    },
+    {
+      "id": 95,
+      "category": "Data Structures",
+      "question": "What is the difference between list.append() and list.extend()?",
+      "options": {
+        "a": "append() adds multiple elements, extend() adds one",
+        "b": "append() adds one element, extend() adds multiple elements",
+        "c": "There is no difference",
+        "d": "append() is faster than extend()"
+      },
+      "correct_answer": "b",
+      "explanation": "append() adds a single element to the end of the list, while extend() adds all elements from an iterable to the list."
+    },
+    {
+      "id": 96,
+      "category": "Data Structures",
+      "question": "What is the output of {1: 'one', 2: 'two'}.get(3, 'default')?",
+      "options": {
+        "a": "KeyError",
+        "b": "None",
+        "c": "default",
+        "d": "3"
+      },
+      "correct_answer": "c",
+      "explanation": "The get() method returns the value for the key if it exists, otherwise returns the default value specified as the second argument."
+    },
+    {
+      "id": 97,
+      "category": "Data Structures",
+      "question": "What is a deque in Python?",
+      "options": {
+        "a": "A type of list",
+        "b": "A double-ended queue",
+        "c": "A dictionary implementation",
+        "d": "A set implementation"
+      },
+      "correct_answer": "b",
+      "explanation": "A deque (double-ended queue) is a data structure that allows efficient append and pop operations from both ends."
+    },
+    {
+      "id": 98,
+      "category": "Object-Oriented Programming",
+      "question": "What is polymorphism in Python?",
+      "options": {
+        "a": "A way to create multiple objects",
+        "b": "The ability of objects to take multiple forms",
+        "c": "A way to define multiple classes",
+        "d": "A way to create multiple methods"
+      },
+      "correct_answer": "b",
+      "explanation": "Polymorphism allows objects to take multiple forms, enabling the same interface to be used for different underlying forms (data types or classes)."
+    },
+    {
+      "id": 99,
+      "category": "Object-Oriented Programming",
+      "question": "What is method overriding in Python?",
+      "options": {
+        "a": "Creating multiple methods with the same name",
+        "b": "Defining a method in a subclass that already exists in the parent class",
+        "c": "Creating methods with different parameters",
+        "d": "Creating static methods"
+      },
+      "correct_answer": "b",
+      "explanation": "Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its parent class."
+    },
+    {
+      "id": 100,
+      "category": "Object-Oriented Programming",
+      "question": "What is the purpose of the @property decorator?",
+      "options": {
+        "a": "To create a class property",
+        "b": "To define a getter method",
+        "c": "To create a static method",
+        "d": "To create a class method"
+      },
+      "correct_answer": "b",
+      "explanation": "The @property decorator is used to define getter methods that can be accessed like attributes, providing a way to implement properties."
+    },
+    {
+      "id": 101,
+      "category": "Object-Oriented Programming",
+      "question": "What is multiple inheritance in Python?",
+      "options": {
+        "a": "Creating multiple classes",
+        "b": "Inheriting from multiple parent classes",
+        "c": "Creating multiple objects",
+        "d": "Creating multiple methods"
+      },
+      "correct_answer": "b",
+      "explanation": "Multiple inheritance allows a class to inherit attributes and methods from more than one parent class."
+    },
+    {
+      "id": 102,
+      "category": "Object-Oriented Programming",
+      "question": "What is the purpose of the __str__ method?",
+      "options": {
+        "a": "To convert an object to a string",
+        "b": "To create a string object",
+        "c": "To compare strings",
+        "d": "To concatenate strings"
+      },
+      "correct_answer": "a",
+      "explanation": "The __str__ method is used to define a string representation of an object that is readable for end users."
+    },
+    {
+      "id": 103,
+      "category": "File Handling",
+      "question": "What is the difference between 'r+' and 'w+' modes in file handling?",
+      "options": {
+        "a": "No difference",
+        "b": "'r+' preserves content, 'w+' truncates the file",
+        "c": "'w+' preserves content, 'r+' truncates the file",
+        "d": "Both truncate the file"
+      },
+      "correct_answer": "b",
+      "explanation": "'r+' opens for reading and writing but preserves file content, while 'w+' truncates (erases) the file before opening for reading and writing."
+    },
+    {
+      "id": 104,
+      "category": "File Handling",
+      "question": "What is the purpose of the seek() method in file handling?",
+      "options": {
+        "a": "To search for a string in the file",
+        "b": "To change the file pointer position",
+        "c": "To read a specific line",
+        "d": "To write at a specific position"
+      },
+      "correct_answer": "b",
+      "explanation": "The seek() method is used to change the position of the file pointer to a specific position in the file."
+    },
+    {
+      "id": 105,
+      "category": "File Handling",
+      "question": "What is the difference between read() and readline()?",
+      "options": {
+        "a": "read() reads the entire file, readline() reads one line",
+        "b": "read() is faster than readline()",
+        "c": "readline() reads the entire file, read() reads one line",
+        "d": "There is no difference"
+      },
+      "correct_answer": "a",
+      "explanation": "read() reads the entire file content at once, while readline() reads one line at a time."
+    },
+    {
+      "id": 106,
+      "category": "File Handling",
+      "question": "What happens if you try to open a file that doesn't exist in 'r' mode?",
+      "options": {
+        "a": "Creates a new file",
+        "b": "Returns None",
+        "c": "Raises FileNotFoundError",
+        "d": "Returns an empty file object"
+      },
+      "correct_answer": "c",
+      "explanation": "Trying to open a non-existent file in read mode ('r') raises a FileNotFoundError exception."
+    },
+    {
+      "id": 107,
+      "category": "File Handling",
+      "question": "What is the purpose of the tell() method in file handling?",
+      "options": {
+        "a": "To tell the file size",
+        "b": "To return the current position of the file pointer",
+        "c": "To tell if the file exists",
+        "d": "To tell the file mode"
+      },
+      "correct_answer": "b",
+      "explanation": "The tell() method returns the current position of the file pointer (the number of bytes from the beginning of the file)."
+    },
+    {
+      "id": 108,
+      "category": "Exception Handling",
+      "question": "What is the purpose of the else clause in a try-except block?",
+      "options": {
+        "a": "To handle exceptions",
+        "b": "To execute code if no exception occurs",
+        "c": "To define custom exceptions",
+        "d": "To clean up resources"
+      },
+      "correct_answer": "b",
+      "explanation": "The else clause in a try-except block is executed when no exception occurs in the try block."
+    },
+    {
+      "id": 109,
+      "category": "Exception Handling",
+      "question": "What happens if an exception occurs in the finally block?",
+      "options": {
+        "a": "It is ignored",
+        "b": "It is handled by the except block",
+        "c": "It replaces any previous exception",
+        "d": "It is raised after any previous exception"
+      },
+      "correct_answer": "c",
+      "explanation": "If an exception occurs in the finally block, it replaces any previous exception that was raised in the try or except blocks."
+    },
+    {
+      "id": 110,
+      "category": "Exception Handling",
+      "question": "Which of the following is not a built-in exception?",
+      "options": {
+        "a": "ValueError",
+        "b": "TypeError",
+        "c": "InputError",
+        "d": "IndexError"
+      },
+      "correct_answer": "c",
+      "explanation": "InputError is not a built-in exception in Python. ValueError, TypeError, and IndexError are built-in exceptions."
+    },
+    {
+      "id": 111,
+      "category": "Exception Handling",
+      "question": "What is the purpose of the raise from statement?",
+      "options": {
+        "a": "To raise multiple exceptions",
+        "b": "To specify the cause of an exception",
+        "c": "To define exception hierarchy",
+        "d": "To catch multiple exceptions"
+      },
+      "correct_answer": "b",
+      "explanation": "The raise from statement is used to specify the cause of an exception, creating an exception chain for better error tracking."
+    },
+    {
+      "id": 112,
+      "category": "Exception Handling",
+      "question": "What is exception chaining in Python?",
+      "options": {
+        "a": "Raising multiple exceptions at once",
+        "b": "Linking exceptions to their cause",
+        "c": "Handling multiple exceptions in one except block",
+        "d": "Creating custom exception hierarchies"
+      },
+      "correct_answer": "b",
+      "explanation": "Exception chaining is the process of linking exceptions to their cause, showing how one exception led to another."
+    },
+    {
+      "id": 113,
+      "category": "Iterators and Generators",
+      "question": "What is the difference between an iterator and an iterable?",
+      "options": {
+        "a": "There is no difference",
+        "b": "Iterator implements __iter__ and __next__, iterable only implements __iter__",
+        "c": "Iterable implements __iter__ and __next__, iterator only implements __iter__",
+        "d": "Iterator is faster than iterable"
+      },
+      "correct_answer": "b",
+      "explanation": "An iterable only implements __iter__ method, while an iterator implements both __iter__ and __next__ methods."
+    },
+    {
+      "id": 114,
+      "category": "Iterators and Generators",
+      "question": "What is the advantage of using generators over lists?",
+      "options": {
+        "a": "Generators are faster",
+        "b": "Generators use less memory",
+        "c": "Generators can store more items",
+        "d": "Generators are thread-safe"
+      },
+      "correct_answer": "b",
+      "explanation": "Generators use less memory as they generate items on-the-fly instead of storing all items in memory like lists."
+    },
+    {
+      "id": 115,
+      "category": "Iterators and Generators",
+      "question": "What is a generator expression?",
+      "options": {
+        "a": "A function that generates random numbers",
+        "b": "A list comprehension that creates a generator",
+        "c": "A tuple comprehension",
+        "d": "A way to create multiple generators"
+      },
+      "correct_answer": "b",
+      "explanation": "A generator expression is similar to a list comprehension but creates a generator object instead of a list."
+    },
+    {
+      "id": 116,
+      "category": "Iterators and Generators",
+      "question": "What happens when you call next() on a generator that has no more items?",
+      "options": {
+        "a": "Returns None",
+        "b": "Returns False",
+        "c": "Raises StopIteration",
+        "d": "Starts over from beginning"
+      },
+      "correct_answer": "c",
+      "explanation": "When a generator has no more items to yield, calling next() raises a StopIteration exception."
+    },
+    {
+      "id": 117,
+      "category": "Iterators and Generators",
+      "question": "What is the purpose of the send() method in generators?",
+      "options": {
+        "a": "To send data back to the generator",
+        "b": "To send the generator to another function",
+        "c": "To send multiple values at once",
+        "d": "To send the generator's state"
+      },
+      "correct_answer": "a",
+      "explanation": "The send() method allows you to send values back into the generator function where it was paused."
+    },
+    {
+      "id": 118,
+      "category": "Decorators and Closures",
+      "question": "What is a closure in Python?",
+      "options": {
+        "a": "A way to close files",
+        "b": "A function that remembers values from its enclosing scope",
+        "c": "A way to end a program",
+        "d": "A way to close database connections"
+      },
+      "correct_answer": "b",
+      "explanation": "A closure is a function that retains access to variables from its enclosing scope even after the scope has closed."
+    },
+    {
+      "id": 119,
+      "category": "Decorators and Closures",
+      "question": "What is the purpose of functools.wraps decorator?",
+      "options": {
+        "a": "To wrap functions in a try-except block",
+        "b": "To preserve metadata of the decorated function",
+        "c": "To make functions faster",
+        "d": "To create function aliases"
+      },
+      "correct_answer": "b",
+      "explanation": "functools.wraps preserves the metadata (like __name__ and __doc__) of the original function when it is decorated."
+    },
+    {
+      "id": 120,
+      "category": "Decorators and Closures",
+      "question": "What is a decorator factory?",
+      "options": {
+        "a": "A function that creates decorators",
+        "b": "A class that creates functions",
+        "c": "A way to create multiple decorators",
+        "d": "A built-in Python module"
+      },
+      "correct_answer": "a",
+      "explanation": "A decorator factory is a function that creates and returns a decorator, allowing for customization of the decorator's behavior."
+    },
+    {
+      "id": 121,
+      "category": "Decorators and Closures",
+      "question": "What happens when multiple decorators are applied to a function?",
+      "options": {
+        "a": "Only the last decorator is applied",
+        "b": "Only the first decorator is applied",
+        "c": "Decorators are applied from bottom to top",
+        "d": "Decorators are applied randomly"
+      },
+      "correct_answer": "c",
+      "explanation": "When multiple decorators are applied, they are applied from bottom to top (the decorator closest to the function is applied first)."
+    },
+    {
+      "id": 122,
+      "category": "Decorators and Closures",
+      "question": "What is the difference between @classmethod and @staticmethod?",
+      "options": {
+        "a": "No difference",
+        "b": "@classmethod receives the class as first argument, @staticmethod doesn't",
+        "c": "@staticmethod receives the class as first argument, @classmethod doesn't",
+        "d": "Both receive the class as first argument"
+      },
+      "correct_answer": "b",
+      "explanation": "@classmethod receives the class as its first argument (cls), while @staticmethod doesn't receive any implicit first argument."
+    },
+    {
+      "id": 123,
+      "category": "Regular Expressions",
+      "question": "What does the '^' symbol mean in a regular expression?",
+      "options": {
+        "a": "Matches the end of a string",
+        "b": "Matches the start of a string",
+        "c": "Matches any character",
+        "d": "Negates a character set"
+      },
+      "correct_answer": "b",
+      "explanation": "The '^' symbol matches the start of a string in regular expressions. When used inside square brackets, it negates the character set."
+    },
+    {
+      "id": 124,
+      "category": "Regular Expressions",
+      "question": "What does the '*' quantifier mean in regular expressions?",
+      "options": {
+        "a": "Matches exactly one occurrence",
+        "b": "Matches one or more occurrences",
+        "c": "Matches zero or more occurrences",
+        "d": "Matches zero or one occurrence"
+      },
+      "correct_answer": "c",
+      "explanation": "The '*' quantifier matches zero or more occurrences of the preceding character or group."
+    },
+    {
+      "id": 125,
+      "category": "Regular Expressions",
+      "question": "What is the purpose of the re.compile() function?",
+      "options": {
+        "a": "To check if a pattern is valid",
+        "b": "To create a reusable pattern object",
+        "c": "To combine multiple patterns",
+        "d": "To optimize pattern matching"
+      },
+      "correct_answer": "b",
+      "explanation": "re.compile() creates a reusable pattern object that can be used multiple times for matching, improving performance."
+    },
+    {
+      "id": 126,
+      "category": "Regular Expressions",
+      "question": "What is the difference between re.match() and re.search()?",
+      "options": {
+        "a": "match() is faster than search()",
+        "b": "match() looks at start of string, search() looks anywhere",
+        "c": "search() is case-sensitive, match() is not",
+        "d": "There is no difference"
+      },
+      "correct_answer": "b",
+      "explanation": "re.match() only matches at the beginning of the string, while re.search() looks for a match anywhere in the string."
+    },
+    {
+      "id": 127,
+      "category": "Regular Expressions",
+      "question": "What does the '?' quantifier mean in regular expressions?",
+      "options": {
+        "a": "Matches exactly one occurrence",
+        "b": "Matches one or more occurrences",
+        "c": "Matches zero or more occurrences",
+        "d": "Matches zero or one occurrence"
+      },
+      "correct_answer": "d",
+      "explanation": "The '?' quantifier matches zero or one occurrence of the preceding character or group, making it optional."
+    },
+    {
+      "id": 128,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the difference between multiprocessing and multithreading in Python?",
+      "options": {
+        "a": "No difference",
+        "b": "Multiprocessing uses multiple CPUs, multithreading uses one CPU",
+        "c": "Multithreading is faster than multiprocessing",
+        "d": "Multiprocessing uses less memory"
+      },
+      "correct_answer": "b",
+      "explanation": "Multiprocessing runs multiple processes using multiple CPUs, while multithreading runs multiple threads within a single process on one CPU."
+    },
+    {
+      "id": 129,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the purpose of the Lock class in threading?",
+      "options": {
+        "a": "To prevent race conditions",
+        "b": "To speed up thread execution",
+        "c": "To create new threads",
+        "d": "To terminate threads"
+      },
+      "correct_answer": "a",
+      "explanation": "The Lock class provides a way to synchronize threads and prevent race conditions by controlling access to shared resources."
+    },
+    {
+      "id": 130,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the purpose of the Pool class in multiprocessing?",
+      "options": {
+        "a": "To create a pool of threads",
+        "b": "To manage shared memory",
+        "c": "To execute tasks in parallel using multiple processes",
+        "d": "To synchronize processes"
+      },
+      "correct_answer": "c",
+      "explanation": "The Pool class provides a way to parallelize the execution of a function across multiple input values using multiple processes."
+    },
+    {
+      "id": 131,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the purpose of the async keyword in Python?",
+      "options": {
+        "a": "To create asynchronous functions",
+        "b": "To create synchronous functions",
+        "c": "To create threads",
+        "d": "To create processes"
+      },
+      "correct_answer": "a",
+      "explanation": "The async keyword is used to define coroutines (asynchronous functions) that can be paused and resumed."
+    },
+    {
+      "id": 132,
+      "category": "Concurrency and Parallelism",
+      "question": "What is the purpose of the await keyword?",
+      "options": {
+        "a": "To wait for a thread to complete",
+        "b": "To wait for a process to complete",
+        "c": "To pause execution until an async operation completes",
+        "d": "To terminate async operations"
+      },
+      "correct_answer": "c",
+      "explanation": "The await keyword is used to pause the execution of an async function until the awaited async operation completes."
+    },
+    {
+      "id": 133,
+      "category": "Networking and Web Development",
+      "question": "What is the purpose of the requests library in Python?",
+      "options": {
+        "a": "To create web servers",
+        "b": "To make HTTP requests",
+        "c": "To handle websockets",
+        "d": "To create databases"
+      },
+      "correct_answer": "b",
+      "explanation": "The requests library is used to make HTTP requests to web servers, providing a simple interface for sending GET, POST, and other HTTP requests."
+    },
+    {
+      "id": 134,
+      "category": "Networking and Web Development",
+      "question": "What is Django?",
+      "options": {
+        "a": "A web server",
+        "b": "A high-level web framework",
+        "c": "A database",
+        "d": "A programming language"
+      },
+      "correct_answer": "b",
+      "explanation": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design."
+    },
+    {
+      "id": 135,
+      "category": "Networking and Web Development",
+      "question": "What is the purpose of WSGI in Python web development?",
+      "options": {
+        "a": "To style web pages",
+        "b": "To define database schemas",
+        "c": "To provide an interface between web servers and applications",
+        "d": "To handle client-side scripting"
+      },
+      "correct_answer": "c",
+      "explanation": "WSGI (Web Server Gateway Interface) provides a standard interface between web servers and Python web applications or frameworks."
+    },
+    {
+      "id": 136,
+      "category": "Networking and Web Development",
+      "question": "What is the purpose of the socket module in Python?",
+      "options": {
+        "a": "To create network connections",
+        "b": "To handle HTTP requests",
+        "c": "To create web forms",
+        "d": "To style web pages"
+      },
+      "correct_answer": "a",
+      "explanation": "The socket module provides a low-level interface to network programming, allowing you to create network connections and communicate between computers."
+    },
+    {
+      "id": 137,
+      "category": "Networking and Web Development",
+      "question": "What is the difference between GET and POST requests?",
+      "options": {
+        "a": "GET is faster than POST",
+        "b": "POST is more secure than GET",
+        "c": "GET sends data in URL, POST sends in request body",
+        "d": "There is no difference"
+      },
+      "correct_answer": "c",
+      "explanation": "GET requests send data as URL parameters, while POST requests send data in the request body, making POST more suitable for sensitive data."
+    },
+    {
+      "id": 138,
+      "category": "Testing and Debugging",
+      "question": "What is the purpose of the unittest module in Python?",
+      "options": {
+        "a": "To format code",
+        "b": "To write and run tests",
+        "c": "To debug code",
+        "d": "To profile code"
+      },
+      "correct_answer": "b",
+      "explanation": "The unittest module provides a framework for writing and running tests in Python, supporting test automation, sharing of setup and shutdown code, and more."
+    },
+    {
+      "id": 139,
+      "category": "Testing and Debugging",
+      "question": "What is the purpose of the pdb module?",
+      "options": {
+        "a": "To write tests",
+        "b": "To format code",
+        "c": "To debug code interactively",
+        "d": "To check code coverage"
+      },
+      "correct_answer": "c",
+      "explanation": "The pdb module is Python's interactive debugger, allowing you to pause execution, inspect variables, and step through code line by line."
+    },
+    {
+      "id": 140,
+      "category": "Testing and Debugging",
+      "question": "What is a test fixture in pytest?",
+      "options": {
+        "a": "A bug in the test code",
+        "b": "A function that runs before and after tests",
+        "c": "A type of assertion",
+        "d": "A test case class"
+      },
+      "correct_answer": "b",
+      "explanation": "A test fixture in pytest is a function that runs before and/or after tests to set up any necessary state or resources."
+    },
+    {
+      "id": 141,
+      "category": "Testing and Debugging",
+      "question": "What is the purpose of assert statements in testing?",
+      "options": {
+        "a": "To print debug information",
+        "b": "To verify conditions are met",
+        "c": "To catch exceptions",
+        "d": "To skip tests"
+      },
+      "correct_answer": "b",
+      "explanation": "Assert statements are used to verify that conditions are met during testing. If an assertion fails, it indicates a test failure."
+    },
+    {
+      "id": 142,
+      "category": "Testing and Debugging",
+      "question": "What is code coverage in testing?",
+      "options": {
+        "a": "The number of tests",
+        "b": "The percentage of code executed by tests",
+        "c": "The time taken to run tests",
+        "d": "The number of bugs found"
+      },
+      "correct_answer": "b",
+      "explanation": "Code coverage measures how much of your code is executed during testing, helping identify untested parts of your codebase."
+    },
+    {
+      "id": 143,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the collections module?",
+      "options": {
+        "a": "To collect garbage",
+        "b": "To provide specialized container datatypes",
+        "c": "To collect user input",
+        "d": "To collect system information"
+      },
+      "correct_answer": "b",
+      "explanation": "The collections module provides specialized container datatypes as alternatives to Python's general purpose built-in containers."
+    },
+    {
+      "id": 144,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the zip() function?",
+      "options": {
+        "a": "To compress files",
+        "b": "To create a zip archive",
+        "c": "To combine iterables element-wise",
+        "d": "To encrypt data"
+      },
+      "correct_answer": "c",
+      "explanation": "The zip() function creates an iterator of tuples where each tuple contains the i-th element from each of the input iterables."
+    },
+    {
+      "id": 145,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the map() function?",
+      "options": {
+        "a": "To create a map data structure",
+        "b": "To apply a function to each item in an iterable",
+        "c": "To map files to memory",
+        "d": "To create a dictionary"
+      },
+      "correct_answer": "b",
+      "explanation": "The map() function applies a given function to each item in an iterable and returns a map object (iterator)."
+    },
+    {
+      "id": 146,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the filter() function?",
+      "options": {
+        "a": "To filter files",
+        "b": "To remove duplicates",
+        "c": "To create a new list with elements that satisfy a condition",
+        "d": "To sort elements"
+      },
+      "correct_answer": "c",
+      "explanation": "The filter() function creates an iterator of elements that satisfy a given predicate (function that returns True/False)."
+    },
+    {
+      "id": 147,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the datetime module?",
+      "options": {
+        "a": "To measure execution time",
+        "b": "To work with dates and times",
+        "c": "To schedule tasks",
+        "d": "To create timestamps"
+      },
+      "correct_answer": "b",
+      "explanation": "The datetime module provides classes for working with dates and times, supporting arithmetic, formatting, and parsing."
+    },
+    {
+      "id": 148,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the os module?",
+      "options": {
+        "a": "To interact with the operating system",
+        "b": "To create GUIs",
+        "c": "To handle network connections",
+        "d": "To process images"
+      },
+      "correct_answer": "a",
+      "explanation": "The os module provides a way to interact with the operating system, including file operations, environment variables, and process management."
+    },
+    {
+      "id": 149,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the sys module?",
+      "options": {
+        "a": "To create system calls",
+        "b": "To access system-specific parameters and functions",
+        "c": "To manage system resources",
+        "d": "To handle system errors"
+      },
+      "correct_answer": "b",
+      "explanation": "The sys module provides access to some variables used or maintained by the Python interpreter and functions that interact with the interpreter."
+    },
+    {
+      "id": 150,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the random module?",
+      "options": {
+        "a": "To generate random numbers",
+        "b": "To shuffle data randomly",
+        "c": "To create random files",
+        "d": "Both a and b"
+      },
+      "correct_answer": "d",
+      "explanation": "The random module implements pseudo-random number generators and functions for random operations like shuffling sequences."
+    },
+    {
+      "id": 151,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the json module?",
+      "options": {
+        "a": "To create JavaScript code",
+        "b": "To encode and decode JSON data",
+        "c": "To validate JSON schemas",
+        "d": "To create web services"
+      },
+      "correct_answer": "b",
+      "explanation": "The json module provides functions for encoding Python objects as JSON strings and decoding JSON strings into Python objects."
+    },
+    {
+      "id": 152,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the math module?",
+      "options": {
+        "a": "To perform basic arithmetic",
+        "b": "To provide access to mathematical functions",
+        "c": "To solve equations",
+        "d": "To create graphs"
+      },
+      "correct_answer": "b",
+      "explanation": "The math module provides access to mathematical functions defined by the C standard, such as trigonometric functions and constants."
+    },
+    {
+      "id": 153,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the time module?",
+      "options": {
+        "a": "To measure time intervals",
+        "b": "To format time strings",
+        "c": "To convert between time representations",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The time module provides various time-related functions, including time measurements, conversions, and formatting."
+    },
+    {
+      "id": 154,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the itertools module?",
+      "options": {
+        "a": "To create iterators for efficient looping",
+        "b": "To iterate over files",
+        "c": "To create loops",
+        "d": "To manage iterations"
+      },
+      "correct_answer": "a",
+      "explanation": "The itertools module provides functions for creating iterators for efficient looping, such as combinations and permutations."
+    },
+    {
+      "id": 155,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the functools module?",
+      "options": {
+        "a": "To create functions",
+        "b": "To modify and compose functions",
+        "c": "To test functions",
+        "d": "To document functions"
+      },
+      "correct_answer": "b",
+      "explanation": "The functools module provides tools for working with functions and callable objects, including function decoration and partial function application."
+    },
+    {
+      "id": 156,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the operator module?",
+      "options": {
+        "a": "To perform arithmetic operations",
+        "b": "To provide function versions of operators",
+        "c": "To create custom operators",
+        "d": "To handle operator precedence"
+      },
+      "correct_answer": "b",
+      "explanation": "The operator module provides function versions of Python's standard operators, useful in functional programming contexts."
+    },
+    {
+      "id": 157,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the statistics module?",
+      "options": {
+        "a": "To perform complex calculations",
+        "b": "To calculate basic statistical measures",
+        "c": "To create statistical graphs",
+        "d": "To analyze big data"
+      },
+      "correct_answer": "b",
+      "explanation": "The statistics module provides functions for calculating basic statistical measures like mean, median, and mode."
+    },
+    {
+      "id": 158,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the pathlib module?",
+      "options": {
+        "a": "To handle file paths",
+        "b": "To create directories",
+        "c": "To find files",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The pathlib module provides an object-oriented interface to filesystem paths, supporting path manipulation, file operations, and pattern matching."
+    },
+    {
+      "id": 159,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the uuid module?",
+      "options": {
+        "a": "To generate unique identifiers",
+        "b": "To validate IDs",
+        "c": "To encrypt data",
+        "d": "To compress data"
+      },
+      "correct_answer": "a",
+      "explanation": "The uuid module provides functions for generating universally unique identifiers (UUIDs)."
+    },
+    {
+      "id": 160,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the argparse module?",
+      "options": {
+        "a": "To parse HTML",
+        "b": "To parse command-line arguments",
+        "c": "To parse JSON",
+        "d": "To parse XML"
+      },
+      "correct_answer": "b",
+      "explanation": "The argparse module makes it easy to write user-friendly command-line interfaces by parsing command-line arguments."
+    },
+    {
+      "id": 161,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the logging module?",
+      "options": {
+        "a": "To create log files",
+        "b": "To track program execution",
+        "c": "To handle error messages",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The logging module provides a flexible framework for generating log messages, tracking program execution, and handling errors."
+    },
+    {
+      "id": 162,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the csv module?",
+      "options": {
+        "a": "To read CSV files",
+        "b": "To write CSV files",
+        "c": "To process CSV data",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The csv module provides functionality to read from and write to CSV (Comma Separated Values) files."
+    },
+    {
+      "id": 163,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the pickle module?",
+      "options": {
+        "a": "To preserve food",
+        "b": "To serialize Python objects",
+        "c": "To compress files",
+        "d": "To encrypt data"
+      },
+      "correct_answer": "b",
+      "explanation": "The pickle module implements binary protocols for serializing and de-serializing Python object structures."
+    },
+    {
+      "id": 164,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the hashlib module?",
+      "options": {
+        "a": "To create hash tables",
+        "b": "To implement hash functions",
+        "c": "To store passwords",
+        "d": "To encrypt files"
+      },
+      "correct_answer": "b",
+      "explanation": "The hashlib module implements a common interface to many different secure hash and message digest algorithms."
+    },
+    {
+      "id": 165,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the base64 module?",
+      "options": {
+        "a": "To encode binary data",
+        "b": "To decode binary data",
+        "c": "Both a and b",
+        "d": "To compress data"
+      },
+      "correct_answer": "c",
+      "explanation": "The base64 module provides functions for encoding binary data to ASCII characters and decoding such encodings back to binary data."
+    },
+    {
+      "id": 166,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the tempfile module?",
+      "options": {
+        "a": "To create temporary files",
+        "b": "To create temporary directories",
+        "c": "Both a and b",
+        "d": "To store temporary data"
+      },
+      "correct_answer": "c",
+      "explanation": "The tempfile module provides functions for generating temporary files and directories that are automatically cleaned up."
+    },
+    {
+      "id": 167,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the shutil module?",
+      "options": {
+        "a": "To copy files",
+        "b": "To remove directories",
+        "c": "To move files",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The shutil module provides high-level operations on files and collections of files, such as copying, moving, and removing."
+    },
+    {
+      "id": 168,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the glob module?",
+      "options": {
+        "a": "To find files using patterns",
+        "b": "To create global variables",
+        "c": "To handle global exceptions",
+        "d": "To manage global state"
+      },
+      "correct_answer": "a",
+      "explanation": "The glob module provides functions for finding files whose names match specified patterns using shell-style wildcards."
+    },
+    {
+      "id": 169,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the platform module?",
+      "options": {
+        "a": "To get system information",
+        "b": "To create cross-platform applications",
+        "c": "To handle platform-specific code",
+        "d": "To manage platform dependencies"
+      },
+      "correct_answer": "a",
+      "explanation": "The platform module provides access to underlying platform's identifying data, such as operating system, hardware, and Python version information."
+    },
+    {
+      "id": 170,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the subprocess module?",
+      "options": {
+        "a": "To create subprocesses",
+        "b": "To run shell commands",
+        "c": "To manage child processes",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes."
+    },
+    {
+      "id": 171,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the typing module?",
+      "options": {
+        "a": "To add type hints",
+        "b": "To check types at runtime",
+        "c": "To convert between types",
+        "d": "To create new types"
+      },
+      "correct_answer": "a",
+      "explanation": "The typing module provides support for type hints, allowing you to specify expected types for function arguments and return values."
+    },
+    {
+      "id": 172,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the enum module?",
+      "options": {
+        "a": "To create enumerations",
+        "b": "To count items",
+        "c": "To enumerate files",
+        "d": "To create sequences"
+      },
+      "correct_answer": "a",
+      "explanation": "The enum module provides support for creating enumerated types, which are sets of symbolic names bound to unique values."
+    },
+    {
+      "id": 173,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the contextlib module?",
+      "options": {
+        "a": "To create context managers",
+        "b": "To manage contexts",
+        "c": "To handle context switching",
+        "d": "To store contextual data"
+      },
+      "correct_answer": "a",
+      "explanation": "The contextlib module provides utilities for working with context managers and the with statement."
+    },
+    {
+      "id": 174,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the decimal module?",
+      "options": {
+        "a": "To handle decimal numbers",
+        "b": "To perform precise arithmetic",
+        "c": "To convert between number systems",
+        "d": "Both a and b"
+      },
+      "correct_answer": "d",
+      "explanation": "The decimal module provides support for decimal floating point arithmetic, offering exact decimal representation and arithmetic."
+    },
+    {
+      "id": 175,
+      "category": "Standard Library and Built-in Functions",
+      "question": "What is the purpose of the calendar module?",
+      "options": {
+        "a": "To work with dates",
+        "b": "To create calendars",
+        "c": "To format dates",
+        "d": "All of the above"
+      },
+      "correct_answer": "d",
+      "explanation": "The calendar module provides functions for working with calendars, including formatting calendar displays and calculating dates."
+    },
+    {
+      "id": 176,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is a metaclass in Python?",
+      "options": {
+        "a": "A class that inherits from multiple classes",
+        "b": "A class that creates classes",
+        "c": "A class that contains only methods",
+        "d": "A class that cannot be instantiated"
+      },
+      "correct_answer": "b",
+      "explanation": "A metaclass is a class for a class - it defines how a class behaves, just as a class defines how an instance behaves."
+    },
+    {
+      "id": 177,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is monkey patching in Python?",
+      "options": {
+        "a": "Debugging code",
+        "b": "Modifying code at runtime",
+        "c": "Writing test cases",
+        "d": "Optimizing code"
+      },
+      "correct_answer": "b",
+      "explanation": "Monkey patching refers to the dynamic (at runtime) modification of a class or module, typically to add features or fix bugs."
+    },
+    {
+      "id": 178,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __slots__ in Python classes?",
+      "options": {
+        "a": "To define class methods",
+        "b": "To restrict attribute creation",
+        "c": "To create class properties",
+        "d": "To define class variables"
+      },
+      "correct_answer": "b",
+      "explanation": "__slots__ allows you to explicitly declare data members and prevents the creation of __dict__, reducing memory usage."
+    },
+    {
+      "id": 179,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the Global Interpreter Lock (GIL)?",
+      "options": {
+        "a": "A lock that prevents memory leaks",
+        "b": "A lock that allows only one thread to execute Python bytecode",
+        "c": "A lock that prevents infinite loops",
+        "d": "A lock that manages file access"
+      },
+      "correct_answer": "b",
+      "explanation": "The GIL is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes simultaneously."
+    },
+    {
+      "id": 180,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of the @property decorator?",
+      "options": {
+        "a": "To create read-only attributes",
+        "b": "To define getters and setters",
+        "c": "To create class methods",
+        "d": "To create static methods"
+      },
+      "correct_answer": "b",
+      "explanation": "The @property decorator allows you to define methods that can be accessed like attributes, providing a way to implement getters and setters."
+    },
+    {
+      "id": 181,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is duck typing in Python?",
+      "options": {
+        "a": "Type checking at runtime",
+        "b": "Type checking at compile time",
+        "c": "Focusing on object capabilities rather than type",
+        "d": "Converting between types"
+      },
+      "correct_answer": "c",
+      "explanation": "Duck typing is a programming concept where the type or class of an object is less important than the methods it defines - 'if it walks like a duck and quacks like a duck, it's a duck.'"
+    },
+    {
+      "id": 182,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __new__ method?",
+      "options": {
+        "a": "To initialize an instance",
+        "b": "To create a new instance",
+        "c": "To delete an instance",
+        "d": "To copy an instance"
+      },
+      "correct_answer": "b",
+      "explanation": "__new__ is a static method that is called before __init__ and is responsible for creating and returning the instance object."
+    },
+    {
+      "id": 183,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the difference between deep and shallow copy?",
+      "options": {
+        "a": "Deep copy is faster",
+        "b": "Shallow copy creates references, deep copy creates new objects",
+        "c": "Deep copy uses less memory",
+        "d": "There is no difference"
+      },
+      "correct_answer": "b",
+      "explanation": "A shallow copy creates a new object but references the same nested objects, while a deep copy creates new objects for all nested objects as well."
+    },
+    {
+      "id": 184,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __call__ method?",
+      "options": {
+        "a": "To make objects callable like functions",
+        "b": "To call other objects",
+        "c": "To initialize objects",
+        "d": "To delete objects"
+      },
+      "correct_answer": "a",
+      "explanation": "The __call__ method allows an object to be called like a function, making the instance callable."
+    },
+    {
+      "id": 185,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is a context manager?",
+      "options": {
+        "a": "A class that manages memory",
+        "b": "A class that implements __enter__ and __exit__",
+        "c": "A class that manages threads",
+        "d": "A class that manages exceptions"
+      },
+      "correct_answer": "b",
+      "explanation": "A context manager is an object that implements __enter__ and __exit__ methods and can be used with the 'with' statement for resource management."
+    },
+    {
+      "id": 186,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __getattr__ method?",
+      "options": {
+        "a": "To get any attribute",
+        "b": "To handle access to undefined attributes",
+        "c": "To create new attributes",
+        "d": "To delete attributes"
+      },
+      "correct_answer": "b",
+      "explanation": "__getattr__ is called when an attribute lookup fails, allowing you to handle access to undefined attributes."
+    },
+    {
+      "id": 187,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __getattribute__ method?",
+      "options": {
+        "a": "To get any attribute",
+        "b": "To handle access to undefined attributes",
+        "c": "To intercept all attribute lookups",
+        "d": "To create new attributes"
+      },
+      "correct_answer": "c",
+      "explanation": "__getattribute__ intercepts all attribute lookups, whether the attribute exists or not."
+    },
+    {
+      "id": 188,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __slots__ in Python classes?",
+      "options": {
+        "a": "To define class methods",
+        "b": "To restrict attribute creation",
+        "c": "To create class properties",
+        "d": "To define class variables"
+      },
+      "correct_answer": "b",
+      "explanation": "__slots__ allows you to explicitly declare data members and prevents the creation of __dict__, reducing memory usage."
+    },
+    {
+      "id": 189,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of the @classmethod decorator?",
+      "options": {
+        "a": "To create static methods",
+        "b": "To create instance methods",
+        "c": "To create methods that receive the class as first argument",
+        "d": "To create properties"
+      },
+      "correct_answer": "c",
+      "explanation": "The @classmethod decorator creates a method that receives the class as the first argument instead of the instance."
+    },
+    {
+      "id": 190,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of the @staticmethod decorator?",
+      "options": {
+        "a": "To create methods that don't need class or instance",
+        "b": "To create class methods",
+        "c": "To create instance methods",
+        "d": "To create properties"
+      },
+      "correct_answer": "a",
+      "explanation": "The @staticmethod decorator creates a method that doesn't receive any implicit first argument (neither the instance nor the class)."
+    },
+    {
+      "id": 191,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __repr__ method?",
+      "options": {
+        "a": "To create a string representation for developers",
+        "b": "To create a string representation for users",
+        "c": "To compare objects",
+        "d": "To convert objects to strings"
+      },
+      "correct_answer": "a",
+      "explanation": "__repr__ should return a string that is a valid Python expression to recreate the object, useful for debugging and development."
+    },
+    {
+      "id": 192,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __str__ method?",
+      "options": {
+        "a": "To create a string representation for developers",
+        "b": "To create a string representation for users",
+        "c": "To compare objects",
+        "d": "To convert objects to strings"
+      },
+      "correct_answer": "b",
+      "explanation": "__str__ should return a concise, readable string representation of the object, suitable for end users."
+    },
+    {
+      "id": 193,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __len__ method?",
+      "options": {
+        "a": "To get the length of an object",
+        "b": "To set the length of an object",
+        "c": "To compare objects",
+        "d": "To convert objects to integers"
+      },
+      "correct_answer": "a",
+      "explanation": "__len__ allows an object to report its length when the len() function is called on it."
+    },
+    {
+      "id": 194,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __bool__ method?",
+      "options": {
+        "a": "To convert objects to boolean",
+        "b": "To check if an object is empty",
+        "c": "To compare objects",
+        "d": "To create boolean attributes"
+      },
+      "correct_answer": "a",
+      "explanation": "__bool__ determines the truth value of an object when used in boolean context or with bool() function."
+    },
+    {
+      "id": 195,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __eq__ method?",
+      "options": {
+        "a": "To compare objects for equality",
+        "b": "To compare objects for ordering",
+        "c": "To convert objects to numbers",
+        "d": "To create equal objects"
+      },
+      "correct_answer": "a",
+      "explanation": "__eq__ defines how the == operator behaves for the object, allowing custom equality comparison."
+    },
+    {
+      "id": 196,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __hash__ method?",
+      "options": {
+        "a": "To create a hash value for the object",
+        "b": "To encrypt the object",
+        "c": "To compress the object",
+        "d": "To compare objects"
+      },
+      "correct_answer": "a",
+      "explanation": "__hash__ returns a hash value for the object, allowing it to be used in hash-based collections like sets and as dictionary keys."
+    },
+    {
+      "id": 197,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __iter__ method?",
+      "options": {
+        "a": "To make an object iterable",
+        "b": "To iterate over an object",
+        "c": "To create an iterator",
+        "d": "To count iterations"
+      },
+      "correct_answer": "a",
+      "explanation": "__iter__ makes an object iterable by returning an iterator object, allowing it to be used in for loops."
+    },
+    {
+      "id": 198,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __next__ method?",
+      "options": {
+        "a": "To get the next item in iteration",
+        "b": "To create the next object",
+        "c": "To move to the next line",
+        "d": "To find the next match"
+      },
+      "correct_answer": "a",
+      "explanation": "__next__ returns the next value in an iterator, raising StopIteration when there are no more items."
+    },
+    {
+      "id": 199,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __enter__ method?",
+      "options": {
+        "a": "To enter a context",
+        "b": "To start a program",
+        "c": "To create an object",
+        "d": "To access private attributes"
+      },
+      "correct_answer": "a",
+      "explanation": "__enter__ is called when entering a context in a 'with' statement, setting up the context manager."
+    },
+    {
+      "id": 200,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __exit__ method?",
+      "options": {
+        "a": "To exit a context",
+        "b": "To end a program",
+        "c": "To delete an object",
+        "d": "To handle exceptions"
+      },
+      "correct_answer": "a",
+      "explanation": "__exit__ is called when exiting a context in a 'with' statement, handling cleanup and exception processing."
+    },
+    {
+      "id": 201,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __del__ method?",
+      "options": {
+        "a": "To delete an object",
+        "b": "To clean up resources",
+        "c": "To handle object destruction",
+        "d": "To remove attributes"
+      },
+      "correct_answer": "c",
+      "explanation": "__del__ is called when an object is about to be destroyed, allowing cleanup operations to be performed."
+    },
+    {
+      "id": 202,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __getitem__ method?",
+      "options": {
+        "a": "To implement indexing",
+        "b": "To get attributes",
+        "c": "To get items from a collection",
+        "d": "To access private members"
+      },
+      "correct_answer": "a",
+      "explanation": "__getitem__ implements indexing and slicing, allowing objects to be accessed using square bracket notation."
+    },
+    {
+      "id": 203,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __setitem__ method?",
+      "options": {
+        "a": "To implement index assignment",
+        "b": "To set attributes",
+        "c": "To add items to a collection",
+        "d": "To modify private members"
+      },
+      "correct_answer": "a",
+      "explanation": "__setitem__ implements index assignment, allowing values to be assigned using square bracket notation."
+    },
+    {
+      "id": 204,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __delitem__ method?",
+      "options": {
+        "a": "To implement index deletion",
+        "b": "To delete attributes",
+        "c": "To remove items from a collection",
+        "d": "To delete private members"
+      },
+      "correct_answer": "a",
+      "explanation": "__delitem__ implements index deletion, allowing items to be deleted using the del statement with square bracket notation."
+    },
+    {
+      "id": 205,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __contains__ method?",
+      "options": {
+        "a": "To implement membership testing",
+        "b": "To check if attributes exist",
+        "c": "To search for items",
+        "d": "To verify containment"
+      },
+      "correct_answer": "a",
+      "explanation": "__contains__ implements membership testing, allowing the 'in' operator to be used with the object."
+    },
+    {
+      "id": 206,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __add__ method?",
+      "options": {
+        "a": "To implement addition",
+        "b": "To concatenate objects",
+        "c": "To add attributes",
+        "d": "To combine collections"
+      },
+      "correct_answer": "a",
+      "explanation": "__add__ implements addition, allowing the + operator to be used with the object."
+    },
+    {
+      "id": 207,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __sub__ method?",
+      "options": {
+        "a": "To implement subtraction",
+        "b": "To remove items",
+        "c": "To subtract attributes",
+        "d": "To split collections"
+      },
+      "correct_answer": "a",
+      "explanation": "__sub__ implements subtraction, allowing the - operator to be used with the object."
+    },
+    {
+      "id": 208,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __mul__ method?",
+      "options": {
+        "a": "To implement multiplication",
+        "b": "To repeat objects",
+        "c": "To multiply attributes",
+        "d": "To combine collections"
+      },
+      "correct_answer": "a",
+      "explanation": "__mul__ implements multiplication, allowing the * operator to be used with the object."
+    },
+    {
+      "id": 209,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __truediv__ method?",
+      "options": {
+        "a": "To implement true division",
+        "b": "To split objects",
+        "c": "To divide attributes",
+        "d": "To separate collections"
+      },
+      "correct_answer": "a",
+      "explanation": "__truediv__ implements true division, allowing the / operator to be used with the object."
+    },
+    {
+      "id": 210,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __floordiv__ method?",
+      "options": {
+        "a": "To implement floor division",
+        "b": "To round division",
+        "c": "To divide integers",
+        "d": "To split objects"
+      },
+      "correct_answer": "a",
+      "explanation": "__floordiv__ implements floor division, allowing the // operator to be used with the object."
+    },
+    {
+      "id": 211,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __mod__ method?",
+      "options": {
+        "a": "To implement modulo operation",
+        "b": "To modify objects",
+        "c": "To get remainders",
+        "d": "To format strings"
+      },
+      "correct_answer": "a",
+      "explanation": "__mod__ implements the modulo operation, allowing the % operator to be used with the object."
+    },
+    {
+      "id": 212,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __pow__ method?",
+      "options": {
+        "a": "To implement exponentiation",
+        "b": "To raise errors",
+        "c": "To calculate power",
+        "d": "To multiply repeatedly"
+      },
+      "correct_answer": "a",
+      "explanation": "__pow__ implements exponentiation, allowing the ** operator to be used with the object."
+    },
+    {
+      "id": 213,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __neg__ method?",
+      "options": {
+        "a": "To implement negation",
+        "b": "To make negative",
+        "c": "To reverse signs",
+        "d": "To handle negative numbers"
+      },
+      "correct_answer": "a",
+      "explanation": "__neg__ implements unary negation, allowing the - operator to be used with the object."
+    },
+    {
+      "id": 214,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __pos__ method?",
+      "options": {
+        "a": "To implement unary plus",
+        "b": "To make positive",
+        "c": "To handle positive numbers",
+        "d": "To preserve signs"
+      },
+      "correct_answer": "a",
+      "explanation": "__pos__ implements unary plus, allowing the + operator to be used with the object."
+    },
+    {
+      "id": 215,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __abs__ method?",
+      "options": {
+        "a": "To implement absolute value",
+        "b": "To handle absolute paths",
+        "c": "To make numbers positive",
+        "d": "To calculate magnitude"
+      },
+      "correct_answer": "a",
+      "explanation": "__abs__ implements the built-in abs() function, returning the absolute value of the object."
+    },
+    {
+      "id": 216,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __round__ method?",
+      "options": {
+        "a": "To implement rounding",
+        "b": "To handle decimal places",
+        "c": "To approximate values",
+        "d": "To format numbers"
+      },
+      "correct_answer": "a",
+      "explanation": "__round__ implements the built-in round() function, rounding the object to a given precision."
+    },
+    {
+      "id": 217,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __floor__ method?",
+      "options": {
+        "a": "To implement floor operation",
+        "b": "To round down numbers",
+        "c": "To handle integers",
+        "d": "To calculate minimums"
+      },
+      "correct_answer": "a",
+      "explanation": "__floor__ implements the math.floor() function, returning the largest integer less than or equal to the object."
+    },
+    {
+      "id": 218,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __ceil__ method?",
+      "options": {
+        "a": "To implement ceiling operation",
+        "b": "To round up numbers",
+        "c": "To handle integers",
+        "d": "To calculate maximums"
+      },
+      "correct_answer": "a",
+      "explanation": "__ceil__ implements the math.ceil() function, returning the smallest integer greater than or equal to the object."
+    },
+    {
+      "id": 219,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __trunc__ method?",
+      "options": {
+        "a": "To implement truncation",
+        "b": "To remove decimals",
+        "c": "To handle integers",
+        "d": "To round towards zero"
+      },
+      "correct_answer": "a",
+      "explanation": "__trunc__ implements the math.trunc() function, truncating the object to an integral."
+    },
+    {
+      "id": 220,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __complex__ method?",
+      "options": {
+        "a": "To implement complex conversion",
+        "b": "To handle complex numbers",
+        "c": "To create complex objects",
+        "d": "To calculate imaginary parts"
+      },
+      "correct_answer": "a",
+      "explanation": "__complex__ implements complex number conversion, allowing the complex() function to be used with the object."
+    },
+    {
+      "id": 221,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __int__ method?",
+      "options": {
+        "a": "To implement integer conversion",
+        "b": "To handle integers",
+        "c": "To round numbers",
+        "d": "To remove decimals"
+      },
+      "correct_answer": "a",
+      "explanation": "__int__ implements integer conversion, allowing the int() function to be used with the object."
+    },
+    {
+      "id": 222,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __float__ method?",
+      "options": {
+        "a": "To implement float conversion",
+        "b": "To handle decimals",
+        "c": "To create floating points",
+        "d": "To calculate precision"
+      },
+      "correct_answer": "a",
+      "explanation": "__float__ implements float conversion, allowing the float() function to be used with the object."
+    },
+    {
+      "id": 223,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __index__ method?",
+      "options": {
+        "a": "To implement integer conversion for indexing",
+        "b": "To handle array indices",
+        "c": "To find positions",
+        "d": "To create indexes"
+      },
+      "correct_answer": "a",
+      "explanation": "__index__ implements integer conversion for slice indices, allowing the object to be used in sequence indices."
+    },
+    {
+      "id": 224,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __format__ method?",
+      "options": {
+        "a": "To implement string formatting",
+        "b": "To handle format strings",
+        "c": "To create formats",
+        "d": "To convert to strings"
+      },
+      "correct_answer": "a",
+      "explanation": "__format__ implements string formatting, allowing the object to be used with format() and formatted string literals."
+    },
+    {
+      "id": 225,
+      "category": "Advanced Features and Best Practices",
+      "question": "What is the purpose of __bytes__ method?",
+      "options": {
+        "a": "To implement bytes conversion",
+        "b": "To handle binary data",
+        "c": "To create byte strings",
+        "d": "To calculate sizes"
+      },
+      "correct_answer": "a",
+      "explanation": "__bytes__ implements bytes conversion, allowing the bytes() function to be used with the object."
+    }
+  ]
+}
